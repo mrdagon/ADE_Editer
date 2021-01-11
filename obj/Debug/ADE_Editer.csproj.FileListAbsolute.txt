@@ -1,0 +1,11 @@
+C:\Users\ganta\source\repos\ADE_Editer\bin\Debug\ADE_Editer.exe.config
+C:\Users\ganta\source\repos\ADE_Editer\bin\Debug\ADE_Editer.exe
+C:\Users\ganta\source\repos\ADE_Editer\bin\Debug\ADE_Editer.pdb
+C:\Users\ganta\source\repos\ADE_Editer\obj\Debug\ADE_Editer.Properties.Resources.resources
+C:\Users\ganta\source\repos\ADE_Editer\obj\Debug\ADE_Editer.csproj.GenerateResource.cache
+C:\Users\ganta\source\repos\ADE_Editer\obj\Debug\ADE_Editer.csproj.CoreCompileInputs.cache
+C:\Users\ganta\source\repos\ADE_Editer\obj\Debug\ADE_Editer.exe
+C:\Users\ganta\source\repos\ADE_Editer\obj\Debug\ADE_Editer.pdb
+C:\Users\ganta\source\repos\ADE_Editer\obj\Debug\ADE_Editer.MainForm.resources
+C:\Users\ganta\source\repos\ADE_Editer\obj\Debug\ADE_Editer.UserTrackbar.resources
+C:\Users\ganta\source\repos\ADE_Editer\obj\Debug\ADE_Editer.csprojAssemblyReference.cache
