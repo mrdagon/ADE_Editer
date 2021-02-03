@@ -31,8 +31,12 @@ namespace ADE_Editer
         public int 回避;
         public int 会心;
 
-        public bool[] 習得Pスキル = new bool[MyType.Max];
-        public bool[] 習得Aスキル = new bool[MyType.Max];
+        public int[] Aスキル = new int[4];
+        public int[] AスキルLv = new int[4];
+
+        public int[] Pスキル = new int[8];
+        public int[] PスキルLv = new int[8];
+
         public void Set(MainForm form)
         {
             SetGet(form, true);
@@ -68,8 +72,34 @@ namespace ADE_Editer
             Eq.Set(form.trackbarモンスター回避, ref 回避);
             Eq.Set(form.trackbarモンスター会心, ref 会心);
 
-            Eq.Set(form.checkedListBoxtrackbarモンスターPスキル, ref 習得Pスキル , PSkill.data.Count);
-            Eq.Set(form.checkedListBoxtrackbarモンスターAスキル, ref 習得Aスキル , ASkill.data.Count);
+            Eq.Set(form.comboBoxモンスターAスキル1, ref Aスキル[0]);
+            Eq.Set(form.comboBoxモンスターAスキル2, ref Aスキル[1]);
+            Eq.Set(form.comboBoxモンスターAスキル3, ref Aスキル[2]);
+            Eq.Set(form.comboBoxモンスターAスキル4, ref Aスキル[3]);
+
+            Eq.Set(form.numericUpDownモンスターAスキルLv1, ref AスキルLv[0]);
+            Eq.Set(form.numericUpDownモンスターAスキルLv2, ref AスキルLv[1]);
+            Eq.Set(form.numericUpDownモンスターAスキルLv3, ref AスキルLv[2]);
+            Eq.Set(form.numericUpDownモンスターAスキルLv4, ref AスキルLv[3]);
+
+            Eq.Set(form.comboBoxモンスターPスキル1, ref Pスキル[0]);
+            Eq.Set(form.comboBoxモンスターPスキル2, ref Pスキル[1]);
+            Eq.Set(form.comboBoxモンスターPスキル3, ref Pスキル[2]);
+            Eq.Set(form.comboBoxモンスターPスキル4, ref Pスキル[3]);
+            Eq.Set(form.comboBoxモンスターPスキル5, ref Pスキル[4]);
+            Eq.Set(form.comboBoxモンスターPスキル6, ref Pスキル[5]);
+            Eq.Set(form.comboBoxモンスターPスキル7, ref Pスキル[6]);
+            Eq.Set(form.comboBoxモンスターPスキル8, ref Pスキル[7]);
+
+            Eq.Set(form.numericUpDownモンスターPスキルLv1, ref PスキルLv[0]);
+            Eq.Set(form.numericUpDownモンスターPスキルLv2, ref PスキルLv[1]);
+            Eq.Set(form.numericUpDownモンスターPスキルLv3, ref PスキルLv[2]);
+            Eq.Set(form.numericUpDownモンスターPスキルLv4, ref PスキルLv[3]);
+            Eq.Set(form.numericUpDownモンスターPスキルLv5, ref PスキルLv[4]);
+            Eq.Set(form.numericUpDownモンスターPスキルLv6, ref PスキルLv[5]);
+            Eq.Set(form.numericUpDownモンスターPスキルLv7, ref PスキルLv[6]);
+            Eq.Set(form.numericUpDownモンスターPスキルLv8, ref PスキルLv[7]);
+
         }
 
         private void Save(StreamWriter sw_str, BinaryWriter bw_data)
@@ -94,8 +124,17 @@ namespace ADE_Editer
             RW.ReadWrite(bw_data, ref 回避);
             RW.ReadWrite(bw_data, ref 会心);
 
-            RW.ReadWrite(bw_data, ref 習得Pスキル , PSkill.data.Count);
-            RW.ReadWrite(bw_data, ref 習得Aスキル , ASkill.data.Count);
+            for(int i=0;i<Aスキル.Length;i++)
+            {
+                RW.ReadWrite(bw_data, ref Aスキル[i]);
+                RW.ReadWrite(bw_data, ref AスキルLv[i]);
+            }
+            for (int i = 0; i < Pスキル.Length; i++)
+            {
+                RW.ReadWrite(bw_data, ref Pスキル[i]);
+                RW.ReadWrite(bw_data, ref PスキルLv[i]);
+            }
+
         }
 
         private void Load(StreamReader br_str, BinaryReader br_data)
@@ -121,8 +160,16 @@ namespace ADE_Editer
             RW.ReadWrite(br_data, ref 回避);
             RW.ReadWrite(br_data, ref 会心);
 
-            RW.ReadWrite(br_data, ref 習得Pスキル, PSkill.data.Count);
-            RW.ReadWrite(br_data, ref 習得Aスキル, ASkill.data.Count);
+            for (int i = 0; i < Aスキル.Length; i++)
+            {
+                RW.ReadWrite(br_data, ref Aスキル[i]);
+                RW.ReadWrite(br_data, ref AスキルLv[i]);
+            }
+            for (int i = 0; i < Pスキル.Length; i++)
+            {
+                RW.ReadWrite(br_data, ref Pスキル[i]);
+                RW.ReadWrite(br_data, ref PスキルLv[i]);
+            }
         }
         static public void Save(string fileName)
         {
@@ -162,14 +209,23 @@ namespace ADE_Editer
         {
             var clone = (Monster)this.MemberwiseClone();
 
-            clone.習得Pスキル = new bool[MyType.Max];
-            clone.習得Aスキル = new bool[MyType.Max];
 
+            clone.Aスキル = new int[4];
+            clone.AスキルLv = new int[4];
 
-            for (int i = 0; i < MyType.Max; i++)
+            clone.Pスキル = new int[8];
+            clone.PスキルLv = new int[8];
+
+            for(int i=0;i<4;i++)
             {
-                clone.習得Pスキル[i] = 習得Pスキル[i];
-                clone.習得Aスキル[i] = 習得Aスキル[i];
+                clone.Aスキル[i] = Aスキル[i];
+                clone.AスキルLv[i] = AスキルLv[i];
+            }
+
+            for (int i = 0; i < 8; i++)
+            {
+                clone.Pスキル[i] = Pスキル[i];
+                clone.PスキルLv[i] = PスキルLv[i];
             }
 
             return clone;

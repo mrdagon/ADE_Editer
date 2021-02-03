@@ -36,7 +36,51 @@ namespace ADE_Editer
         int copyTabIndex = -1;
         int copyItemIndex = -1;
 
+        private void UpdateData()
+        {
+            switch (nowTab)
+            {
+                case 0:
+                    ASkill.data[listBoxAスキル.SelectedIndex].Get(this);
+                    break;
+                case 1:
+                    PSkill.data[listBoxPスキル.SelectedIndex].Get(this);
+                    break;
+                case 2:
+                    Job.data[listBoxジョブ.SelectedIndex].Get(this);
+                    break;
+                case 3:
+                    Monster.data[listBoxモンスター.SelectedIndex].Get(this);
+                    break;
+                case 4:
+                    Dungeon.data[listBoxダンジョン.SelectedIndex].Get(this);
+                    break;
+                case 5:
+                    Item.data[listBoxモンスター.SelectedIndex].Get(this);
+                    break;
+                case 6:
+                    Material.data[listBox素材.SelectedIndex].Get(this);
+                    break;
+                case 7:
+                    Accessory.data[listBoxアクセサリー.SelectedIndex].Get(this);
+                    break;
+                case 8:
+                    Quest.data[listBoxクエスト.SelectedIndex].Get(this);
+                    break;
+                case 9:
+                    Invest.data[listBox投資.SelectedIndex].Get(this);
+                    break;
+                case 10:
+                    //列挙型
+                    break;
+                default:
+                    break;
+            }
 
+            UpdateComboCheck();
+        }
+
+        //●自動生成関数
         public MainForm()
         {
             InitializeComponent();
@@ -52,7 +96,6 @@ namespace ADE_Editer
             if (false)
             {
                 var cd = System.Environment.CurrentDirectory + "/data/";
-
 
                 MyType.Load(cd + "type");
 
@@ -110,6 +153,15 @@ namespace ADE_Editer
 
             UpdateComboCheck();
             ASkill.data[0].Set(this);
+            PSkill.data[0].Set(this);
+            Accessory.data[0].Set(this);
+            Quest.data[0].Set(this);
+            Job.data[0].Set(this);
+            Dungeon.data[0].Set(this);
+            Monster.data[0].Set(this);
+            Invest.data[0].Set(this);
+            Material.data[0].Set(this);
+            Item.data[0].Set(this);
 
             listBoxAスキル.SelectedIndex = 0;
             listBoxPスキル.SelectedIndex = 0;
@@ -134,46 +186,8 @@ namespace ADE_Editer
             //コンボボックスの中身を更新してから処理
 
             //切り替え前のタブの数値を内部データに代入する
-            switch (nowTab)
-            {
-                case 0:
-                    ASkill.data[listBoxAスキル.SelectedIndex].Get(this);
-                    break;
-                case 1:
-                    PSkill.data[listBoxPスキル.SelectedIndex].Get(this);
-                    break;
-                case 2:
-                    Job.data[listBoxジョブ.SelectedIndex].Get(this);
-                    break;
-                case 3:
-                    Monster.data[listBoxモンスター.SelectedIndex].Get(this);
-                    break;
-                case 4:
-                    Dungeon.data[listBoxダンジョン.SelectedIndex].Get(this);
-                    break;
-                case 5:
-                    Item.data[listBoxモンスター.SelectedIndex].Get(this);
-                    break;
-                case 6:
-                    Material.data[listBox素材.SelectedIndex].Get(this);
-                    break;
-                case 7:
-                    Accessory.data[listBoxアクセサリー.SelectedIndex].Get(this);
-                    break;
-                case 8:
-                    Quest.data[listBoxクエスト.SelectedIndex].Get(this);
-                    break;
-                case 9:
-                    Invest.data[listBox投資.SelectedIndex].Get(this);
-                    break;
-                case 10:
-                    //列挙型
-                    break;
-                default:
-                    break;
-            }
+            UpdateData();
 
-            UpdateComboCheck();
             nowTab = n;
 
             //コンボボックスの数値などを入れ直したので再Set
@@ -551,15 +565,12 @@ namespace ADE_Editer
                     listBox列挙型.SelectedIndex = 0;
                     break;
             }
-
-
-
-
-
         }
 
         private void button保存_Click(object sender, EventArgs e)
         {
+
+            UpdateData();
             var cd = System.Environment.CurrentDirectory + "/data/";
 
             //保存処理
@@ -853,6 +864,8 @@ namespace ADE_Editer
 
         private void textBox列挙型名前_TextChanged(object sender, EventArgs e)
         {
+            if(listBox列挙型.SelectedIndex < 0) { return; }
+
             listBox列挙型.SelectedIndexChanged -= listBox列挙型_SelectedIndexChanged;
             listBox列挙型.Items[listBox列挙型.SelectedIndex] = textBox列挙型名前.Text;
 
@@ -881,7 +894,8 @@ namespace ADE_Editer
             comboBoxPスキル条件.Items.Clear();//Pスキル条件
             comboBoxPスキルタイミング.Items.Clear();//Pスキルタイミング
             comboBoxPスキル対象.Items.Clear();//Pスキル対象
-            comboBoxPスキル効果.Items.Clear();//Pスキル効果
+            comboBoxPスキル効果A.Items.Clear();//Pスキル効果
+            comboBoxPスキル効果B.Items.Clear();//Pスキル効果
             comboBoxPスキル習得前提Pスキル.Items.Clear();//PSkill
 
             comboBoxジョブ武器種.Items.Clear();//装備種
@@ -891,8 +905,18 @@ namespace ADE_Editer
 
             comboBoxモンスターボスドロップ.Items.Clear();//Accessory
             comboBoxモンスター素材種.Items.Clear();//素材種
-            checkedListBoxtrackbarモンスターAスキル.Items.Clear();//ASkill
-            checkedListBoxtrackbarモンスターPスキル.Items.Clear();//PSkill
+            comboBoxモンスターPスキル1.Items.Clear();
+            comboBoxモンスターPスキル2.Items.Clear();
+            comboBoxモンスターPスキル3.Items.Clear();
+            comboBoxモンスターPスキル4.Items.Clear();
+            comboBoxモンスターPスキル5.Items.Clear();
+            comboBoxモンスターPスキル6.Items.Clear();
+            comboBoxモンスターPスキル7.Items.Clear();
+            comboBoxモンスターPスキル8.Items.Clear();
+            comboBoxモンスターAスキル1.Items.Clear();
+            comboBoxモンスターAスキル2.Items.Clear();
+            comboBoxモンスターAスキル3.Items.Clear();
+            comboBoxモンスターAスキル4.Items.Clear();
 
             comboBoxダンジョンボス.Items.Clear();//Monster
             comboBoxダンジョンザコ1.Items.Clear();//Monster
@@ -915,6 +939,7 @@ namespace ADE_Editer
 
             comboBoxクエスト種類.Items.Clear();//クエスト種
             comboBox開放クエスト.Items.Clear();//Quest
+            comboBoxクエストアクセサリ.Items.Clear();
 
             //ASkill
             for (int i = 0; i < ASkill.data.Count; i++)
@@ -922,7 +947,10 @@ namespace ADE_Editer
                 comboBoxAスキル連続スキル.Items.Add(ASkill.data[i].名前);
                 comboBoxAスキル前提スキル.Items.Add(ASkill.data[i].名前);
                 checkedListBoxジョブAスキル.Items.Add(ASkill.data[i].名前);
-                checkedListBoxtrackbarモンスターAスキル.Items.Add(ASkill.data[i].名前);
+                comboBoxモンスターAスキル1.Items.Add(ASkill.data[i].名前);
+                comboBoxモンスターAスキル2.Items.Add(ASkill.data[i].名前);
+                comboBoxモンスターAスキル3.Items.Add(ASkill.data[i].名前);
+                comboBoxモンスターAスキル4.Items.Add(ASkill.data[i].名前);
             }
 
             //PSkill
@@ -930,9 +958,16 @@ namespace ADE_Editer
             {
                 comboBoxPスキル習得前提Pスキル.Items.Add(PSkill.data[i].名前);//PSkill
                 checkedListBoxジョブPスキル.Items.Add(PSkill.data[i].名前);//PSkill
-                checkedListBoxtrackbarモンスターPスキル.Items.Add(PSkill.data[i].名前);//PSkill
                 comboBoxアクセサリーPスキル.Items.Add(PSkill.data[i].名前);//PSkill
                 comboBox装備品Pスキル.Items.Add(PSkill.data[i].名前);//PSkill
+                comboBoxモンスターPスキル1.Items.Add(PSkill.data[i].名前);
+                comboBoxモンスターPスキル2.Items.Add(PSkill.data[i].名前);
+                comboBoxモンスターPスキル3.Items.Add(PSkill.data[i].名前);
+                comboBoxモンスターPスキル4.Items.Add(PSkill.data[i].名前);
+                comboBoxモンスターPスキル5.Items.Add(PSkill.data[i].名前);
+                comboBoxモンスターPスキル6.Items.Add(PSkill.data[i].名前);
+                comboBoxモンスターPスキル7.Items.Add(PSkill.data[i].名前);
+                comboBoxモンスターPスキル8.Items.Add(PSkill.data[i].名前);
             }
 
             //Monster
@@ -955,6 +990,7 @@ namespace ADE_Editer
                 comboBoxダンジョン遺物3.Items.Add(Accessory.data[i].名前);//Accessory
                 comboBoxダンジョン遺物4.Items.Add(Accessory.data[i].名前);//Accessory
                 comboBoxダンジョン遺物5.Items.Add(Accessory.data[i].名前);//Accessory
+                comboBoxクエストアクセサリ.Items.Add(Accessory.data[i].名前);
             }
 
             //Quest
@@ -989,7 +1025,8 @@ namespace ADE_Editer
 
             for (int i = 0; i < MyType.Pスキル効果.Count; i++)
             {
-                comboBoxPスキル効果.Items.Add(MyType.Pスキル効果[i]);//Pスキル効果
+                comboBoxPスキル効果A.Items.Add(MyType.Pスキル効果[i]);//Pスキル効果
+                comboBoxPスキル効果B.Items.Add(MyType.Pスキル効果[i]);//Pスキル効果
             }
 
             for (int i = 0; i < MyType.スキル追加効果種.Count; i++)
@@ -1022,6 +1059,7 @@ namespace ADE_Editer
 
             for (int i = 0; i < MyType.素材種.Count; i++)
             {
+                comboBoxモンスター素材種.Items.Add(MyType.素材種[i]);
                 comboBox素材種類.Items.Add(MyType.素材種[i]);//素材種
             }
         }

@@ -32,6 +32,11 @@ namespace ADE_Editer
         public int 遺物4;
         public int 遺物5;
 
+        public int 部屋数;
+        public int ボス出現探索率;
+        public int 地図A出現探索率;
+        public int 地図B出現探索率;
+
         public void Set(MainForm form)
         {
             SetGet(form, true);
@@ -59,13 +64,19 @@ namespace ADE_Editer
             Eq.Set(form.trackbarダンジョンザコLv, ref ザコLv);
 
             Eq.Set(form.trackbarダンジョンボス地図, ref ボス地図);
-            Eq.Set(form.trackbarダンジョン探索地図, ref 探索地図);
+            Eq.Set(form.trackbarダンジョン探索地図A, ref 探索地図);
 
             Eq.Set(form.comboBoxダンジョン遺物1, ref 遺物1);
             Eq.Set(form.comboBoxダンジョン遺物2, ref 遺物2);
             Eq.Set(form.comboBoxダンジョン遺物3, ref 遺物3);
             Eq.Set(form.comboBoxダンジョン遺物4, ref 遺物4);
             Eq.Set(form.comboBoxダンジョン遺物5, ref 遺物5);
+
+            Eq.Set(form.numダンジョン部屋数, ref 部屋数);
+            Eq.Set(form.trackbarダンジョンボス地図, ref ボス出現探索率);
+            Eq.Set(form.trackbarダンジョン地図発見A, ref 地図A出現探索率);
+            Eq.Set(form.trackbarダンジョン地図発見B, ref 地図B出現探索率);
+
         }
         private void Save(StreamWriter sw_str, BinaryWriter bw_data)
         {
@@ -89,6 +100,11 @@ namespace ADE_Editer
             RW.ReadWrite(bw_data, ref 遺物3);
             RW.ReadWrite(bw_data, ref 遺物4);
             RW.ReadWrite(bw_data, ref 遺物5);
+
+            RW.ReadWrite(bw_data, ref 部屋数);
+            RW.ReadWrite(bw_data, ref ボス出現探索率);
+            RW.ReadWrite(bw_data, ref 地図A出現探索率);
+            RW.ReadWrite(bw_data, ref 地図B出現探索率);
         }
 
         private void Load(StreamReader br_str, BinaryReader br_data)
@@ -115,6 +131,10 @@ namespace ADE_Editer
             RW.ReadWrite(br_data, ref 遺物4);
             RW.ReadWrite(br_data, ref 遺物5);
 
+            RW.ReadWrite(br_data, ref 部屋数);
+            RW.ReadWrite(br_data, ref ボス出現探索率);
+            RW.ReadWrite(br_data, ref 地図A出現探索率);
+            RW.ReadWrite(br_data, ref 地図B出現探索率);
         }
         static public void Save(string fileName)
         {

@@ -16,6 +16,7 @@ namespace ADE_Editer
 
         public int 画像ID;
         public int Pスキル;
+        public int PスキルLv;
         public int ランク;
         public int HP;
         public int 筋力;
@@ -47,6 +48,7 @@ namespace ADE_Editer
 
             Eq.Set(form.numアクセサリー画像ID, ref 画像ID);
             Eq.Set(form.comboBoxアクセサリーPスキル, ref Pスキル);
+            Eq.Set(form.trackbarアクセサリーPスキルLv, ref PスキルLv);
             Eq.Set(form.trackbarアクセサリーランク, ref ランク);
             Eq.Set(form.trackbarアクセサリーHP, ref HP);
             Eq.Set(form.trackbarアクセサリー筋力, ref 筋力);
@@ -66,6 +68,7 @@ namespace ADE_Editer
 
             RW.ReadWrite(bw_data, ref 画像ID);
             RW.ReadWrite(bw_data, ref Pスキル);
+            RW.ReadWrite(bw_data, ref PスキルLv);
             RW.ReadWrite(bw_data, ref ランク);
             RW.ReadWrite(bw_data, ref HP);
             RW.ReadWrite(bw_data, ref 筋力);
@@ -86,6 +89,7 @@ namespace ADE_Editer
 
             RW.ReadWrite(br_data, ref 画像ID);
             RW.ReadWrite(br_data, ref Pスキル);
+            RW.ReadWrite(br_data, ref PスキルLv);
             RW.ReadWrite(br_data, ref ランク);
             RW.ReadWrite(br_data, ref HP);
             RW.ReadWrite(br_data, ref 筋力);
@@ -166,6 +170,11 @@ namespace ADE_Editer
                 if (it.遺物3 >= index) { it.遺物3 += num; }
                 if (it.遺物4 >= index) { it.遺物4 += num; }
                 if (it.遺物5 >= index) { it.遺物5 += num; }
+            }
+
+            foreach (var it in Quest.data)
+            {
+                if (it.入手アクセサリー >= index) { it.入手アクセサリー += num; }
             }
         }
 

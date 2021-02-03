@@ -16,6 +16,7 @@ namespace ADE_Editer
 
         public int 装備種;
         public int Pスキル;
+        public int PスキルLv;
         public int ランク;
         public int HP;
         public int 筋力;
@@ -47,6 +48,7 @@ namespace ADE_Editer
 
             Eq.Set(form.comboBox装備品装備種, ref 装備種);
             Eq.Set(form.comboBox装備品Pスキル, ref Pスキル);
+            Eq.Set(form.trackbar装備品PスキルLv, ref PスキルLv);
             Eq.Set(form.trackbar装備品ランク, ref ランク);
             Eq.Set(form.trackbar装備品HP, ref HP);
             Eq.Set(form.trackbar装備品筋力, ref 筋力);
@@ -66,6 +68,7 @@ namespace ADE_Editer
 
             RW.ReadWrite(bw_data, ref 装備種);
             RW.ReadWrite(bw_data, ref Pスキル);
+            RW.ReadWrite(bw_data, ref PスキルLv);
             RW.ReadWrite(bw_data, ref ランク);
             RW.ReadWrite(bw_data, ref HP);
             RW.ReadWrite(bw_data, ref 筋力);
@@ -86,6 +89,7 @@ namespace ADE_Editer
 
             RW.ReadWrite(br_data, ref 装備種);
             RW.ReadWrite(br_data, ref Pスキル);
+            RW.ReadWrite(br_data, ref PスキルLv);
             RW.ReadWrite(br_data, ref ランク);
             RW.ReadWrite(br_data, ref HP);
             RW.ReadWrite(br_data, ref 筋力);

@@ -226,25 +226,26 @@ namespace ADE_Editer
                 case 4://Pスキル効果
                     foreach (var it in PSkill.data)
                     {
-                        InsertData.Check(ref it.効果, index, num);
+                        InsertData.Check(ref it.効果A, index, num);
+                        InsertData.Check(ref it.効果B, index, num);
                     }
                     break;
                 case 5://スキル追加効果種
                     foreach (var it in ASkill.data)
                     {
-                        InsertData.Check(ref it.追加効果1, index, num);
-                        InsertData.Check(ref it.追加効果2, index, num);
-                        InsertData.Check(ref it.追加効果3, index, num);
-                        InsertData.Check(ref it.追加効果4, index, num);
-                        InsertData.Check(ref it.追加効果5, index, num);
+                        InsertData.Check(ref it.追加効果[0], index, num);
+                        InsertData.Check(ref it.追加効果[1], index, num);
+                        InsertData.Check(ref it.追加効果[2], index, num);
+                        InsertData.Check(ref it.追加効果[3], index, num);
+                        InsertData.Check(ref it.追加効果[4], index, num);
                     }
                     break;
                 case 6://バフ効果種
                     foreach (var it in ASkill.data)
                     {
-                        InsertData.Check(ref it.バフ種類1, index, num);
-                        InsertData.Check(ref it.バフ種類2, index, num);
-                        InsertData.Check(ref it.バフ種類3, index, num);
+                        InsertData.Check(ref it.バフ種類[0], index, num);
+                        InsertData.Check(ref it.バフ種類[1], index, num);
+                        InsertData.Check(ref it.バフ種類[2], index, num);
                     }
                     break;
                 case 7://装備種
@@ -269,6 +270,11 @@ namespace ADE_Editer
                     {
                         InsertData.Check(ref it.種類, index, num);
                     }
+                    foreach (var it in Monster.data)
+                    {
+                        InsertData.Check(ref it.素材種, index, num);
+                    }
+
                     break;
             }
         }

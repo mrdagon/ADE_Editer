@@ -203,53 +203,22 @@ namespace ADE_Editer
         public int 隊列;
         public int 連続スキルID;//Aスキルリスト
 
-        public int 追加効果1;
-        public int 追加効果2;
-        public int 追加効果3;
-        public int 追加効果4;
-        public int 追加効果5;
+        public int[] 追加効果 = new int[5];
 
-        public int レベル補正種1;
-        public int レベル補正1Lv1;
-        public int レベル補正1Lv2;
-        public int レベル補正1Lv3;
-        public int レベル補正1Lv4;
-        public int レベル補正1Lv5;
-        public int レベル補正1Lv6;
-        public int レベル補正1Lv7;
-        public int レベル補正1Lv8;
-        public int レベル補正1Lv9;
+        public int レベル補正種A;
+        public int[] レベル補正A = new int[9];
 
-        public int レベル補正種2;
-        public int レベル補正2Lv1;
-        public int レベル補正2Lv2;
-        public int レベル補正2Lv3;
-        public int レベル補正2Lv4;
-        public int レベル補正2Lv5;
-        public int レベル補正2Lv6;
-        public int レベル補正2Lv7;
-        public int レベル補正2Lv8;
-        public int レベル補正2Lv9;
+        public int レベル補正種B;
+        public int[] レベル補正B = new int[9];
+
 
         public bool 自己バフ;
 
-        public int バフ種類1;
-        public int バフ固定値1;
-        public int バフ反映率1;
-        public int バフ発動率1;
-        public int バフ持続1;
-
-        public int バフ種類2;
-        public int バフ固定値2;
-        public int バフ反映率2;
-        public int バフ発動率2;
-        public int バフ持続2;
-
-        public int バフ種類3;
-        public int バフ固定値3;
-        public int バフ反映率3;
-        public int バフ発動率3;
-        public int バフ持続3;
+        public int[] バフ種類 = new int[3];
+        public int[] バフ固定値 = new int[3];
+        public int[] バフ反映率 = new int[3];
+        public int[] バフ発動率 = new int[3];
+        public int[] バフ持続 = new int[3];
 
         //コントロールに数値を反映
         public void Set(MainForm form)
@@ -292,53 +261,53 @@ namespace ADE_Editer
             Eq.Set(form.comboBoxAスキル隊列 , ref 隊列);
             Eq.Set(form.comboBoxAスキル連続スキル , ref 連続スキルID);//Aスキルリスト
 
-            Eq.Set(form.comboBoxAスキル追加効果1 , ref 追加効果1);
-            Eq.Set(form.comboBoxAスキル追加効果2 , ref 追加効果2);
-            Eq.Set(form.comboBoxAスキル追加効果3 , ref 追加効果3);
-            Eq.Set(form.comboBoxAスキル追加効果4 , ref 追加効果4);
-            Eq.Set(form.comboBoxAスキル追加効果5 , ref 追加効果5);
+            Eq.Set(form.comboBoxAスキル追加効果1 , ref 追加効果[0]);
+            Eq.Set(form.comboBoxAスキル追加効果2 , ref 追加効果[1]);
+            Eq.Set(form.comboBoxAスキル追加効果3 , ref 追加効果[2]);
+            Eq.Set(form.comboBoxAスキル追加効果4 , ref 追加効果[3]);
+            Eq.Set(form.comboBoxAスキル追加効果5 , ref 追加効果[4]);
 
-            Eq.Set(form.comboBoxAスキルレベル補正1 , ref レベル補正種1);
-            Eq.Set(form.numAスキルレベル補正1Lv1 , ref レベル補正1Lv1);
-            Eq.Set(form.numAスキルレベル補正1Lv2 , ref レベル補正1Lv2);
-            Eq.Set(form.numAスキルレベル補正1Lv3 , ref レベル補正1Lv3);
-            Eq.Set(form.numAスキルレベル補正1Lv4 , ref レベル補正1Lv4);
-            Eq.Set(form.numAスキルレベル補正1Lv5 , ref レベル補正1Lv5);
-            Eq.Set(form.numAスキルレベル補正1Lv6 , ref レベル補正1Lv6);
-            Eq.Set(form.numAスキルレベル補正1Lv7 , ref レベル補正1Lv7);
-            Eq.Set(form.numAスキルレベル補正1Lv8 , ref レベル補正1Lv8);
-            Eq.Set(form.numAスキルレベル補正1Lv9 , ref レベル補正1Lv9);
+            Eq.Set(form.comboBoxAスキルレベル補正1 , ref レベル補正種A);
+            Eq.Set(form.numAスキルレベル補正1Lv1 , ref レベル補正A[0]);
+            Eq.Set(form.numAスキルレベル補正1Lv2 , ref レベル補正A[1]);
+            Eq.Set(form.numAスキルレベル補正1Lv3 , ref レベル補正A[2]);
+            Eq.Set(form.numAスキルレベル補正1Lv4 , ref レベル補正A[3]);
+            Eq.Set(form.numAスキルレベル補正1Lv5 , ref レベル補正A[4]);
+            Eq.Set(form.numAスキルレベル補正1Lv6 , ref レベル補正A[5]);
+            Eq.Set(form.numAスキルレベル補正1Lv7 , ref レベル補正A[6]);
+            Eq.Set(form.numAスキルレベル補正1Lv8 , ref レベル補正A[7]);
+            Eq.Set(form.numAスキルレベル補正1Lv9 , ref レベル補正A[8]);
 
-            Eq.Set(form.comboBoxAスキルレベル補正2 , ref レベル補正種2);
-            Eq.Set(form.numAスキルレベル補正2Lv1 , ref レベル補正2Lv1);
-            Eq.Set(form.numAスキルレベル補正2Lv2 , ref レベル補正2Lv2);
-            Eq.Set(form.numAスキルレベル補正2Lv3 , ref レベル補正2Lv3);
-            Eq.Set(form.numAスキルレベル補正2Lv4 , ref レベル補正2Lv4);
-            Eq.Set(form.numAスキルレベル補正2Lv5 , ref レベル補正2Lv5);
-            Eq.Set(form.numAスキルレベル補正2Lv6 , ref レベル補正2Lv6);
-            Eq.Set(form.numAスキルレベル補正2Lv7 , ref レベル補正2Lv7);
-            Eq.Set(form.numAスキルレベル補正2Lv8 , ref レベル補正2Lv8);
-            Eq.Set(form.numAスキルレベル補正2Lv9 , ref レベル補正2Lv9);
+            Eq.Set(form.comboBoxAスキルレベル補正2 , ref レベル補正種B);
+            Eq.Set(form.numAスキルレベル補正2Lv1 , ref レベル補正B[0]);
+            Eq.Set(form.numAスキルレベル補正2Lv2 , ref レベル補正B[1]);
+            Eq.Set(form.numAスキルレベル補正2Lv3 , ref レベル補正B[2]);
+            Eq.Set(form.numAスキルレベル補正2Lv4 , ref レベル補正B[3]);
+            Eq.Set(form.numAスキルレベル補正2Lv5 , ref レベル補正B[4]);
+            Eq.Set(form.numAスキルレベル補正2Lv6 , ref レベル補正B[5]);
+            Eq.Set(form.numAスキルレベル補正2Lv7 , ref レベル補正B[6]);
+            Eq.Set(form.numAスキルレベル補正2Lv8 , ref レベル補正B[7]);
+            Eq.Set(form.numAスキルレベル補正2Lv9 , ref レベル補正B[8]);
 
             Eq.Set(form.checkBoxAスキル自己バフ , ref 自己バフ);
 
-            Eq.Set(form.comboBoxAスキルバフ1 , ref バフ種類1);
-            Eq.Set(form.trackbarAスキルバフ固定値1 , ref バフ固定値1);
-            Eq.Set(form.trackbarAスキルバフ反映率1 , ref バフ反映率1);
-            Eq.Set(form.trackbarAスキルバフ発動率1 , ref バフ発動率1);
-            Eq.Set(form.trackbarAスキルバフ持続1 , ref バフ持続1);
+            Eq.Set(form.comboBoxAスキルバフ1 , ref バフ種類[0]);
+            Eq.Set(form.trackbarAスキルバフ固定値1 , ref バフ固定値[0]);
+            Eq.Set(form.trackbarAスキルバフ反映率1 , ref バフ反映率[0]);
+            Eq.Set(form.trackbarAスキルバフ発動率1 , ref バフ発動率[0]);
+            Eq.Set(form.trackbarAスキルバフ持続1 , ref バフ持続[0]);
 
-            Eq.Set(form.comboBoxAスキルバフ2 , ref バフ種類2);
-            Eq.Set(form.trackbarAスキルバフ固定値2 , ref バフ固定値2);
-            Eq.Set(form.trackbarAスキルバフ反映率2 , ref バフ反映率2);
-            Eq.Set(form.trackbarAスキルバフ発動率2 , ref バフ発動率2);
-            Eq.Set(form.trackbarAスキルバフ持続2 , ref バフ持続2);
+            Eq.Set(form.comboBoxAスキルバフ2 , ref バフ種類[1]);
+            Eq.Set(form.trackbarAスキルバフ固定値2 , ref バフ固定値[1]);
+            Eq.Set(form.trackbarAスキルバフ反映率2 , ref バフ反映率[1]);
+            Eq.Set(form.trackbarAスキルバフ発動率2 , ref バフ発動率[1]);
+            Eq.Set(form.trackbarAスキルバフ持続2 , ref バフ持続[1]);
 
-            Eq.Set(form.comboBoxAスキルバフ3 , ref バフ種類3);
-            Eq.Set(form.trackbarAスキルバフ固定値3 , ref バフ固定値3);
-            Eq.Set(form.trackbarAスキルバフ反映率3 , ref バフ反映率3);
-            Eq.Set(form.trackbarAスキルバフ発動率3 , ref バフ発動率3);
-            Eq.Set(form.trackbarAスキルバフ持続3 , ref バフ持続3);
+            Eq.Set(form.comboBoxAスキルバフ3 , ref バフ種類[2]);
+            Eq.Set(form.trackbarAスキルバフ固定値3 , ref バフ固定値[2]);
+            Eq.Set(form.trackbarAスキルバフ反映率3 , ref バフ反映率[2]);
+            Eq.Set(form.trackbarAスキルバフ発動率3 , ref バフ発動率[2]);
+            Eq.Set(form.trackbarAスキルバフ持続3 , ref バフ持続[2]);
         }
 
         private void Save(StreamWriter sw_str , BinaryWriter bw_data )
@@ -369,53 +338,35 @@ namespace ADE_Editer
             RW.ReadWrite(bw_data, ref 隊列);
             RW.ReadWrite(bw_data, ref 連続スキルID);//Aスキルリスト
 
-            RW.ReadWrite(bw_data, ref 追加効果1);
-            RW.ReadWrite(bw_data, ref 追加効果2);
-            RW.ReadWrite(bw_data, ref 追加効果3);
-            RW.ReadWrite(bw_data, ref 追加効果4);
-            RW.ReadWrite(bw_data, ref 追加効果5);
+            RW.ReadWrite(bw_data, ref 追加効果[0]);
+            RW.ReadWrite(bw_data, ref 追加効果[1]);
+            RW.ReadWrite(bw_data, ref 追加効果[2]);
+            RW.ReadWrite(bw_data, ref 追加効果[3]);
+            RW.ReadWrite(bw_data, ref 追加効果[4]);
 
-            RW.ReadWrite(bw_data, ref レベル補正種1);
-            RW.ReadWrite(bw_data, ref レベル補正1Lv1);
-            RW.ReadWrite(bw_data, ref レベル補正1Lv2);
-            RW.ReadWrite(bw_data, ref レベル補正1Lv3);
-            RW.ReadWrite(bw_data, ref レベル補正1Lv4);
-            RW.ReadWrite(bw_data, ref レベル補正1Lv5);
-            RW.ReadWrite(bw_data, ref レベル補正1Lv6);
-            RW.ReadWrite(bw_data, ref レベル補正1Lv7);
-            RW.ReadWrite(bw_data, ref レベル補正1Lv8);
-            RW.ReadWrite(bw_data, ref レベル補正1Lv9);
+            RW.ReadWrite(bw_data, ref レベル補正種A);
+            for (int i = 0; i < レベル補正A.Length; i++)
+            {
+                RW.ReadWrite(bw_data, ref レベル補正A[i]);
+            }
 
-            RW.ReadWrite(bw_data, ref レベル補正種2);
-            RW.ReadWrite(bw_data, ref レベル補正2Lv1);
-            RW.ReadWrite(bw_data, ref レベル補正2Lv2);
-            RW.ReadWrite(bw_data, ref レベル補正2Lv3);
-            RW.ReadWrite(bw_data, ref レベル補正2Lv4);
-            RW.ReadWrite(bw_data, ref レベル補正2Lv5);
-            RW.ReadWrite(bw_data, ref レベル補正2Lv6);
-            RW.ReadWrite(bw_data, ref レベル補正2Lv7);
-            RW.ReadWrite(bw_data, ref レベル補正2Lv8);
-            RW.ReadWrite(bw_data, ref レベル補正2Lv9);
+            RW.ReadWrite(bw_data, ref レベル補正種B);
+
+            for(int i=0;i< レベル補正B.Length;i++)
+            {
+                RW.ReadWrite(bw_data, ref レベル補正B[i]);
+            }
 
             RW.ReadWrite(bw_data, ref 自己バフ);
 
-            RW.ReadWrite(bw_data, ref バフ種類1);
-            RW.ReadWrite(bw_data, ref バフ固定値1);
-            RW.ReadWrite(bw_data, ref バフ反映率1);
-            RW.ReadWrite(bw_data, ref バフ発動率1);
-            RW.ReadWrite(bw_data, ref バフ持続1);
-
-            RW.ReadWrite(bw_data, ref バフ種類2);
-            RW.ReadWrite(bw_data, ref バフ固定値2);
-            RW.ReadWrite(bw_data, ref バフ反映率2);
-            RW.ReadWrite(bw_data, ref バフ発動率2);
-            RW.ReadWrite(bw_data, ref バフ持続2);
-
-            RW.ReadWrite(bw_data, ref バフ種類3);
-            RW.ReadWrite(bw_data, ref バフ固定値3);
-            RW.ReadWrite(bw_data, ref バフ反映率3);
-            RW.ReadWrite(bw_data, ref バフ発動率3);
-            RW.ReadWrite(bw_data, ref バフ持続3);
+            for(int i=0;i<バフ種類.Length;i++)
+            {
+                RW.ReadWrite(bw_data, ref バフ種類[i]);
+                RW.ReadWrite(bw_data, ref バフ固定値[i]);
+                RW.ReadWrite(bw_data, ref バフ反映率[i]);
+                RW.ReadWrite(bw_data, ref バフ発動率[i]);
+                RW.ReadWrite(bw_data, ref バフ持続[i]);
+            }
         }
 
         private void Load(StreamReader br_str , BinaryReader br_data)
@@ -449,53 +400,33 @@ namespace ADE_Editer
             RW.ReadWrite(br_data, ref 隊列);
             RW.ReadWrite(br_data, ref 連続スキルID);//Aスキルリスト
 
-            RW.ReadWrite(br_data, ref 追加効果1);
-            RW.ReadWrite(br_data, ref 追加効果2);
-            RW.ReadWrite(br_data, ref 追加効果3);
-            RW.ReadWrite(br_data, ref 追加効果4);
-            RW.ReadWrite(br_data, ref 追加効果5);
+            for(int i=0;i<追加効果.Length;i++)
+            {
+                RW.ReadWrite(br_data, ref 追加効果[i]);
+            }
 
-            RW.ReadWrite(br_data, ref レベル補正種1);
-            RW.ReadWrite(br_data, ref レベル補正1Lv1);
-            RW.ReadWrite(br_data, ref レベル補正1Lv2);
-            RW.ReadWrite(br_data, ref レベル補正1Lv3);
-            RW.ReadWrite(br_data, ref レベル補正1Lv4);
-            RW.ReadWrite(br_data, ref レベル補正1Lv5);
-            RW.ReadWrite(br_data, ref レベル補正1Lv6);
-            RW.ReadWrite(br_data, ref レベル補正1Lv7);
-            RW.ReadWrite(br_data, ref レベル補正1Lv8);
-            RW.ReadWrite(br_data, ref レベル補正1Lv9);
 
-            RW.ReadWrite(br_data, ref レベル補正種2);
-            RW.ReadWrite(br_data, ref レベル補正2Lv1);
-            RW.ReadWrite(br_data, ref レベル補正2Lv2);
-            RW.ReadWrite(br_data, ref レベル補正2Lv3);
-            RW.ReadWrite(br_data, ref レベル補正2Lv4);
-            RW.ReadWrite(br_data, ref レベル補正2Lv5);
-            RW.ReadWrite(br_data, ref レベル補正2Lv6);
-            RW.ReadWrite(br_data, ref レベル補正2Lv7);
-            RW.ReadWrite(br_data, ref レベル補正2Lv8);
-            RW.ReadWrite(br_data, ref レベル補正2Lv9);
+            RW.ReadWrite(br_data, ref レベル補正種A);
+            for (int i = 0; i < レベル補正A.Length; i++)
+            {
+                RW.ReadWrite(br_data, ref レベル補正A[i]);
+            }
+
+            RW.ReadWrite(br_data, ref レベル補正種B);
+            for (int i = 0; i < レベル補正B.Length; i++)
+            {
+                RW.ReadWrite(br_data, ref レベル補正B[i]);
+            }
 
             RW.ReadWrite(br_data, ref 自己バフ);
-
-            RW.ReadWrite(br_data, ref バフ種類1);
-            RW.ReadWrite(br_data, ref バフ固定値1);
-            RW.ReadWrite(br_data, ref バフ反映率1);
-            RW.ReadWrite(br_data, ref バフ発動率1);
-            RW.ReadWrite(br_data, ref バフ持続1);
-
-            RW.ReadWrite(br_data, ref バフ種類2);
-            RW.ReadWrite(br_data, ref バフ固定値2);
-            RW.ReadWrite(br_data, ref バフ反映率2);
-            RW.ReadWrite(br_data, ref バフ発動率2);
-            RW.ReadWrite(br_data, ref バフ持続2);
-
-            RW.ReadWrite(br_data, ref バフ種類3);
-            RW.ReadWrite(br_data, ref バフ固定値3);
-            RW.ReadWrite(br_data, ref バフ反映率3);
-            RW.ReadWrite(br_data, ref バフ発動率3);
-            RW.ReadWrite(br_data, ref バフ持続3);
+            for (int i = 0; i < バフ種類.Length; i++)
+            {
+                RW.ReadWrite(br_data, ref バフ種類[i]);
+                RW.ReadWrite(br_data, ref バフ固定値[i]);
+                RW.ReadWrite(br_data, ref バフ反映率[i]);
+                RW.ReadWrite(br_data, ref バフ発動率[i]);
+                RW.ReadWrite(br_data, ref バフ持続[i]);
+            }
         }
 
         static public void Save(string fileName)
@@ -542,7 +473,28 @@ namespace ADE_Editer
             {
                 clone.スキルタグ[i] = スキルタグ[i];
             }
-                  
+
+            for(int i=0;i<5;i++)
+            {
+                clone.追加効果[i] = 追加効果[i];
+            }
+
+            for (int i = 0; i < 9; i++)
+            {
+                clone.レベル補正A[i] = レベル補正A[i];
+                clone.レベル補正B[i] = レベル補正B[i];
+
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                clone.バフ種類[i] = バフ種類[i];
+                clone.バフ固定値[i] = バフ固定値[i];
+                clone.バフ反映率[i] = バフ反映率[i];
+                clone.バフ発動率[i] = バフ発動率[i];
+                clone.バフ持続[i] = バフ持続[i];
+            }
+
             return clone;
         }
 
@@ -574,8 +526,12 @@ namespace ADE_Editer
             }
             foreach (var it in Monster.data)
             {
-                InsertData.Check(ref it.習得Aスキル, index, num);
+                if (it.Aスキル[0] >= index) { it.Aスキル[0]++; }
+                if (it.Aスキル[1] >= index) { it.Aスキル[1]++; }
+                if (it.Aスキル[2] >= index) { it.Aスキル[2]++; }
+                if (it.Aスキル[3] >= index) { it.Aスキル[3]++; }
             }
+
         }
     }
 }

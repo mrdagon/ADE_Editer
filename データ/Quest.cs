@@ -19,6 +19,10 @@ namespace ADE_Editer
         public int 開放フロア;
         public int 開放クエスト;
 
+        public int 入手アクセサリー;
+        public int 入手ゴールド;
+
+
         public void Set(MainForm form)
         {
             SetGet(form, true);
@@ -41,6 +45,9 @@ namespace ADE_Editer
             Eq.Set(form.numクエスト条件値, ref 条件値);
             Eq.Set(form.numクエスト開放フロア, ref 開放フロア);
             Eq.Set(form.comboBox開放クエスト, ref 開放クエスト);
+
+            Eq.Set(form.numクエストゴールド, ref 入手ゴールド);
+            Eq.Set(form.comboBoxクエストアクセサリ, ref 入手アクセサリー);
         }
 
         private void Save(StreamWriter sw_str, BinaryWriter bw_data)
@@ -52,6 +59,8 @@ namespace ADE_Editer
             RW.ReadWrite(bw_data, ref 条件値);
             RW.ReadWrite(bw_data, ref 開放フロア);
             RW.ReadWrite(bw_data, ref 開放クエスト);
+            RW.ReadWrite(bw_data, ref 入手ゴールド);
+            RW.ReadWrite(bw_data, ref 入手アクセサリー);
         }
 
         private void Load(StreamReader br_str, BinaryReader br_data)
@@ -64,6 +73,8 @@ namespace ADE_Editer
             RW.ReadWrite(br_data, ref 条件値);
             RW.ReadWrite(br_data, ref 開放フロア);
             RW.ReadWrite(br_data, ref 開放クエスト);
+            RW.ReadWrite(br_data, ref 入手ゴールド);
+            RW.ReadWrite(br_data, ref 入手アクセサリー);
         }
 
         static public void Save(string fileName)
