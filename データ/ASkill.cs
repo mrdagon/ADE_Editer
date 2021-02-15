@@ -457,6 +457,7 @@ namespace ADE_Editer
             {
                 data.Add( new ASkill());
                 data[i].Load(sr, br);
+                //下限上限修正
             }
 
             sr.Close();

@@ -36,7 +36,7 @@ namespace ADE_Editer
         int copyTabIndex = -1;
         int copyItemIndex = -1;
 
-        private void UpdateData()
+        private void UpdateData(bool isControlUpdate)
         {
             switch (nowTab)
             {
@@ -77,7 +77,365 @@ namespace ADE_Editer
                     break;
             }
 
-            UpdateComboCheck();
+            if (isControlUpdate) { UpdateComboCheck(); }
+        }
+
+        private void コピー()
+        {
+            copyTabIndex = nowTab;
+
+            switch (nowTab)
+            {
+                case 0: copyItemIndex = listBoxAスキル.SelectedIndex; break;
+                case 1: copyItemIndex = listBoxPスキル.SelectedIndex; break;
+                case 2: copyItemIndex = listBoxジョブ.SelectedIndex; break;
+                case 3: copyItemIndex = listBoxモンスター.SelectedIndex; break;
+                case 4: copyItemIndex = listBoxダンジョン.SelectedIndex; break;
+                case 5: copyItemIndex = listBox装備品.SelectedIndex; break;
+                case 6: copyItemIndex = listBox素材.SelectedIndex; break;
+                case 7: copyItemIndex = listBoxアクセサリー.SelectedIndex; break;
+                case 8: copyItemIndex = listBoxクエスト.SelectedIndex; break;
+                case 9: copyItemIndex = listBox投資.SelectedIndex; break;
+            }
+        }
+
+        private void 挿入(bool isUpdate)
+        {
+            //関連する数値を更新する
+
+            switch (nowTab)
+            {
+                case 0:
+                    ASkill.Insert(listBoxAスキル.SelectedIndex);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    listBoxAスキル.Items.Insert(listBoxAスキル.SelectedIndex, "New");
+                    textBoxAスキル名前.Text = "New";
+                    listBoxAスキル.SelectedIndex--;
+                    break;
+                case 1:
+                    PSkill.Insert(listBoxPスキル.SelectedIndex);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    listBoxPスキル.Items.Insert(listBoxPスキル.SelectedIndex, "New");
+                    textBoxPスキル名前.Text = "New";
+                    listBoxPスキル.SelectedIndex--;
+                    break;
+                case 2:
+                    Job.Insert(listBoxジョブ.SelectedIndex);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    listBoxジョブ.Items.Insert(listBoxジョブ.SelectedIndex, "New");
+                    textBoxジョブ名前.Text = "New";
+                    listBoxジョブ.SelectedIndex--;
+                    break;
+                case 3:
+                    Monster.Insert(listBoxモンスター.SelectedIndex);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    listBoxモンスター.Items.Insert(listBoxモンスター.SelectedIndex, "New");
+                    textBoxモンスター名前.Text = "New";
+                    listBoxモンスター.SelectedIndex--;
+                    break;
+                case 4:
+                    Dungeon.Insert(listBoxダンジョン.SelectedIndex);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    listBoxダンジョン.Items.Insert(listBoxダンジョン.SelectedIndex, "New");
+                    textBoxダンジョン名前.Text = "New";
+                    listBoxダンジョン.SelectedIndex--;
+                    break;
+                case 5:
+                    Item.Insert(listBox装備品.SelectedIndex);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    listBox装備品.Items.Insert(listBox装備品.SelectedIndex, "New");
+                    textBox装備品名前.Text = "New";
+                    listBox装備品.SelectedIndex--;
+                    break;
+                case 6:
+                    Material.Insert(listBox素材.SelectedIndex);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    listBox素材.Items.Insert(listBox素材.SelectedIndex, "New");
+                    textBox素材名前.Text = "New";
+                    listBox素材.SelectedIndex--;
+                    break;
+                case 7:
+                    Accessory.Insert(listBoxアクセサリー.SelectedIndex);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    listBoxアクセサリー.Items.Insert(listBoxアクセサリー.SelectedIndex, "New");
+                    textBoxアクセサリー名前.Text = "New";
+                    listBoxアクセサリー.SelectedIndex--;
+                    break;
+                case 8:
+                    Quest.Insert(listBoxクエスト.SelectedIndex);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    listBoxクエスト.Items.Insert(listBoxクエスト.SelectedIndex, "New");
+                    textBoxクエスト名前.Text = "New";
+                    listBoxクエスト.SelectedIndex--;
+                    break;
+                case 9:
+                    Invest.Insert(listBox投資.SelectedIndex);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    listBox投資.Items.Insert(listBox投資.SelectedIndex, "New");
+                    textBox投資名前.Text = "New";
+                    listBox投資.SelectedIndex--;
+                    break;
+                case 10:
+                    listBox列挙型.SelectedIndexChanged -= listBox列挙型_SelectedIndexChanged;
+
+                    if (listBox列挙型.SelectedIndex >= 0)
+                    {
+                        MyType.Insert(comboBox列挙型.SelectedIndex, listBox列挙型.SelectedIndex);
+                        listBox列挙型.Items.Insert(listBox列挙型.SelectedIndex, "New");
+                    }
+                    else
+                    {
+                        listBox列挙型.Items.Add("New");
+                        listBox列挙型.SelectedIndex = 0;
+                        MyType.Insert(comboBox列挙型.SelectedIndex, listBox列挙型.SelectedIndex);
+                    }
+
+                    listBox列挙型.SelectedIndexChanged += listBox列挙型_SelectedIndexChanged;
+                    break;
+            }
+        }
+
+        private void 貼り付け()
+        {
+            if (copyTabIndex != nowTab) { return; }
+
+            //ListBoxの名前を更新して、
+            switch (nowTab)
+            {
+                case 0:
+                    listBoxAスキル.SelectedIndexChanged -= listBoxAスキル_SelectedIndexChanged;
+                    listBoxAスキル.Items[listBoxAスキル.SelectedIndex] = ASkill.data[copyItemIndex].名前;
+                    ASkill.data[nowAスキル] = ASkill.data[copyItemIndex].Clone();
+                    ASkill.data[nowAスキル].Set(this);
+                    listBoxAスキル.SelectedIndexChanged += listBoxAスキル_SelectedIndexChanged;
+                    break;
+                case 1:
+                    listBoxPスキル.SelectedIndexChanged -= listBoxPスキル_SelectedIndexChanged;
+                    listBoxPスキル.Items[listBoxPスキル.SelectedIndex] = PSkill.data[copyItemIndex].名前;
+                    PSkill.data[nowPスキル] = PSkill.data[copyItemIndex].Clone();
+                    PSkill.data[nowPスキル].Set(this);
+                    listBoxPスキル.SelectedIndexChanged += listBoxPスキル_SelectedIndexChanged;
+                    break;
+                case 2:
+                    listBoxジョブ.SelectedIndexChanged -= listBoxジョブ_SelectedIndexChanged;
+                    listBoxジョブ.Items[listBoxジョブ.SelectedIndex] = Job.data[copyItemIndex].名前;
+                    Job.data[nowジョブ] = Job.data[copyItemIndex].Clone();
+                    Job.data[nowジョブ].Set(this);
+                    listBoxジョブ.SelectedIndexChanged += listBoxジョブ_SelectedIndexChanged;
+                    break;
+                case 3:
+                    listBoxモンスター.SelectedIndexChanged -= listBoxモンスター_SelectedIndexChanged;
+                    listBoxモンスター.Items[listBoxモンスター.SelectedIndex] = Monster.data[copyItemIndex].名前;
+                    Monster.data[nowモンスター] = Monster.data[copyItemIndex].Clone();
+                    Monster.data[nowモンスター].Set(this);
+                    listBoxモンスター.SelectedIndexChanged += listBoxモンスター_SelectedIndexChanged;
+                    break;
+                case 4:
+                    listBoxダンジョン.SelectedIndexChanged -= listBoxダンジョン_SelectedIndexChanged;
+                    listBoxダンジョン.Items[listBoxダンジョン.SelectedIndex] = Dungeon.data[copyItemIndex].名前;
+                    Dungeon.data[nowダンジョン] = Dungeon.data[copyItemIndex].Clone();
+                    Dungeon.data[nowダンジョン].Set(this);
+                    listBoxダンジョン.SelectedIndexChanged += listBoxダンジョン_SelectedIndexChanged;
+                    break;
+                case 5:
+                    listBox装備品.SelectedIndexChanged -= listBox装備品_SelectedIndexChanged;
+                    listBox装備品.Items[listBox装備品.SelectedIndex] = Item.data[copyItemIndex].名前;
+                    Item.data[now装備品] = Item.data[copyItemIndex].Clone();
+                    Item.data[now装備品].Set(this);
+                    listBox装備品.SelectedIndexChanged += listBox装備品_SelectedIndexChanged;
+                    break;
+                case 6:
+                    listBox素材.SelectedIndexChanged -= listBox素材_SelectedIndexChanged;
+                    listBox素材.Items[listBox素材.SelectedIndex] = Material.data[copyItemIndex].名前;
+                    Material.data[now素材] = Material.data[copyItemIndex].Clone();
+                    Material.data[now素材].Set(this);
+                    listBox素材.SelectedIndexChanged += listBox素材_SelectedIndexChanged;
+                    break;
+                case 7:
+                    listBoxアクセサリー.SelectedIndexChanged -= listBoxアクセサリー_SelectedIndexChanged;
+                    listBoxアクセサリー.Items[listBoxアクセサリー.SelectedIndex] = Accessory.data[copyItemIndex].名前;
+                    Accessory.data[nowアクセサリー] = Accessory.data[copyItemIndex].Clone();
+                    Accessory.data[nowアクセサリー].Set(this);
+                    listBoxアクセサリー.SelectedIndexChanged += listBoxアクセサリー_SelectedIndexChanged;
+                    break;
+                case 8:
+                    listBoxクエスト.SelectedIndexChanged -= listBoxクエスト_SelectedIndexChanged;
+                    listBoxクエスト.Items[listBoxクエスト.SelectedIndex] = Quest.data[copyItemIndex].名前;
+                    Quest.data[nowクエスト] = Quest.data[copyItemIndex].Clone();
+                    Quest.data[nowクエスト].Set(this);
+                    listBoxクエスト.SelectedIndexChanged += listBoxクエスト_SelectedIndexChanged;
+                    break;
+                case 9:
+                    listBox投資.SelectedIndexChanged -= listBox投資_SelectedIndexChanged;
+                    listBox投資.Items[listBox投資.SelectedIndex] = Invest.data[copyItemIndex].名前;
+                    Invest.data[now投資] = Invest.data[copyItemIndex].Clone();
+                    Invest.data[now投資].Set(this);
+                    listBox投資.SelectedIndexChanged += listBox投資_SelectedIndexChanged;
+                    break;
+                case 10:
+                    break;
+            }
+        }
+
+        private void 削除(bool isUpdate)
+        {
+            switch (nowTab)
+            {
+                case 0:
+                    if (listBoxAスキル.Items.Count <= 1) { break; }
+
+                    ASkill.Remove(nowAスキル);
+                    listBoxAスキル.SelectedIndexChanged -= listBoxAスキル_SelectedIndexChanged;
+                    listBoxAスキル.Items.RemoveAt(nowAスキル);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    nowAスキル = Math.Max(0,nowAスキル-1);
+                    listBoxAスキル.SelectedIndex = nowAスキル;
+                    listBoxAスキル.SelectedIndexChanged += listBoxAスキル_SelectedIndexChanged;
+                    ASkill.data[listBoxAスキル.SelectedIndex].Set(this);
+                    break;
+                case 1:
+                    if (listBoxPスキル.Items.Count <= 1) { break; }
+
+                    PSkill.Remove(nowPスキル);
+                    listBoxPスキル.SelectedIndexChanged -= listBoxPスキル_SelectedIndexChanged;
+                    listBoxPスキル.Items.RemoveAt(nowPスキル);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    nowPスキル = 0;
+                    listBoxPスキル.SelectedIndex = 0;
+                    listBoxPスキル.SelectedIndexChanged += listBoxPスキル_SelectedIndexChanged;
+                    PSkill.data[0].Set(this);
+                    break;
+                case 2:
+                    if (listBoxジョブ.Items.Count <= 1) { break; }
+
+                    Job.Remove(nowジョブ);
+                    listBoxジョブ.SelectedIndexChanged -= listBoxジョブ_SelectedIndexChanged;
+                    listBoxジョブ.Items.RemoveAt(nowジョブ);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    nowジョブ = 0;
+                    listBoxジョブ.SelectedIndex = 0;
+                    listBoxジョブ.SelectedIndexChanged += listBoxジョブ_SelectedIndexChanged;
+                    Job.data[0].Set(this);
+                    break;
+                case 3:
+                    if (listBoxモンスター.Items.Count <= 1) { break; }
+
+                    Monster.Remove(nowモンスター);
+                    listBoxモンスター.SelectedIndexChanged -= listBoxモンスター_SelectedIndexChanged;
+                    listBoxモンスター.Items.RemoveAt(nowモンスター);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    nowモンスター = 0;
+                    listBoxモンスター.SelectedIndex = 0;
+                    listBoxモンスター.SelectedIndexChanged += listBoxモンスター_SelectedIndexChanged;
+                    Monster.data[0].Set(this);
+                    break;
+                case 4:
+                    if (listBoxダンジョン.Items.Count <= 1) { break; }
+
+                    Dungeon.Remove(nowダンジョン);
+                    listBoxダンジョン.SelectedIndexChanged -= listBoxダンジョン_SelectedIndexChanged;
+                    listBoxダンジョン.Items.RemoveAt(nowダンジョン);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    nowダンジョン = 0;
+                    listBoxダンジョン.SelectedIndex = 0;
+                    listBoxダンジョン.SelectedIndexChanged += listBoxダンジョン_SelectedIndexChanged;
+                    Dungeon.data[0].Set(this);
+                    break;
+                case 5:
+                    if (listBox装備品.Items.Count <= 1) { break; }
+
+                    Item.Remove(now装備品);
+                    listBox装備品.SelectedIndexChanged -= listBox装備品_SelectedIndexChanged;
+                    listBox装備品.Items.RemoveAt(now装備品);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    now装備品 = 0;
+                    listBox装備品.SelectedIndex = 0;
+                    listBox装備品.SelectedIndexChanged += listBox装備品_SelectedIndexChanged;
+                    Item.data[0].Set(this);
+                    break;
+                case 6:
+                    if (listBox素材.Items.Count <= 1) { break; }
+
+                    Material.Remove(now素材);
+                    listBox素材.SelectedIndexChanged -= listBox素材_SelectedIndexChanged;
+                    listBox素材.Items.RemoveAt(now素材);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    now素材 = 0;
+                    listBox素材.SelectedIndex = 0;
+                    listBox素材.SelectedIndexChanged += listBox素材_SelectedIndexChanged;
+                    Material.data[0].Set(this);
+                    break;
+                case 7:
+                    if (listBoxアクセサリー.Items.Count <= 1) { break; }
+
+                    Accessory.Remove(nowアクセサリー);
+                    listBoxアクセサリー.SelectedIndexChanged -= listBoxアクセサリー_SelectedIndexChanged;
+                    listBoxアクセサリー.Items.RemoveAt(nowアクセサリー);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    nowアクセサリー = 0;
+                    listBoxアクセサリー.SelectedIndex = 0;
+                    listBoxアクセサリー.SelectedIndexChanged += listBoxアクセサリー_SelectedIndexChanged;
+                    Accessory.data[0].Set(this);
+                    break;
+                case 8:
+                    if (listBoxクエスト.Items.Count <= 1) { break; }
+
+                    Quest.Remove(nowクエスト);
+                    listBoxクエスト.SelectedIndexChanged -= listBoxクエスト_SelectedIndexChanged;
+                    listBoxクエスト.Items.RemoveAt(nowクエスト);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    nowクエスト = 0;
+                    listBoxクエスト.SelectedIndex = 0;
+                    listBoxクエスト.SelectedIndexChanged += listBoxクエスト_SelectedIndexChanged;
+                    Quest.data[0].Set(this);
+                    break;
+                case 9:
+                    if (listBox投資.Items.Count <= 1) { break; }
+
+                    Invest.Remove(now投資);
+                    listBox投資.SelectedIndexChanged -= listBox投資_SelectedIndexChanged;
+                    listBox投資.Items.RemoveAt(now投資);
+                    if (isUpdate) { UpdateComboCheck(); }
+                    now投資 = 0;
+                    listBox投資.SelectedIndex = 0;
+                    listBox投資.SelectedIndexChanged += listBox投資_SelectedIndexChanged;
+                    Invest.data[0].Set(this);
+                    break;
+                case 10:
+                    if (listBox列挙型.SelectedIndex < 0 || listBox列挙型.Items.Count <= 1) { break; }
+
+                    MyType.Delete(comboBox列挙型.SelectedIndex, listBox列挙型.SelectedIndex);
+                    listBox列挙型.SelectedIndexChanged -= listBox列挙型_SelectedIndexChanged;
+                    listBox列挙型.Items.RemoveAt(listBox列挙型.SelectedIndex);
+                    listBox列挙型.SelectedIndexChanged += listBox列挙型_SelectedIndexChanged;
+                    listBox列挙型.SelectedIndex = 0;
+                    break;
+            }
+
+        }
+
+        private void listBoxShortCut(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.V && e.Control == true)
+            {
+                //クリップボードからテキスト取得
+                貼り付け();
+            }
+            if (e.KeyCode == Keys.C && e.Control == true)
+            {
+                //クリップボードからテキスト取得
+                コピー();
+            }
+            if (e.KeyCode == Keys.D && e.Control == true)
+            {
+                //クリップボードからテキスト取得
+                削除(false);
+            }
+            if (e.KeyCode == Keys.I && e.Control == true)
+            {
+                //クリップボードからテキスト取得
+                挿入(false);
+            }
         }
 
         //●自動生成関数
@@ -186,7 +544,8 @@ namespace ADE_Editer
             //コンボボックスの中身を更新してから処理
 
             //切り替え前のタブの数値を内部データに代入する
-            UpdateData();
+            UpdateData(true);
+            UpdateComboCheck();
 
             nowTab = n;
 
@@ -234,343 +593,28 @@ namespace ADE_Editer
         //ボタンクリック処理
         private void buttonコピー_Click(object sender, EventArgs e)
         {
-            copyTabIndex = nowTab;
-
-            switch (nowTab)
-            {
-                case 0: copyItemIndex = listBoxAスキル.SelectedIndex; break;
-                case 1: copyItemIndex = listBoxPスキル.SelectedIndex; break;
-                case 2: copyItemIndex = listBoxジョブ.SelectedIndex; break;
-                case 3: copyItemIndex = listBoxモンスター.SelectedIndex; break;
-                case 4: copyItemIndex = listBoxダンジョン.SelectedIndex; break;
-                case 5: copyItemIndex = listBox装備品.SelectedIndex; break;
-                case 6: copyItemIndex = listBox素材.SelectedIndex; break;
-                case 7: copyItemIndex = listBoxアクセサリー.SelectedIndex; break;
-                case 8: copyItemIndex = listBoxクエスト.SelectedIndex; break;
-                case 9: copyItemIndex = listBox投資.SelectedIndex; break;
-            }
+            コピー();
         }
 
         private void button挿入_Click(object sender, EventArgs e)
         {
-            //関連する数値を更新する
-
-            switch (nowTab)
-            {
-                case 0:
-                    ASkill.Insert(listBoxAスキル.SelectedIndex);
-                    UpdateComboCheck();
-                    listBoxAスキル.Items.Insert(listBoxAスキル.SelectedIndex, "New");
-                    textBoxAスキル名前.Text = "New";
-                    listBoxAスキル.SelectedIndex--;
-                    break;
-                case 1:
-                    PSkill.Insert(listBoxPスキル.SelectedIndex);
-                    UpdateComboCheck();
-                    listBoxPスキル.Items.Insert(listBoxPスキル.SelectedIndex, "New");
-                    textBoxPスキル名前.Text = "New";
-                    listBoxPスキル.SelectedIndex--;
-                    break;
-                case 2:
-                    Job.Insert(listBoxジョブ.SelectedIndex);
-                    UpdateComboCheck();
-                    listBoxジョブ.Items.Insert(listBoxジョブ.SelectedIndex, "New");
-                    textBoxジョブ名前.Text = "New";
-                    listBoxジョブ.SelectedIndex--;
-                    break;
-                case 3:
-                    Monster.Insert(listBoxモンスター.SelectedIndex);
-                    UpdateComboCheck();
-                    listBoxモンスター.Items.Insert(listBoxモンスター.SelectedIndex, "New");
-                    textBoxモンスター名前.Text = "New";
-                    listBoxモンスター.SelectedIndex--;
-                    break;
-                case 4:
-                    Dungeon.Insert(listBoxダンジョン.SelectedIndex);
-                    UpdateComboCheck();
-                    listBoxダンジョン.Items.Insert(listBoxダンジョン.SelectedIndex, "New");
-                    textBoxダンジョン名前.Text = "New";
-                    listBoxダンジョン.SelectedIndex--;
-                    break;
-                case 5:
-                    Item.Insert(listBox装備品.SelectedIndex);
-                    UpdateComboCheck();
-                    listBox装備品.Items.Insert(listBox装備品.SelectedIndex, "New");
-                    textBox装備品名前.Text = "New";
-                    listBox装備品.SelectedIndex--;
-                    break;
-                case 6:
-                    Material.Insert(listBox素材.SelectedIndex);
-                    UpdateComboCheck();
-                    listBox素材.Items.Insert(listBox素材.SelectedIndex, "New");
-                    textBox素材名前.Text = "New";
-                    listBox素材.SelectedIndex--;
-                    break;
-                case 7:
-                    Accessory.Insert(listBoxアクセサリー.SelectedIndex);
-                    UpdateComboCheck();
-                    listBoxアクセサリー.Items.Insert(listBoxアクセサリー.SelectedIndex, "New");
-                    textBoxアクセサリー名前.Text = "New";
-                    listBoxアクセサリー.SelectedIndex--;
-                    break;
-                case 8:
-                    Quest.Insert(listBoxクエスト.SelectedIndex);
-                    UpdateComboCheck();
-                    listBoxクエスト.Items.Insert(listBoxクエスト.SelectedIndex, "New");
-                    textBoxクエスト名前.Text = "New";
-                    listBoxクエスト.SelectedIndex--;
-                    break;
-                case 9:
-                    Invest.Insert(listBox投資.SelectedIndex);
-                    UpdateComboCheck();
-                    listBox投資.Items.Insert(listBox投資.SelectedIndex, "New");
-                    textBox投資名前.Text = "New";
-                    listBox投資.SelectedIndex--;
-                    break;
-                case 10:
-                    listBox列挙型.SelectedIndexChanged -= listBox列挙型_SelectedIndexChanged;
-
-                    if (listBox列挙型.SelectedIndex >= 0)
-                    {
-                        MyType.Insert(comboBox列挙型.SelectedIndex, listBox列挙型.SelectedIndex);
-                        listBox列挙型.Items.Insert(listBox列挙型.SelectedIndex, "New");
-                    }
-                    else
-                    {
-                        listBox列挙型.Items.Add("New");
-                        listBox列挙型.SelectedIndex = 0;
-                        MyType.Insert(comboBox列挙型.SelectedIndex, listBox列挙型.SelectedIndex);
-                    }
-
-                    listBox列挙型.SelectedIndexChanged += listBox列挙型_SelectedIndexChanged;
-                    break;
-            }
+            挿入(false);
         }
 
         private void button貼り付け_Click(object sender, EventArgs e)
         {
-            if (copyTabIndex != nowTab) { return; }
-
-            //ListBoxの名前を更新して、
-            switch (nowTab)
-            {
-                case 0:
-                    listBoxAスキル.SelectedIndexChanged -= listBoxAスキル_SelectedIndexChanged;
-                    listBoxAスキル.Items[listBoxAスキル.SelectedIndex] = ASkill.data[copyItemIndex].名前;
-                    ASkill.data[nowAスキル] = ASkill.data[copyItemIndex].Clone();
-                    ASkill.data[nowAスキル].Set(this);
-                    listBoxAスキル.SelectedIndexChanged += listBoxAスキル_SelectedIndexChanged;
-                    break;
-                case 1:
-                    listBoxPスキル.SelectedIndexChanged -= listBoxPスキル_SelectedIndexChanged;
-                    listBoxPスキル.Items[listBoxPスキル.SelectedIndex] = PSkill.data[copyItemIndex].名前;
-                    PSkill.data[nowPスキル] = PSkill.data[copyItemIndex].Clone();
-                    PSkill.data[nowPスキル].Set(this);
-                    listBoxPスキル.SelectedIndexChanged += listBoxPスキル_SelectedIndexChanged;
-                    break;
-                case 2:
-                    listBoxジョブ.SelectedIndexChanged -= listBoxジョブ_SelectedIndexChanged;
-                    listBoxジョブ.Items[listBoxジョブ.SelectedIndex] = Job.data[copyItemIndex].名前;
-                    Job.data[nowジョブ] = Job.data[copyItemIndex].Clone();
-                    Job.data[nowジョブ].Set(this);
-                    listBoxジョブ.SelectedIndexChanged += listBoxジョブ_SelectedIndexChanged;
-                    break;
-                case 3:
-                    listBoxモンスター.SelectedIndexChanged -= listBoxモンスター_SelectedIndexChanged;
-                    listBoxモンスター.Items[listBoxモンスター.SelectedIndex] = Monster.data[copyItemIndex].名前;
-                    Monster.data[nowモンスター] = Monster.data[copyItemIndex].Clone();
-                    Monster.data[nowモンスター].Set(this);
-                    listBoxモンスター.SelectedIndexChanged += listBoxモンスター_SelectedIndexChanged;
-                    break;
-                case 4:
-                    listBoxダンジョン.SelectedIndexChanged -= listBoxダンジョン_SelectedIndexChanged;
-                    listBoxダンジョン.Items[listBoxダンジョン.SelectedIndex] = Dungeon.data[copyItemIndex].名前;
-                    Dungeon.data[nowダンジョン] = Dungeon.data[copyItemIndex].Clone();
-                    Dungeon.data[nowダンジョン].Set(this);
-                    listBoxダンジョン.SelectedIndexChanged += listBoxダンジョン_SelectedIndexChanged;
-                    break;
-                case 5:
-                    listBox装備品.SelectedIndexChanged -= listBox装備品_SelectedIndexChanged;
-                    listBox装備品.Items[listBox装備品.SelectedIndex] = Item.data[copyItemIndex].名前;
-                    Item.data[now装備品] = Item.data[copyItemIndex].Clone();
-                    Item.data[now装備品].Set(this);
-                    listBox装備品.SelectedIndexChanged += listBox装備品_SelectedIndexChanged;
-                    break;
-                case 6:
-                    listBox素材.SelectedIndexChanged -= listBox素材_SelectedIndexChanged;
-                    listBox素材.Items[listBox素材.SelectedIndex] = Material.data[copyItemIndex].名前;
-                    Material.data[now素材] = Material.data[copyItemIndex].Clone();
-                    Material.data[now素材].Set(this);
-                    listBox素材.SelectedIndexChanged += listBox素材_SelectedIndexChanged;
-                    break;
-                case 7:
-                    listBoxアクセサリー.SelectedIndexChanged -= listBoxアクセサリー_SelectedIndexChanged;
-                    listBoxアクセサリー.Items[listBoxアクセサリー.SelectedIndex] = Accessory.data[copyItemIndex].名前;
-                    Accessory.data[nowアクセサリー] = Accessory.data[copyItemIndex].Clone();
-                    Accessory.data[nowアクセサリー].Set(this);
-                    listBoxアクセサリー.SelectedIndexChanged += listBoxアクセサリー_SelectedIndexChanged;
-                    break;
-                case 8:
-                    listBoxクエスト.SelectedIndexChanged -= listBoxクエスト_SelectedIndexChanged;
-                    listBoxクエスト.Items[listBoxクエスト.SelectedIndex] = Quest.data[copyItemIndex].名前;
-                    Quest.data[nowクエスト] = Quest.data[copyItemIndex].Clone();
-                    Quest.data[nowクエスト].Set(this);
-                    listBoxクエスト.SelectedIndexChanged += listBoxクエスト_SelectedIndexChanged;
-                    break;
-                case 9:
-                    listBox投資.SelectedIndexChanged -= listBox投資_SelectedIndexChanged;
-                    listBox投資.Items[listBox投資.SelectedIndex] = Invest.data[copyItemIndex].名前;
-                    Invest.data[now投資] = Invest.data[copyItemIndex].Clone();
-                    Invest.data[now投資].Set(this);
-                    listBox投資.SelectedIndexChanged += listBox投資_SelectedIndexChanged;
-                    break;
-                case 10:
-                    break;
-            }
+            貼り付け();
         }
 
         private void button削除_Click(object sender, EventArgs e)
         {
             //残り一個は削除不可
-
-            switch (nowTab)
-            {
-                case 0:
-                    if (listBoxAスキル.Items.Count <= 1) { break; }
-
-                    ASkill.Remove(nowAスキル);
-                    listBoxAスキル.SelectedIndexChanged -= listBoxAスキル_SelectedIndexChanged;
-                    listBoxAスキル.Items.RemoveAt(nowAスキル);
-                    UpdateComboCheck();
-                    nowAスキル = 0;
-                    listBoxAスキル.SelectedIndex = 0;
-                    listBoxAスキル.SelectedIndexChanged += listBoxAスキル_SelectedIndexChanged;
-                    ASkill.data[0].Set(this);
-                    break;
-                case 1:
-                    if (listBoxPスキル.Items.Count <= 1) { break; }
-
-                    PSkill.Remove(nowPスキル);
-                    listBoxPスキル.SelectedIndexChanged -= listBoxPスキル_SelectedIndexChanged;
-                    listBoxPスキル.Items.RemoveAt(nowPスキル);
-                    UpdateComboCheck();
-                    nowPスキル = 0;
-                    listBoxPスキル.SelectedIndex = 0;
-                    listBoxPスキル.SelectedIndexChanged += listBoxPスキル_SelectedIndexChanged;
-                    PSkill.data[0].Set(this);
-                    break;
-                case 2:
-                    if (listBoxジョブ.Items.Count <= 1) { break; }
-
-                    Job.Remove(nowジョブ);
-                    listBoxジョブ.SelectedIndexChanged -= listBoxジョブ_SelectedIndexChanged;
-                    listBoxジョブ.Items.RemoveAt(nowジョブ);
-                    UpdateComboCheck();
-                    nowジョブ = 0;
-                    listBoxジョブ.SelectedIndex = 0;
-                    listBoxジョブ.SelectedIndexChanged += listBoxジョブ_SelectedIndexChanged;
-                    Job.data[0].Set(this);
-                    break;
-                case 3:
-                    if (listBoxモンスター.Items.Count <= 1) { break; }
-
-                    Monster.Remove(nowモンスター);
-                    listBoxモンスター.SelectedIndexChanged -= listBoxモンスター_SelectedIndexChanged;
-                    listBoxモンスター.Items.RemoveAt(nowモンスター);
-                    UpdateComboCheck();
-                    nowモンスター = 0;
-                    listBoxモンスター.SelectedIndex = 0;
-                    listBoxモンスター.SelectedIndexChanged += listBoxモンスター_SelectedIndexChanged;
-                    Monster.data[0].Set(this);
-                    break;
-                case 4:
-                    if (listBoxダンジョン.Items.Count <= 1) { break; }
-
-                    Dungeon.Remove(nowダンジョン);
-                    listBoxダンジョン.SelectedIndexChanged -= listBoxダンジョン_SelectedIndexChanged;
-                    listBoxダンジョン.Items.RemoveAt(nowダンジョン);
-                    UpdateComboCheck();
-                    nowダンジョン = 0;
-                    listBoxダンジョン.SelectedIndex = 0;
-                    listBoxダンジョン.SelectedIndexChanged += listBoxダンジョン_SelectedIndexChanged;
-                    Dungeon.data[0].Set(this);
-                    break;
-                case 5:
-                    if (listBox装備品.Items.Count <= 1) { break; }
-
-                    Item.Remove(now装備品);
-                    listBox装備品.SelectedIndexChanged -= listBox装備品_SelectedIndexChanged;
-                    listBox装備品.Items.RemoveAt(now装備品);
-                    UpdateComboCheck();
-                    now装備品 = 0;
-                    listBox装備品.SelectedIndex = 0;
-                    listBox装備品.SelectedIndexChanged += listBox装備品_SelectedIndexChanged;
-                    Item.data[0].Set(this);
-                    break;
-                case 6:
-                    if (listBox素材.Items.Count <= 1) { break; }
-
-                    Material.Remove(now素材);
-                    listBox素材.SelectedIndexChanged -= listBox素材_SelectedIndexChanged;
-                    listBox素材.Items.RemoveAt(now素材);
-                    UpdateComboCheck();
-                    now素材 = 0;
-                    listBox素材.SelectedIndex = 0;
-                    listBox素材.SelectedIndexChanged += listBox素材_SelectedIndexChanged;
-                    Material.data[0].Set(this);
-                    break;
-                case 7:
-                    if (listBoxアクセサリー.Items.Count <= 1) { break; }
-
-                    Accessory.Remove(nowアクセサリー);
-                    listBoxアクセサリー.SelectedIndexChanged -= listBoxアクセサリー_SelectedIndexChanged;
-                    listBoxアクセサリー.Items.RemoveAt(nowアクセサリー);
-                    UpdateComboCheck();
-                    nowアクセサリー = 0;
-                    listBoxアクセサリー.SelectedIndex = 0;
-                    listBoxアクセサリー.SelectedIndexChanged += listBoxアクセサリー_SelectedIndexChanged;
-                    Accessory.data[0].Set(this);
-                    break;
-                case 8:
-                    if (listBoxクエスト.Items.Count <= 1) { break; }
-
-                    Quest.Remove(nowクエスト);
-                    listBoxクエスト.SelectedIndexChanged -= listBoxクエスト_SelectedIndexChanged;
-                    listBoxクエスト.Items.RemoveAt(nowクエスト);
-                    UpdateComboCheck();
-                    nowクエスト = 0;
-                    listBoxクエスト.SelectedIndex = 0;
-                    listBoxクエスト.SelectedIndexChanged += listBoxクエスト_SelectedIndexChanged;
-                    Quest.data[0].Set(this);
-                    break;
-                case 9:
-                    if (listBox投資.Items.Count <= 1) { break; }
-
-                    Invest.Remove(now投資);
-                    listBox投資.SelectedIndexChanged -= listBox投資_SelectedIndexChanged;
-                    listBox投資.Items.RemoveAt(now投資);
-                    UpdateComboCheck();
-                    now投資 = 0;
-                    listBox投資.SelectedIndex = 0;
-                    listBox投資.SelectedIndexChanged += listBox投資_SelectedIndexChanged;
-                    Invest.data[0].Set(this);
-                    break;
-                case 10:
-                    if (listBox列挙型.SelectedIndex< 0 || listBox列挙型.Items.Count <= 1) { break; }
-
-                    MyType.Delete(comboBox列挙型.SelectedIndex, listBox列挙型.SelectedIndex);
-                    listBox列挙型.SelectedIndexChanged -= listBox列挙型_SelectedIndexChanged;
-                    listBox列挙型.Items.RemoveAt(listBox列挙型.SelectedIndex);
-                    listBox列挙型.SelectedIndexChanged += listBox列挙型_SelectedIndexChanged;
-                    listBox列挙型.SelectedIndex = 0;
-                    break;
-            }
+            削除(false);
         }
 
         private void button保存_Click(object sender, EventArgs e)
         {
-
-            UpdateData();
+            UpdateData(false);
             var cd = System.Environment.CurrentDirectory + "/data/";
 
             //保存処理
@@ -1072,6 +1116,61 @@ namespace ADE_Editer
         private void TabPスキル_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void listBoxAスキル_KeyDown(object sender, KeyEventArgs e)
+        {
+            listBoxShortCut(sender, e);
+        }
+
+        private void MainTabControl_KeyDown(object sender, KeyEventArgs e)
+        {
+            listBoxShortCut(sender, e);
+        }
+
+        private void listBoxジョブ_KeyDown(object sender, KeyEventArgs e)
+        {
+            listBoxShortCut(sender, e);
+        }
+
+        private void listBoxモンスター_KeyDown(object sender, KeyEventArgs e)
+        {
+            listBoxShortCut(sender, e);
+        }
+
+        private void listBoxダンジョン_KeyDown(object sender, KeyEventArgs e)
+        {
+            listBoxShortCut(sender, e);
+        }
+
+        private void listBoxアクセサリー_KeyDown(object sender, KeyEventArgs e)
+        {
+            listBoxShortCut(sender, e);
+        }
+
+        private void listBox装備品_KeyDown(object sender, KeyEventArgs e)
+        {
+            listBoxShortCut(sender, e);
+        }
+
+        private void listBox素材_KeyDown(object sender, KeyEventArgs e)
+        {
+            listBoxShortCut(sender, e);
+        }
+
+        private void listBoxクエスト_KeyDown(object sender, KeyEventArgs e)
+        {
+            listBoxShortCut(sender, e);
+        }
+
+        private void listBox投資_KeyDown(object sender, KeyEventArgs e)
+        {
+            listBoxShortCut(sender, e);
         }
     }
 }

@@ -35,6 +35,15 @@ namespace ADE_Editer
             }
             set
             {
+                if( value < Minimum)
+                {
+                    value = Minimum;
+                }                
+                else if( value > Maximum)
+                {
+                    value = Maximum;
+                }
+
                 trackBar.Value = value;
                 textBox.Text = value.ToString();
             }
