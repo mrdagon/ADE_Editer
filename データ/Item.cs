@@ -64,7 +64,7 @@ namespace ADE_Editer
         private void Save(StreamWriter sw_str, BinaryWriter bw_data)
         {
             //文字とそれ以外は別ファイルに保存
-            sw_str.WriteLine(名前 + "," + 説明);
+            sw_str.WriteLine(名前 + "," + 説明.Replace("\r\n", "\t"));
 
             RW.ReadWrite(bw_data, ref 装備種);
             RW.ReadWrite(bw_data, ref Pスキル);
@@ -85,7 +85,7 @@ namespace ADE_Editer
         {
             var strS = br_str.ReadLine().Split(',');
             名前 = strS[0];
-            説明 = strS[1];
+            説明 = strS[1].Replace("\t" , "\r\n");
 
             RW.ReadWrite(br_data, ref 装備種);
             RW.ReadWrite(br_data, ref Pスキル);

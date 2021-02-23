@@ -24,7 +24,8 @@ namespace ADE_Editer
         public int ザコLv;
 
         public int ボス地図;
-        public int 探索地図;
+        public int 探索地図A;
+        public int 探索地図B;
 
         public int 遺物1;
         public int 遺物2;
@@ -64,7 +65,8 @@ namespace ADE_Editer
             Eq.Set(form.trackbarダンジョンザコLv, ref ザコLv);
 
             Eq.Set(form.trackbarダンジョンボス地図, ref ボス地図);
-            Eq.Set(form.trackbarダンジョン探索地図A, ref 探索地図);
+            Eq.Set(form.trackbarダンジョン探索地図A, ref 探索地図A);
+            Eq.Set(form.trackbarダンジョン探索地図B, ref 探索地図B);
 
             Eq.Set(form.comboBoxダンジョン遺物1, ref 遺物1);
             Eq.Set(form.comboBoxダンジョン遺物2, ref 遺物2);
@@ -73,15 +75,14 @@ namespace ADE_Editer
             Eq.Set(form.comboBoxダンジョン遺物5, ref 遺物5);
 
             Eq.Set(form.numダンジョン部屋数, ref 部屋数);
-            Eq.Set(form.trackbarダンジョンボス地図, ref ボス出現探索率);
+            Eq.Set(form.trackbarダンジョンボス探索率, ref ボス出現探索率);
             Eq.Set(form.trackbarダンジョン地図発見A, ref 地図A出現探索率);
             Eq.Set(form.trackbarダンジョン地図発見B, ref 地図B出現探索率);
-
         }
         private void Save(StreamWriter sw_str, BinaryWriter bw_data)
         {
             //文字とそれ以外は別ファイルに保存
-            sw_str.WriteLine(名前 + "," + 説明);
+            sw_str.WriteLine(名前 + "," + 説明.Replace("\r\n", "\t"));
 
             RW.ReadWrite(bw_data, ref ボス);
             RW.ReadWrite(bw_data, ref ボスLv);
@@ -93,7 +94,8 @@ namespace ADE_Editer
             RW.ReadWrite(bw_data, ref ザコLv);
 
             RW.ReadWrite(bw_data, ref ボス地図);
-            RW.ReadWrite(bw_data, ref 探索地図);
+            RW.ReadWrite(bw_data, ref 探索地図A);
+            RW.ReadWrite(bw_data, ref 探索地図B);
 
             RW.ReadWrite(bw_data, ref 遺物1);
             RW.ReadWrite(bw_data, ref 遺物2);
@@ -111,7 +113,7 @@ namespace ADE_Editer
         {
             var strS = br_str.ReadLine().Split(',');
             名前 = strS[0];
-            説明 = strS[1];
+            説明 = strS[1].Replace( "\t" , "\r\n");
 
             RW.ReadWrite(br_data, ref ボス);
             RW.ReadWrite(br_data, ref ボスLv);
@@ -123,7 +125,8 @@ namespace ADE_Editer
             RW.ReadWrite(br_data, ref ザコLv);
 
             RW.ReadWrite(br_data, ref ボス地図);
-            RW.ReadWrite(br_data, ref 探索地図);
+            RW.ReadWrite(br_data, ref 探索地図A);
+            RW.ReadWrite(br_data, ref 探索地図B);
 
             RW.ReadWrite(br_data, ref 遺物1);
             RW.ReadWrite(br_data, ref 遺物2);

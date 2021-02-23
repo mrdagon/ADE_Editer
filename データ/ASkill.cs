@@ -204,6 +204,8 @@ namespace ADE_Editer
         public int 連続スキルID;//Aスキルリスト
 
         public int[] 追加効果 = new int[5];
+        public int[] 追加効果値 = new int[5];
+
 
         public int レベル補正種A;
         public int[] レベル補正A = new int[9];
@@ -266,6 +268,12 @@ namespace ADE_Editer
             Eq.Set(form.comboBoxAスキル追加効果3 , ref 追加効果[2]);
             Eq.Set(form.comboBoxAスキル追加効果4 , ref 追加効果[3]);
             Eq.Set(form.comboBoxAスキル追加効果5 , ref 追加効果[4]);
+            Eq.Set(form.trackbarAスキル追加効果1, ref 追加効果値[0]);
+            Eq.Set(form.trackbarAスキル追加効果2, ref 追加効果値[1]);
+            Eq.Set(form.trackbarAスキル追加効果3, ref 追加効果値[2]);
+            Eq.Set(form.trackbarAスキル追加効果4, ref 追加効果値[3]);
+            Eq.Set(form.trackbarAスキル追加効果5, ref 追加効果値[4]);
+
 
             Eq.Set(form.comboBoxAスキルレベル補正1 , ref レベル補正種A);
             Eq.Set(form.numAスキルレベル補正1Lv1 , ref レベル補正A[0]);
@@ -313,7 +321,7 @@ namespace ADE_Editer
         private void Save(StreamWriter sw_str , BinaryWriter bw_data )
         {
             //文字とそれ以外は別ファイルに保存
-            sw_str.WriteLine(名前 + "," + 説明);
+            sw_str.WriteLine(名前 + "," + 説明.Replace("\r\n", "\t"));
 
             RW.ReadWrite(bw_data, ref アイコンID);
             RW.ReadWrite(bw_data, ref エフェクトID);
@@ -338,11 +346,12 @@ namespace ADE_Editer
             RW.ReadWrite(bw_data, ref 隊列);
             RW.ReadWrite(bw_data, ref 連続スキルID);//Aスキルリスト
 
-            RW.ReadWrite(bw_data, ref 追加効果[0]);
-            RW.ReadWrite(bw_data, ref 追加効果[1]);
-            RW.ReadWrite(bw_data, ref 追加効果[2]);
-            RW.ReadWrite(bw_data, ref 追加効果[3]);
-            RW.ReadWrite(bw_data, ref 追加効果[4]);
+            for (int i = 0; i < 5; i++)
+            {
+                RW.ReadWrite(bw_data, ref 追加効果[i]);
+                RW.ReadWrite(bw_data, ref 追加効果値[i]);
+            }
+
 
             RW.ReadWrite(bw_data, ref レベル補正種A);
             for (int i = 0; i < レベル補正A.Length; i++)
@@ -375,7 +384,7 @@ namespace ADE_Editer
             var strS = str.Split(',');
 
             名前 = strS[0];
-            説明 = strS[1];
+            説明 = strS[1].Replace("\t","\r\n");
 
             RW.ReadWrite(br_data, ref アイコンID);
             RW.ReadWrite(br_data, ref エフェクトID);
@@ -403,6 +412,8 @@ namespace ADE_Editer
             for(int i=0;i<追加効果.Length;i++)
             {
                 RW.ReadWrite(br_data, ref 追加効果[i]);
+                RW.ReadWrite(br_data, ref 追加効果値[i]);
+                if (追加効果[i] < 0) 追加効果[i] = 0;
             }
 
 
@@ -422,11 +433,16 @@ namespace ADE_Editer
             for (int i = 0; i < バフ種類.Length; i++)
             {
                 RW.ReadWrite(br_data, ref バフ種類[i]);
+                if (バフ種類[i] < 0) バフ種類[i] = 0;
+
                 RW.ReadWrite(br_data, ref バフ固定値[i]);
                 RW.ReadWrite(br_data, ref バフ反映率[i]);
                 RW.ReadWrite(br_data, ref バフ発動率[i]);
                 RW.ReadWrite(br_data, ref バフ持続[i]);
             }
+
+            if (連続スキルID < 0) 連続スキルID = 0;
+            if (前提スキルID < 0) 前提スキルID = 0;
         }
 
         static public void Save(string fileName)
