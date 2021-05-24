@@ -18,7 +18,10 @@ namespace ADE_Editer
         public int 部門ID;
         public int ランク;
         public int 費用;
-        public bool 永続;
+
+        public int[] 素材種 = new int[4];
+        public int[] 素材数 = new int[4];
+        public int[] 素材ランク = new int[4];
 
         public void Set(MainForm form)
         {
@@ -40,31 +43,56 @@ namespace ADE_Editer
 
             Eq.Set(form.num投資部門ID, ref 部門ID);
             Eq.Set(form.trackbar投資ランク, ref ランク);
-            Eq.Set(form.num投資費用, ref 費用);
-            Eq.Set(form.checkBox投資永続, ref 永続);
+            Eq.Set(form.num投資必要数1, ref 費用);
+
+            Eq.Set(form.comboBox投資費用素材種1, ref 素材種[0]);
+            Eq.Set(form.num投資必要数1, ref 素材数[0]);
+            Eq.Set(form.Trackbar投資素材ランク1, ref 素材ランク[0]);
+
+            Eq.Set(form.comboBox投資費用素材種2, ref 素材種[1]);
+            Eq.Set(form.num投資必要数2, ref 素材数[1]);
+            Eq.Set(form.Trackbar投資素材ランク2, ref 素材ランク[1]);
+
+            Eq.Set(form.comboBox投資費用素材種3, ref 素材種[2]);
+            Eq.Set(form.num投資必要数3, ref 素材数[2]);
+            Eq.Set(form.Trackbar投資素材ランク3, ref 素材ランク[2]);
+
+            Eq.Set(form.comboBox投資費用素材種4, ref 素材種[3]);
+            Eq.Set(form.num投資必要数4, ref 素材数[3]);
+            Eq.Set(form.Trackbar投資素材ランク4, ref 素材ランク[3]);
         }
 
         private void Save(StreamWriter sw_str, BinaryWriter bw_data)
         {
             //文字とそれ以外は別ファイルに保存
-            sw_str.WriteLine(名前 + "," + 説明.Replace("\r\n", "\t"));
+            sw_str.WriteLine(名前 + CV.区切りSave + 説明.Replace("\r\n",CV.改行Save));
 
             RW.ReadWrite(bw_data, ref  部門ID);
             RW.ReadWrite(bw_data, ref  ランク);
-            RW.ReadWrite(bw_data, ref  費用);
-            RW.ReadWrite(bw_data, ref 永続);
+
+            for(int i=0;i<素材種.Length;i++)
+            {
+                RW.ReadWrite(bw_data, ref 素材種[i]);
+                RW.ReadWrite(bw_data, ref 素材数[i]);
+                RW.ReadWrite(bw_data, ref 素材ランク[i]);
+            }
         }
 
         private void Load(StreamReader br_str, BinaryReader br_data)
         {
-            var strS = br_str.ReadLine().Split(',');
+            var strS = br_str.ReadLine().Split(CV.区切りLoad);
             名前 = strS[0];
-            説明 = strS[1].Replace( "\t" , "\r\n");
+            説明 = strS[1].Replace( CV.改行Load , "\r\n");
 
             RW.ReadWrite(br_data, ref 部門ID);
             RW.ReadWrite(br_data, ref ランク);
-            RW.ReadWrite(br_data, ref 費用);
-            RW.ReadWrite(br_data, ref 永続);
+
+            for (int i = 0; i < 素材種.Length; i++)
+            {
+                RW.ReadWrite(br_data, ref 素材種[i]);
+                RW.ReadWrite(br_data, ref 素材数[i]);
+                RW.ReadWrite(br_data, ref 素材ランク[i]);
+            }
         }
         static public void Save(string fileName)
         {
@@ -102,7 +130,20 @@ namespace ADE_Editer
 
         public Invest Clone()
         {
-            return (Invest)this.MemberwiseClone();
+            var clone = (Invest)this.MemberwiseClone();
+
+            clone.素材種 = new int[4];
+            clone.素材数 = new int[4];
+            clone.素材ランク = new int[4];
+
+            for(int i=0;i<素材種.Length;i++)
+            {
+                clone.素材種[i] = 素材種[i];
+                clone.素材数[i] = 素材数[i];
+                clone.素材ランク[i] = 素材ランク[i];
+            }
+
+            return clone;
         }
 
         static public void Insert(int index)

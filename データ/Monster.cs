@@ -17,8 +17,8 @@ namespace ADE_Editer
         public int 画像ID;
         public int 素材種;
         public int 隊列;
-        public bool ボス;
-        public int ボスドロップ;
+        public bool isボス;
+        public int[] ボスドロップ = new int[2];
         public int レア素材率;
 
         public int HP;
@@ -31,8 +31,8 @@ namespace ADE_Editer
         public int 回避;
         public int 会心;
 
-        public int[] Aスキル = new int[4];
-        public int[] AスキルLv = new int[4];
+        public int[] Aスキル = new int[8];
+        public int[] AスキルLv = new int[8];
 
         public int[] Pスキル = new int[8];
         public int[] PスキルLv = new int[8];
@@ -58,8 +58,9 @@ namespace ADE_Editer
             Eq.Set(form.numモンスター画像ID, ref 画像ID);
             Eq.Set(form.comboBoxモンスター素材種, ref 素材種);
             Eq.Set(form.comboBoxモンスター隊列, ref 隊列);
-            Eq.Set(form.checkBoxモンスターボス, ref ボス);
-            Eq.Set(form.comboBoxモンスターボスドロップ, ref ボスドロップ);
+            Eq.Set(form.checkBoxモンスターボス, ref isボス);
+            Eq.Set(form.comboBoxモンスターボスドロップA, ref ボスドロップ[0]);
+            Eq.Set(form.comboBoxモンスターボスドロップB, ref ボスドロップ[1]);
             Eq.Set(form.trackbarモンスターレア素材率, ref レア素材率);
 
             Eq.Set(form.trackbarモンスターHP, ref HP);
@@ -76,11 +77,19 @@ namespace ADE_Editer
             Eq.Set(form.comboBoxモンスターAスキル2, ref Aスキル[1]);
             Eq.Set(form.comboBoxモンスターAスキル3, ref Aスキル[2]);
             Eq.Set(form.comboBoxモンスターAスキル4, ref Aスキル[3]);
+            Eq.Set(form.comboBoxモンスターAスキル5, ref Aスキル[4]);
+            Eq.Set(form.comboBoxモンスターAスキル6, ref Aスキル[5]);
+            Eq.Set(form.comboBoxモンスターAスキル7, ref Aスキル[6]);
+            Eq.Set(form.comboBoxモンスターAスキル8, ref Aスキル[7]);
 
             Eq.Set(form.numericUpDownモンスターAスキルLv1, ref AスキルLv[0]);
             Eq.Set(form.numericUpDownモンスターAスキルLv2, ref AスキルLv[1]);
             Eq.Set(form.numericUpDownモンスターAスキルLv3, ref AスキルLv[2]);
             Eq.Set(form.numericUpDownモンスターAスキルLv4, ref AスキルLv[3]);
+            Eq.Set(form.numericUpDownモンスターAスキルLv5, ref AスキルLv[4]);
+            Eq.Set(form.numericUpDownモンスターAスキルLv6, ref AスキルLv[5]);
+            Eq.Set(form.numericUpDownモンスターAスキルLv7, ref AスキルLv[6]);
+            Eq.Set(form.numericUpDownモンスターAスキルLv8, ref AスキルLv[7]);
 
             Eq.Set(form.comboBoxモンスターPスキル1, ref Pスキル[0]);
             Eq.Set(form.comboBoxモンスターPスキル2, ref Pスキル[1]);
@@ -105,13 +114,14 @@ namespace ADE_Editer
         private void Save(StreamWriter sw_str, BinaryWriter bw_data)
         {
             //文字とそれ以外は別ファイルに保存
-            sw_str.WriteLine(名前 + "," + 説明.Replace("\r\n", "\t"));
+            sw_str.WriteLine(名前 + CV.区切りSave + 説明.Replace("\r\n",CV.改行Save));
 
             RW.ReadWrite(bw_data, ref 画像ID);
             RW.ReadWrite(bw_data, ref 素材種);
             RW.ReadWrite(bw_data, ref 隊列);
-            RW.ReadWrite(bw_data, ref ボス);
-            RW.ReadWrite(bw_data, ref ボスドロップ);
+            RW.ReadWrite(bw_data, ref isボス);
+            RW.ReadWrite(bw_data, ref ボスドロップ[0]);
+            RW.ReadWrite(bw_data, ref ボスドロップ[1]);
             RW.ReadWrite(bw_data, ref レア素材率);
 
             RW.ReadWrite(bw_data, ref HP);
@@ -139,15 +149,16 @@ namespace ADE_Editer
 
         private void Load(StreamReader br_str, BinaryReader br_data)
         {
-            var strS = br_str.ReadLine().Split(',');
+            var strS = br_str.ReadLine().Split(CV.区切りLoad);
             名前 = strS[0];
-            説明 = strS[1].Replace( "\t" , "\r\n");
+            説明 = strS[1].Replace( CV.改行Load , "\r\n");
 
             RW.ReadWrite(br_data, ref 画像ID);
             RW.ReadWrite(br_data, ref 素材種);
             RW.ReadWrite(br_data, ref 隊列);
-            RW.ReadWrite(br_data, ref ボス);
-            RW.ReadWrite(br_data, ref ボスドロップ);
+            RW.ReadWrite(br_data, ref isボス);
+            RW.ReadWrite(br_data, ref ボスドロップ[0]);
+            RW.ReadWrite(br_data, ref ボスドロップ[1]);
             RW.ReadWrite(br_data, ref レア素材率);
 
             RW.ReadWrite(br_data, ref HP);
@@ -216,13 +227,18 @@ namespace ADE_Editer
             clone.Pスキル = new int[8];
             clone.PスキルLv = new int[8];
 
-            for(int i=0;i<4;i++)
+            clone.ボスドロップ = new int[2];
+
+            clone.ボスドロップ[0] = ボスドロップ[0];
+            clone.ボスドロップ[1] = ボスドロップ[1];
+
+            for (int i=0;i<Aスキル.Length;i++)
             {
                 clone.Aスキル[i] = Aスキル[i];
                 clone.AスキルLv[i] = AスキルLv[i];
             }
 
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < Pスキル.Length; i++)
             {
                 clone.Pスキル[i] = Pスキル[i];
                 clone.PスキルLv[i] = PスキルLv[i];
@@ -251,12 +267,11 @@ namespace ADE_Editer
             //ダンジョンザコx5
             foreach (var it in Dungeon.data)
             {
-                if (it.ボス >= index) { it.ボス += num; }
-                if (it.ザコ1 >= index) { it.ザコ1 += num; }
-                if (it.ザコ2 >= index) { it.ザコ2 += num; }
-                if (it.ザコ3 >= index) { it.ザコ3 += num; }
-                if (it.ザコ4 >= index) { it.ザコ4 += num; }
-                if (it.ザコ5 >= index) { it.ザコ5 += num; }
+                for(int i=0;i<it.ボス.Length;i++)
+                {
+                    if (it.ボス[i] >= index) { it.ボス[i] += num; }
+                    if (it.ザコ[i] >= index) { it.ザコ[i] += num; }
+                }
             }
         }
     }

@@ -22,7 +22,12 @@ namespace ADE_Editer
         public int 入手アクセサリー;
         public int 入手ゴールド;
 
+        public bool 重要クエスト;
+        public int 対象フロア;
+        public int 目標日数;
+        public int 獲得ポイント;
 
+        public int 依頼人;
         public void Set(MainForm form)
         {
             SetGet(form, true);
@@ -48,12 +53,19 @@ namespace ADE_Editer
 
             Eq.Set(form.numクエストゴールド, ref 入手ゴールド);
             Eq.Set(form.comboBoxクエストアクセサリ, ref 入手アクセサリー);
+
+            Eq.Set(form.checkBoxクエスト重要, ref 重要クエスト);
+            Eq.Set(form.numクエスト対象フロア, ref 対象フロア);
+            Eq.Set(form.numクエスト目標日数, ref 目標日数);
+            Eq.Set(form.numクエスト獲得ポイント, ref 獲得ポイント);
+
+            Eq.Set(form.numクエスト依頼人, ref 依頼人);
         }
 
-        private void Save(StreamWriter sw_str, BinaryWriter bw_data)
+        private void SaveData(StreamWriter sw_str, BinaryWriter bw_data)
         {
             //文字とそれ以外は別ファイルに保存
-            sw_str.WriteLine(名前 + "," + 説明.Replace("\r\n", "\t"));
+            sw_str.WriteLine(名前 + CV.区切りSave + 説明.Replace("\r\n",CV.改行Save));
 
             RW.ReadWrite(bw_data, ref 種類);
             RW.ReadWrite(bw_data, ref 条件値);
@@ -61,13 +73,20 @@ namespace ADE_Editer
             RW.ReadWrite(bw_data, ref 開放クエスト);
             RW.ReadWrite(bw_data, ref 入手ゴールド);
             RW.ReadWrite(bw_data, ref 入手アクセサリー);
+
+            RW.ReadWrite(bw_data, ref 重要クエスト);
+            RW.ReadWrite(bw_data, ref 対象フロア);
+            RW.ReadWrite(bw_data, ref 目標日数);
+            RW.ReadWrite(bw_data, ref 獲得ポイント);
+
+            RW.ReadWrite(bw_data, ref 依頼人);
         }
 
-        private void Load(StreamReader br_str, BinaryReader br_data)
+        private void LoadData(StreamReader br_str, BinaryReader br_data)
         {
-            var strS = br_str.ReadLine().Split(',');
+            var strS = br_str.ReadLine().Split(CV.区切りLoad);
             名前 = strS[0];
-            説明 = strS[1].Replace( "\t" , "\r\n");
+            説明 = strS[1].Replace( CV.改行Load , "\r\n");
 
             RW.ReadWrite(br_data, ref 種類);
             RW.ReadWrite(br_data, ref 条件値);
@@ -75,6 +94,13 @@ namespace ADE_Editer
             RW.ReadWrite(br_data, ref 開放クエスト);
             RW.ReadWrite(br_data, ref 入手ゴールド);
             RW.ReadWrite(br_data, ref 入手アクセサリー);
+
+            RW.ReadWrite(br_data, ref 重要クエスト);
+            RW.ReadWrite(br_data, ref 対象フロア);
+            RW.ReadWrite(br_data, ref 目標日数);
+            RW.ReadWrite(br_data, ref 獲得ポイント);
+
+            RW.ReadWrite(br_data, ref 依頼人);
         }
 
         static public void Save(string fileName)
@@ -87,7 +113,7 @@ namespace ADE_Editer
             bw.Write(data.Count());
             for (int i = 0; i < data.Count(); i++)
             {
-                data[i].Save(sw, bw);
+                data[i].SaveData(sw, bw);
             }
 
             sw.Close();
@@ -104,7 +130,7 @@ namespace ADE_Editer
             for (int i = 0; i < n; i++)
             {
                 data.Add(new Quest());
-                data[i].Load(sr, br);
+                data[i].LoadData(sr, br);
             }
 
             sr.Close();

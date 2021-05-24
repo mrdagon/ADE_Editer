@@ -36,10 +36,12 @@ namespace ADE_Editer
 
 
         public int レベル補正種類A;
-        public int[] レベル補正A = new int[9];
+        public int レベル補正A;
 
         public int レベル補正種類B;
-        public int[] レベル補正B = new int[9];
+        public int レベル補正B;
+
+        public int レアリティ;
 
         public void Set(MainForm form)
         {
@@ -63,13 +65,10 @@ namespace ADE_Editer
             Eq.Set(form.checkBoxPスキルキースキル, ref キースキル);
 
             Eq.Set(form.checkedListBoxPスキルスキルタグ, ref スキルタグ , MyType.スキル系統.Count);//
-            Eq.Set(form.comboBoxPスキル習得前提Pスキル, ref 習得前提PスキルID);//
-            Eq.Set(form.trackbarPスキル習得前提PスキルLv, ref 習得前提PスキルLv);
-            Eq.Set(form.trackbarPスキル必要Lv, ref 習得必要Lv);
+            Eq.Set(form.comboBoxPスキルレアリティ, ref 習得前提PスキルID);//
 
             Eq.Set(form.comboBoxPスキル条件, ref 条件);//
             Eq.Set(form.trackbarPスキル条件値, ref 条件値);
-            Eq.Set(form.trackbarPスキル持続時間, ref 持続時間);
 
             Eq.Set(form.comboBoxPスキルタイミング, ref タイミング);//
             Eq.Set(form.trackbarPスキル発動率, ref 発動率);
@@ -80,32 +79,19 @@ namespace ADE_Editer
             Eq.Set(form.trackbarPスキル効果値B, ref 効果値B);
 
             Eq.Set(form.comboBoxPスキルレベル補正1, ref レベル補正種類A);
-            Eq.Set(form.numPスキルレベル補正1Lv1, ref レベル補正A[0]);
-            Eq.Set(form.numPスキルレベル補正1Lv2, ref レベル補正A[1]);
-            Eq.Set(form.numPスキルレベル補正1Lv3, ref レベル補正A[2]);
-            Eq.Set(form.numPスキルレベル補正1Lv4, ref レベル補正A[3]);
-            Eq.Set(form.numPスキルレベル補正1Lv5, ref レベル補正A[4]);
-            Eq.Set(form.numPスキルレベル補正1Lv6, ref レベル補正A[5]);
-            Eq.Set(form.numPスキルレベル補正1Lv7, ref レベル補正A[6]);
-            Eq.Set(form.numPスキルレベル補正1Lv8, ref レベル補正A[7]);
-            Eq.Set(form.numPスキルレベル補正1Lv9, ref レベル補正A[8]);
+            Eq.Set(form.numPスキルレベル補正Lv1, ref レベル補正A);
 
             Eq.Set(form.comboBoxPスキルレベル補正2 , ref レベル補正種類B);
-            Eq.Set(form.numPスキルレベル補正2Lv1 , ref レベル補正B[0]);
-            Eq.Set(form.numPスキルレベル補正2Lv2 , ref レベル補正B[1]);
-            Eq.Set(form.numPスキルレベル補正2Lv3 , ref レベル補正B[2]);
-            Eq.Set(form.numPスキルレベル補正2Lv4 , ref レベル補正B[3]);
-            Eq.Set(form.numPスキルレベル補正2Lv5 , ref レベル補正B[4]);
-            Eq.Set(form.numPスキルレベル補正2Lv6 , ref レベル補正B[5]);
-            Eq.Set(form.numPスキルレベル補正2Lv7 , ref レベル補正B[6]);
-            Eq.Set(form.numPスキルレベル補正2Lv8 , ref レベル補正B[7]);
-            Eq.Set(form.numPスキルレベル補正2Lv9 , ref レベル補正B[8]);
+            Eq.Set(form.numPスキルレベル補正Lv5 , ref レベル補正B);
+
+            Eq.Set(form.comboBoxPスキルレアリティ, ref レアリティ);
+
         }
 
         private void Save(StreamWriter sw_str, BinaryWriter bw_data)
         {
             //文字とそれ以外は別ファイルに保存
-            sw_str.WriteLine(名前 + "," + 説明.Replace("\r\n", "\t"));
+            sw_str.WriteLine(名前 + CV.区切りSave + 説明.Replace("\r\n",CV.改行Save));
 
             RW.ReadWrite(bw_data, ref アイコンID);
             RW.ReadWrite(bw_data, ref キースキル);
@@ -128,23 +114,20 @@ namespace ADE_Editer
             RW.ReadWrite(bw_data, ref 効果値B);
 
             RW.ReadWrite(bw_data, ref レベル補正種類A);
-            for (int i = 0; i < レベル補正A.Length; i++)
-            {
-                RW.ReadWrite(bw_data, ref レベル補正A[i]);
-            }
+            RW.ReadWrite(bw_data, ref レベル補正A);
+            
 
             RW.ReadWrite(bw_data, ref レベル補正種類B);
-            for (int i = 0; i < レベル補正B.Length; i++)
-            {
-                RW.ReadWrite(bw_data, ref レベル補正B[i]);
-            }
+            RW.ReadWrite(bw_data, ref レベル補正B);
+
+            RW.ReadWrite(bw_data, ref レアリティ);
         }
 
         private void Load(StreamReader br_str, BinaryReader br_data)
         {
-            var strS = br_str.ReadLine().Split(',');
+            var strS = br_str.ReadLine().Split(CV.区切りLoad);
             名前 = strS[0];
-            説明 = strS[1].Replace( "\t" , "\r\n");
+            説明 = strS[1].Replace( CV.改行Load , "\r\n");
 
             RW.ReadWrite(br_data, ref アイコンID);
             RW.ReadWrite(br_data, ref キースキル);
@@ -167,16 +150,12 @@ namespace ADE_Editer
             RW.ReadWrite(br_data, ref 効果値B);
 
             RW.ReadWrite(br_data, ref レベル補正種類A);
-            for (int i = 0; i < レベル補正A.Length; i++)
-            {
-                RW.ReadWrite(br_data, ref レベル補正A[i]);
-            }
-
+            RW.ReadWrite(br_data, ref レベル補正A);
+            
             RW.ReadWrite(br_data, ref レベル補正種類B);
-            for (int i = 0; i < レベル補正B.Length; i++)
-            {
-                RW.ReadWrite(br_data, ref レベル補正B[i]);
-            }
+            RW.ReadWrite(br_data, ref レベル補正B);
+
+            RW.ReadWrite(br_data, ref レアリティ);
         }
 
         static public void Save(string fileName)
@@ -224,14 +203,10 @@ namespace ADE_Editer
                 clone.スキルタグ[i] = スキルタグ[i];
             }
 
-            clone.レベル補正A = new int[9];
-            clone.レベル補正B = new int[9];
+            clone.レベル補正A = レベル補正A;
+            clone.レベル補正B = レベル補正B;
 
-            for(int i=0;i<9;i++)
-            {
-                clone.レベル補正A[i] = レベル補正A[i];
-                clone.レベル補正B[i] = レベル補正B[i];
-            }
+            clone.レアリティ = レアリティ;
 
             return clone;
         }
@@ -263,7 +238,14 @@ namespace ADE_Editer
             foreach (var it in Job.data)
             {
                 InsertData.Check(ref it.習得Pスキル, index, num);
+
+                for(int i=0;i<it.習得キースキル.Length;i++)
+                {
+                    if (it.習得キースキル[i] >= index) { it.習得キースキル[i] += num; }
+                }
             }
+
+
             foreach (var it in Item.data)
             {
                 if (it.Pスキル >= index) { it.Pスキル += num; }

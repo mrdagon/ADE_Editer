@@ -12,12 +12,12 @@ namespace ADE_Editer.データ
         public void Save(StreamWriter sw_str, BinaryWriter bw_data)
         {
             //文字とそれ以外は別ファイルに保存
-            //sw_str.WriteLine(名前 + "," + 説明);
+            //sw_str.WriteLine(名前 CV.区切りSave 説明);
         }
 
         public void Load(StreamReader br_str, BinaryReader br_data)
         {
-            var strS = br_str.ReadLine().Split(',');
+            var strS = br_str.ReadLine().Split(CV.区切りLoad);
 
         }
     }

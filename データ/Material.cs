@@ -43,7 +43,7 @@ namespace ADE_Editer
         private void Save(StreamWriter sw_str, BinaryWriter bw_data)
         {
             //文字とそれ以外は別ファイルに保存
-            sw_str.WriteLine(名前 + "," + 説明.Replace("\r\n", "\t"));
+            sw_str.WriteLine(名前 + CV.区切りSave + 説明.Replace("\r\n",CV.改行Save));
 
             RW.ReadWrite(bw_data, ref 種類);
             RW.ReadWrite(bw_data, ref ランク);
@@ -53,9 +53,9 @@ namespace ADE_Editer
 
         private void Load(StreamReader br_str, BinaryReader br_data)
         {
-            var strS = br_str.ReadLine().Split(',');
+            var strS = br_str.ReadLine().Split(CV.区切りLoad);
             名前 = strS[0];
-            説明 = strS[1].Replace( "\t" , "\r\n");
+            説明 = strS[1].Replace( CV.改行Load , "\r\n");
 
             RW.ReadWrite(br_data, ref 種類);
             RW.ReadWrite(br_data, ref ランク);

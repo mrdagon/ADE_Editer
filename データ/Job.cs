@@ -29,6 +29,9 @@ namespace ADE_Editer
         public bool[] 習得Aスキル = new bool[MyType.Max];
         public bool[] 習得Pスキル = new bool[MyType.Max];
 
+        public int[] 習得キースキル = new int[3];
+
+
         public void Set(MainForm form)
         {
             SetGet(form, true);
@@ -61,12 +64,16 @@ namespace ADE_Editer
 
             Eq.Set( form.checkedListBoxジョブAスキル, ref 習得Aスキル , ASkill.data.Count);
             Eq.Set( form.checkedListBoxジョブPスキル, ref 習得Pスキル , PSkill.data.Count);
+
+            Eq.Set( form.comboBoxジョブキースキル1, ref 習得キースキル[0]);
+            Eq.Set( form.comboBoxジョブキースキル2, ref 習得キースキル[1]);
+            Eq.Set( form.comboBoxジョブキースキル3, ref 習得キースキル[2]);
         }
 
         private void Save(StreamWriter sw_str, BinaryWriter bw_data)
         {
             //文字とそれ以外は別ファイルに保存
-            sw_str.WriteLine(名前 + "," + 説明.Replace("\r\n", "\t"));
+            sw_str.WriteLine(名前 + CV.区切りSave + 説明.Replace("\r\n",CV.改行Save));
 
             RW.ReadWrite(bw_data, ref 武器種);
             RW.ReadWrite(bw_data, ref 防具種);
@@ -83,11 +90,16 @@ namespace ADE_Editer
 
             RW.ReadWrite(bw_data, ref 習得Aスキル , ASkill.data.Count);
             RW.ReadWrite(bw_data, ref 習得Pスキル , PSkill.data.Count);
+
+            for(int i=0;i<3;i++)
+            {
+                RW.ReadWrite(bw_data, ref 習得キースキル[i]);
+            }
         }
 
         private void Load(StreamReader br_str, BinaryReader br_data)
         {
-            var strS = br_str.ReadLine().Split(',');
+            var strS = br_str.ReadLine().Split(CV.区切りLoad);
             名前 = strS[0];
             説明 = strS[1].Replace("\t", "\r\n");
 
@@ -106,6 +118,11 @@ namespace ADE_Editer
 
             RW.ReadWrite(br_data, ref 習得Aスキル, ASkill.data.Count);
             RW.ReadWrite(br_data, ref 習得Pスキル, PSkill.data.Count);
+
+            for (int i = 0; i < 3; i++)
+            {
+                RW.ReadWrite(br_data, ref 習得キースキル[i]);
+            }
         }
         static public void Save(string fileName)
         {
@@ -147,12 +164,18 @@ namespace ADE_Editer
 
             clone.習得Pスキル = new bool[MyType.Max];
             clone.習得Aスキル = new bool[MyType.Max];
+            clone.習得キースキル = new int[3];
 
 
             for (int i = 0; i < MyType.Max; i++)
             {
                 clone.習得Pスキル[i] = 習得Pスキル[i];
                 clone.習得Aスキル[i] = 習得Aスキル[i];
+            }
+
+            for(int i=0; i<習得キースキル.Length;i++)
+            {
+                clone.習得キースキル[i] = 習得キースキル[i];
             }
 
             return clone;

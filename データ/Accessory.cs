@@ -28,6 +28,11 @@ namespace ADE_Editer
         public int 回避;
         public int 会心;
         //コントロールに数値を反映
+        public int レアリティ;
+        public int 開放ポイント;
+        public int 目標日数;
+        public int 持越ポイント;
+
         public void Set(MainForm form)
         {
             SetGet(form, true);
@@ -59,12 +64,18 @@ namespace ADE_Editer
             Eq.Set(form.trackbarアクセサリー命中, ref 命中);
             Eq.Set(form.trackbarアクセサリー回避, ref 回避);
             Eq.Set(form.trackbarアクセサリー会心, ref 会心);
+
+
+            Eq.Set(form.comboBoxアクセサリーレアリティ, ref レアリティ);
+            Eq.Set(form.numアクセサリー購入ポイント, ref 開放ポイント);
+            Eq.Set(form.numアクセサリー目標日数, ref 目標日数);
+            Eq.Set(form.numアクセサリー持越ポイント, ref 持越ポイント);
         }
 
         private void Save(StreamWriter sw_str, BinaryWriter bw_data)
         {
             //文字とそれ以外は別ファイルに保存
-            sw_str.WriteLine(名前 + "," + 説明.Replace("\r\n", "\t"));
+            sw_str.WriteLine(名前 + CV.区切りSave + 説明.Replace("\r\n",CV.改行Save));
 
             RW.ReadWrite(bw_data, ref 画像ID);
             RW.ReadWrite(bw_data, ref Pスキル);
@@ -79,13 +90,18 @@ namespace ADE_Editer
             RW.ReadWrite(bw_data, ref 命中);
             RW.ReadWrite(bw_data, ref 回避);
             RW.ReadWrite(bw_data, ref 会心);
-        }
+
+            RW.ReadWrite(bw_data, ref レアリティ);
+            RW.ReadWrite(bw_data, ref 開放ポイント);
+            RW.ReadWrite(bw_data, ref 目標日数);
+            RW.ReadWrite(bw_data, ref 持越ポイント);
+    }
 
         private void Load(StreamReader br_str, BinaryReader br_data)
         {
-            var strS = br_str.ReadLine().Split(',');
+            var strS = br_str.ReadLine().Split(CV.区切りLoad);
             名前 = strS[0];
-            説明 = strS[1].Replace( "\t" , "\r\n");
+            説明 = strS[1].Replace( CV.改行Load , "\r\n");
 
             RW.ReadWrite(br_data, ref 画像ID);
             RW.ReadWrite(br_data, ref Pスキル);
@@ -100,6 +116,11 @@ namespace ADE_Editer
             RW.ReadWrite(br_data, ref 命中);
             RW.ReadWrite(br_data, ref 回避);
             RW.ReadWrite(br_data, ref 会心);
+
+            RW.ReadWrite(br_data, ref レアリティ);
+            RW.ReadWrite(br_data, ref 開放ポイント);
+            RW.ReadWrite(br_data, ref 目標日数);
+            RW.ReadWrite(br_data, ref 持越ポイント);
         }
 
         static public void Save(string fileName)
@@ -160,16 +181,17 @@ namespace ADE_Editer
 
             foreach (var it in Monster.data)
             {
-                if (it.ボスドロップ >= index) { it.ボスドロップ+=num; }
+                if (it.ボスドロップ[0] >= index) { it.ボスドロップ[0]+=num; }
+                if (it.ボスドロップ[1] >= index) { it.ボスドロップ[1] += num; }
             }
 
             foreach (var it in Dungeon.data)
             {
-                if (it.遺物1 >= index) { it.遺物1 += num; }
-                if (it.遺物2 >= index) { it.遺物2 += num; }
-                if (it.遺物3 >= index) { it.遺物3 += num; }
-                if (it.遺物4 >= index) { it.遺物4 += num; }
-                if (it.遺物5 >= index) { it.遺物5 += num; }
+                for (int i = 0; i < it.遺物.Length; i++)
+                {
+                    if (it.遺物[i] >= index) { it.遺物[i] += num; }
+
+                }
             }
 
             foreach (var it in Quest.data)

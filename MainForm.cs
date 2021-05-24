@@ -32,6 +32,7 @@ namespace ADE_Editer
         static int now素材= 0;
         static int nowモンスター= 0;
         static int nowクエスト = 0;
+        static int now強化数 = 0;
 
         int copyTabIndex = -1;
         int copyItemIndex = -1;
@@ -80,6 +81,7 @@ namespace ADE_Editer
             if (isControlUpdate) { UpdateComboCheck(); }
         }
 
+        //コンボボックスとリストボックス項目の更新
         private void UpdateComboCheck()
         {
             switch (nowTab)
@@ -90,12 +92,39 @@ namespace ADE_Editer
                     comboBoxAスキルバフ2.Items.Clear();//バフ効果
                     comboBoxAスキルバフ3.Items.Clear();//バフ効果
                     comboBoxAスキル連続スキル.Items.Clear();//ASkill
-                    comboBoxAスキル前提スキル.Items.Clear();//ASkill
+                    comboBoxAスキルレアリティ.Items.Clear();//ASkill
                     comboBoxAスキル追加効果1.Items.Clear();//スキル追加効果種
                     comboBoxAスキル追加効果2.Items.Clear();//スキル追加効果種
                     comboBoxAスキル追加効果3.Items.Clear();//スキル追加効果種
                     comboBoxAスキル追加効果4.Items.Clear();//スキル追加効果種
                     comboBoxAスキル追加効果5.Items.Clear();//スキル追加効果種
+
+                    for (int i = 0; i < ASkill.data.Count; i++)
+                    {
+                        comboBoxAスキル連続スキル.Items.Add(ASkill.data[i].名前);
+                    }
+
+                    for (int i = 0; i < MyType.スキル系統.Count; i++)
+                    {
+                        checkedListBoxAスキルスキルタグ.Items.Add(MyType.スキル系統[i]);//スキル系統
+                    }
+
+                    for (int i = 0; i < MyType.スキル追加効果種.Count; i++)
+                    {
+                        comboBoxAスキル追加効果1.Items.Add(MyType.スキル追加効果種[i]);//スキル追加効果種
+                        comboBoxAスキル追加効果2.Items.Add(MyType.スキル追加効果種[i]);//スキル追加効果種
+                        comboBoxAスキル追加効果3.Items.Add(MyType.スキル追加効果種[i]);//スキル追加効果種
+                        comboBoxAスキル追加効果4.Items.Add(MyType.スキル追加効果種[i]);//スキル追加効果種
+                        comboBoxAスキル追加効果5.Items.Add(MyType.スキル追加効果種[i]);//スキル追加効果種
+                    }
+
+                    for (int i = 0; i < MyType.バフ効果.Count; i++)
+                    {
+                        comboBoxAスキルバフ1.Items.Add(MyType.バフ効果[i]);//バフ効果
+                        comboBoxAスキルバフ2.Items.Add(MyType.バフ効果[i]);//バフ効果
+                        comboBoxAスキルバフ3.Items.Add(MyType.バフ効果[i]);//バフ効果
+                    }
+
                     break;
                 case 1:
                     checkedListBoxPスキルスキルタグ.Items.Clear();//スキル系統
@@ -105,16 +134,64 @@ namespace ADE_Editer
                     comboBoxPスキル対象.Items.Clear();//Pスキル対象
                     comboBoxPスキル効果A.Items.Clear();//Pスキル効果
                     comboBoxPスキル効果B.Items.Clear();//Pスキル効果
-                    comboBoxPスキル習得前提Pスキル.Items.Clear();//PSkill
+
+                    for (int i = 0; i < MyType.スキル系統.Count; i++)
+                    {
+                        checkedListBoxPスキルスキルタグ.Items.Add(MyType.スキル系統[i]);//スキル系統
+                    }
+
+                    for (int i = 0; i < MyType.Pスキルタイミング.Count; i++)
+                    {
+                        comboBoxPスキルタイミング.Items.Add(MyType.Pスキルタイミング[i]);//Pスキルタイミング
+
+                    }
+                    for (int i = 0; i < MyType.Pスキル条件.Count; i++)
+                    {
+                        comboBoxPスキル条件.Items.Add(MyType.Pスキル条件[i]);//Pスキル条件
+                    }
+
+                    for (int i = 0; i < MyType.Pスキル対象.Count; i++)
+                    {
+                        comboBoxPスキル対象.Items.Add(MyType.Pスキル対象[i]);//Pスキル対象
+                    }
+
+                    for (int i = 0; i < MyType.Pスキル効果.Count; i++)
+                    {
+                        comboBoxPスキル効果A.Items.Add(MyType.Pスキル効果[i]);//Pスキル効果
+                        comboBoxPスキル効果B.Items.Add(MyType.Pスキル効果[i]);//Pスキル効果
+                    }
                     break;
                 case 2:
                     comboBoxジョブ武器種.Items.Clear();//装備種
                     comboBoxジョブ防具種.Items.Clear();//装備種
                     checkedListBoxジョブAスキル.Items.Clear();//ASkill
                     checkedListBoxジョブPスキル.Items.Clear();//PSkill
+                    comboBoxジョブキースキル1.Items.Clear();
+                    comboBoxジョブキースキル2.Items.Clear();
+                    comboBoxジョブキースキル3.Items.Clear();
+
+
+                    for (int i = 0; i < PSkill.data.Count; i++)
+                    {
+                        checkedListBoxジョブPスキル.Items.Add(PSkill.data[i].名前);//PSkill
+                        comboBoxジョブキースキル1.Items.Add(PSkill.data[i].名前);
+                        comboBoxジョブキースキル2.Items.Add(PSkill.data[i].名前);
+                        comboBoxジョブキースキル3.Items.Add(PSkill.data[i].名前);
+                    }
+
+                    for (int i = 0; i < ASkill.data.Count; i++)
+                    {
+                        checkedListBoxジョブAスキル.Items.Add(ASkill.data[i].名前);
+                    }
+                    for (int i = 0; i < MyType.装備種.Count; i++)
+                    {
+                        comboBoxジョブ武器種.Items.Add(MyType.装備種[i]);//装備種
+                        comboBoxジョブ防具種.Items.Add(MyType.装備種[i]);//装備種
+                    }
                     break;
                 case 3:
-                    comboBoxモンスターボスドロップ.Items.Clear();//Accessory
+                    comboBoxモンスターボスドロップA.Items.Clear();//Accessory
+                    comboBoxモンスターボスドロップB.Items.Clear();//Accessory
                     comboBoxモンスター素材種.Items.Clear();//素材種
                     comboBoxモンスターPスキル1.Items.Clear();
                     comboBoxモンスターPスキル2.Items.Clear();
@@ -128,179 +205,197 @@ namespace ADE_Editer
                     comboBoxモンスターAスキル2.Items.Clear();
                     comboBoxモンスターAスキル3.Items.Clear();
                     comboBoxモンスターAスキル4.Items.Clear();
+                    comboBoxモンスターAスキル5.Items.Clear();
+                    comboBoxモンスターAスキル6.Items.Clear();
+                    comboBoxモンスターAスキル7.Items.Clear();
+                    comboBoxモンスターAスキル8.Items.Clear();
+                    
+                    for (int i = 0; i < Accessory.data.Count; i++)
+                    {
+                        comboBoxモンスターボスドロップA.Items.Add(Accessory.data[i].名前);//Accessory
+                        comboBoxモンスターボスドロップB.Items.Add(Accessory.data[i].名前);//Accessory
+                    }
+
+                    for (int i = 0; i < PSkill.data.Count; i++)
+                    {
+                        comboBoxモンスターPスキル1.Items.Add(PSkill.data[i].名前);
+                        comboBoxモンスターPスキル2.Items.Add(PSkill.data[i].名前);
+                        comboBoxモンスターPスキル3.Items.Add(PSkill.data[i].名前);
+                        comboBoxモンスターPスキル4.Items.Add(PSkill.data[i].名前);
+                        comboBoxモンスターPスキル5.Items.Add(PSkill.data[i].名前);
+                        comboBoxモンスターPスキル6.Items.Add(PSkill.data[i].名前);
+                        comboBoxモンスターPスキル7.Items.Add(PSkill.data[i].名前);
+                        comboBoxモンスターPスキル8.Items.Add(PSkill.data[i].名前);
+                    }
+
+                    for (int i = 0; i < ASkill.data.Count; i++)
+                    {
+                        comboBoxモンスターAスキル1.Items.Add(ASkill.data[i].名前);
+                        comboBoxモンスターAスキル2.Items.Add(ASkill.data[i].名前);
+                        comboBoxモンスターAスキル3.Items.Add(ASkill.data[i].名前);
+                        comboBoxモンスターAスキル4.Items.Add(ASkill.data[i].名前);
+                        comboBoxモンスターAスキル5.Items.Add(ASkill.data[i].名前);
+                        comboBoxモンスターAスキル6.Items.Add(ASkill.data[i].名前);
+                        comboBoxモンスターAスキル7.Items.Add(ASkill.data[i].名前);
+                        comboBoxモンスターAスキル8.Items.Add(ASkill.data[i].名前);
+                    }
+
+                    for (int i = 0; i < MyType.素材種.Count; i++)
+                    {
+                        comboBoxモンスター素材種.Items.Add(MyType.素材種[i]);
+                    }
                     break;
                 case 4:
-                    comboBoxダンジョンボス.Items.Clear();//Monster
+                    comboBoxダンジョンボス1.Items.Clear();//Monster
+                    comboBoxダンジョンボス2.Items.Clear();//Monster
+                    comboBoxダンジョンボス3.Items.Clear();//Monster
+                    comboBoxダンジョンボス4.Items.Clear();//Monster
+                    comboBoxダンジョンボス5.Items.Clear();//Monster
+                    comboBoxダンジョンボス6.Items.Clear();//Monster
+
                     comboBoxダンジョンザコ1.Items.Clear();//Monster
                     comboBoxダンジョンザコ2.Items.Clear();//Monster
                     comboBoxダンジョンザコ3.Items.Clear();//Monster
                     comboBoxダンジョンザコ4.Items.Clear();//Monster
                     comboBoxダンジョンザコ5.Items.Clear();//Monster
+                    comboBoxダンジョンザコ6.Items.Clear();//Monster
 
                     comboBoxダンジョン遺物1.Items.Clear();//Accessory
                     comboBoxダンジョン遺物2.Items.Clear();//Accessory
                     comboBoxダンジョン遺物3.Items.Clear();//Accessory
                     comboBoxダンジョン遺物4.Items.Clear();//Accessory
                     comboBoxダンジョン遺物5.Items.Clear();//Accessory
+                    comboBoxダンジョン遺物6.Items.Clear();//Accessory
+                    for (int i = 0; i < Accessory.data.Count; i++)
+                    {
+                        comboBoxダンジョン遺物1.Items.Add(Accessory.data[i].名前);//Accessory
+                        comboBoxダンジョン遺物2.Items.Add(Accessory.data[i].名前);//Accessory
+                        comboBoxダンジョン遺物3.Items.Add(Accessory.data[i].名前);//Accessory
+                        comboBoxダンジョン遺物4.Items.Add(Accessory.data[i].名前);//Accessory
+                        comboBoxダンジョン遺物5.Items.Add(Accessory.data[i].名前);//Accessory
+                        comboBoxダンジョン遺物6.Items.Add(Accessory.data[i].名前);//Accessory
+                    }
+
+                    for (int i = 0; i < Monster.data.Count; i++)
+                    {
+                        comboBoxダンジョンボス1.Items.Add(Monster.data[i].名前);//Monster
+                        comboBoxダンジョンボス2.Items.Add(Monster.data[i].名前);//Monster
+                        comboBoxダンジョンボス3.Items.Add(Monster.data[i].名前);//Monster
+                        comboBoxダンジョンボス4.Items.Add(Monster.data[i].名前);//Monster
+                        comboBoxダンジョンボス5.Items.Add(Monster.data[i].名前);//Monster
+                        comboBoxダンジョンボス6.Items.Add(Monster.data[i].名前);//Monster
+                        comboBoxダンジョンザコ1.Items.Add(Monster.data[i].名前);//Monster
+                        comboBoxダンジョンザコ2.Items.Add(Monster.data[i].名前);//Monster
+                        comboBoxダンジョンザコ3.Items.Add(Monster.data[i].名前);//Monster
+                        comboBoxダンジョンザコ4.Items.Add(Monster.data[i].名前);//Monster
+                        comboBoxダンジョンザコ5.Items.Add(Monster.data[i].名前);//Monster
+                        comboBoxダンジョンザコ6.Items.Add(Monster.data[i].名前);//Monster
+                    }
                     break;
-                case 5:
+                case 5://装備品
                     comboBox装備品装備種.Items.Clear();//装備種
                     comboBox装備品Pスキル.Items.Clear();//PSkill
+                    for (int i = 0; i < MyType.装備種.Count; i++)
+                    {
+                        comboBox装備品装備種.Items.Add(MyType.装備種[i]);//装備種
+                    }
+                    for (int i = 0; i < PSkill.data.Count; i++)
+                    {
+                        comboBox装備品Pスキル.Items.Add(PSkill.data[i].名前);//PSkill
+                    }
                     break;
-                case 6:
+                case 6://素材
                     comboBox素材種類.Items.Clear();//素材種
+                    for (int i = 0; i < MyType.素材種.Count; i++)
+                    {
+                        comboBox素材種類.Items.Add(MyType.素材種[i]);//素材種
+                    }
                     break;
-                case 7:
+                case 7://アクセサリー
                     comboBoxアクセサリーPスキル.Items.Clear();//PSkill
+                    for (int i = 0; i < PSkill.data.Count; i++)
+                    {
+                        comboBoxアクセサリーPスキル.Items.Add(PSkill.data[i].名前);//PSkill
+                    }
                     break;
-                case 8:
+                case 8://クエスト
                     comboBoxクエスト種類.Items.Clear();//クエスト種
                     comboBox開放クエスト.Items.Clear();//Quest
                     comboBoxクエストアクセサリ.Items.Clear();
+                    //Quest
+                    for (int i = 0; i < MyType.クエスト種.Count; i++)
+                    {
+                        comboBoxクエスト種類.Items.Add(MyType.クエスト種[i]);//クエスト種
+                    }
+                    for (int i = 0; i < Quest.data.Count; i++)
+                    {
+                        comboBox開放クエスト.Items.Add(Quest.data[i].名前);//Quest
+                    }
+                    for (int i = 0; i < Accessory.data.Count; i++)
+                    {
+                        comboBoxクエストアクセサリ.Items.Add(Accessory.data[i].名前);
+                    }
                     break;
-                case 9:
+                case 9://投資
+                    comboBox投資費用素材種1.Items.Clear();
+                    comboBox投資費用素材種2.Items.Clear();
+                    comboBox投資費用素材種3.Items.Clear();
+                    comboBox投資費用素材種4.Items.Clear();
+                    for (int i = 0; i < MyType.素材種.Count; i++)
+                    {
+                        comboBox投資費用素材種1.Items.Add(MyType.素材種[i]);//素材種
+                        comboBox投資費用素材種2.Items.Add(MyType.素材種[i]);//素材種
+                        comboBox投資費用素材種3.Items.Add(MyType.素材種[i]);//素材種
+                        comboBox投資費用素材種4.Items.Add(MyType.素材種[i]);//素材種
+                    }
                     break;
                 case 10:
                     //列挙型
+                    break;
+                case 11:
+                    //ここの初期化
+
+                    if(RecipeType.コントロール == null )
+                    {
+                        RecipeType.コントロール = new List<素材Combobox>();
+
+                        int y = label142.Top;
+
+                        foreach (var itA in MyType.装備種)
+                        {
+                            y += 30;
+                            var cont = new 素材Combobox();
+
+                            RecipeType.コントロール.Add(cont);
+                            cont.label1.Text = itA;
+                            cont.Left = label142.Location.X - 50;
+                            cont.Top = y;
+                            this.MainTabControl.TabPages[11].Controls.Add(cont);
+
+                            foreach (var itB in MyType.素材種)
+                            {
+                                cont.comboBoxMain.Items.Add(itB);
+                                cont.comboBoxSub.Items.Add(itB);
+                            }
+                        }
+
+                        RecipeType.Set(this);
+                    }
+
+                    
                     break;
                 default:
                     break;
             }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
             //ASkill
-            for (int i = 0; i < ASkill.data.Count; i++)
-            {
-                comboBoxAスキル連続スキル.Items.Add(ASkill.data[i].名前);
-                comboBoxAスキル前提スキル.Items.Add(ASkill.data[i].名前);
-                checkedListBoxジョブAスキル.Items.Add(ASkill.data[i].名前);
-                comboBoxモンスターAスキル1.Items.Add(ASkill.data[i].名前);
-                comboBoxモンスターAスキル2.Items.Add(ASkill.data[i].名前);
-                comboBoxモンスターAスキル3.Items.Add(ASkill.data[i].名前);
-                comboBoxモンスターAスキル4.Items.Add(ASkill.data[i].名前);
-            }
-
-            //PSkill
-            for (int i = 0; i < PSkill.data.Count; i++)
-            {
-                comboBoxPスキル習得前提Pスキル.Items.Add(PSkill.data[i].名前);//PSkill
-                checkedListBoxジョブPスキル.Items.Add(PSkill.data[i].名前);//PSkill
-                comboBoxアクセサリーPスキル.Items.Add(PSkill.data[i].名前);//PSkill
-                comboBox装備品Pスキル.Items.Add(PSkill.data[i].名前);//PSkill
-                comboBoxモンスターPスキル1.Items.Add(PSkill.data[i].名前);
-                comboBoxモンスターPスキル2.Items.Add(PSkill.data[i].名前);
-                comboBoxモンスターPスキル3.Items.Add(PSkill.data[i].名前);
-                comboBoxモンスターPスキル4.Items.Add(PSkill.data[i].名前);
-                comboBoxモンスターPスキル5.Items.Add(PSkill.data[i].名前);
-                comboBoxモンスターPスキル6.Items.Add(PSkill.data[i].名前);
-                comboBoxモンスターPスキル7.Items.Add(PSkill.data[i].名前);
-                comboBoxモンスターPスキル8.Items.Add(PSkill.data[i].名前);
-            }
-
-            //Monster
-            for (int i = 0; i < Monster.data.Count; i++)
-            {
-                comboBoxダンジョンボス.Items.Add(Monster.data[i].名前);//Monster
-                comboBoxダンジョンザコ1.Items.Add(Monster.data[i].名前);//Monster
-                comboBoxダンジョンザコ2.Items.Add(Monster.data[i].名前);//Monster
-                comboBoxダンジョンザコ3.Items.Add(Monster.data[i].名前);//Monster
-                comboBoxダンジョンザコ4.Items.Add(Monster.data[i].名前);//Monster
-                comboBoxダンジョンザコ5.Items.Add(Monster.data[i].名前);//Monster
-            }
-
-            //Accessory
-            for (int i = 0; i < Accessory.data.Count; i++)
-            {
-                comboBoxモンスターボスドロップ.Items.Add(Accessory.data[i].名前);//Accessory
-                comboBoxダンジョン遺物1.Items.Add(Accessory.data[i].名前);//Accessory
-                comboBoxダンジョン遺物2.Items.Add(Accessory.data[i].名前);//Accessory
-                comboBoxダンジョン遺物3.Items.Add(Accessory.data[i].名前);//Accessory
-                comboBoxダンジョン遺物4.Items.Add(Accessory.data[i].名前);//Accessory
-                comboBoxダンジョン遺物5.Items.Add(Accessory.data[i].名前);//Accessory
-                comboBoxクエストアクセサリ.Items.Add(Accessory.data[i].名前);
-            }
-
-            //Quest
-            for (int i = 0; i < Quest.data.Count; i++)
-            {
-                comboBox開放クエスト.Items.Add(Quest.data[i].名前);//Quest
-            }
 
             //MyType系
-            for (int i = 0; i < MyType.スキル系統.Count; i++)
-            {
-                checkedListBoxAスキルスキルタグ.Items.Add(MyType.スキル系統[i]);//スキル系統
-                checkedListBoxPスキルスキルタグ.Items.Add(MyType.スキル系統[i]);//スキル系統
 
-            }
 
-            for (int i = 0; i < MyType.Pスキルタイミング.Count; i++)
-            {
-                comboBoxPスキルタイミング.Items.Add(MyType.Pスキルタイミング[i]);//Pスキルタイミング
 
-            }
-            for (int i = 0; i < MyType.Pスキル条件.Count; i++)
-            {
-                comboBoxPスキル条件.Items.Add(MyType.Pスキル条件[i]);//Pスキル条件
-            }
 
-            for (int i = 0; i < MyType.Pスキル対象.Count; i++)
-            {
-                comboBoxPスキル対象.Items.Add(MyType.Pスキル対象[i]);//Pスキル対象
 
-            }
-
-            for (int i = 0; i < MyType.Pスキル効果.Count; i++)
-            {
-                comboBoxPスキル効果A.Items.Add(MyType.Pスキル効果[i]);//Pスキル効果
-                comboBoxPスキル効果B.Items.Add(MyType.Pスキル効果[i]);//Pスキル効果
-            }
-
-            for (int i = 0; i < MyType.スキル追加効果種.Count; i++)
-            {
-                comboBoxAスキル追加効果1.Items.Add(MyType.スキル追加効果種[i]);//スキル追加効果種
-                comboBoxAスキル追加効果2.Items.Add(MyType.スキル追加効果種[i]);//スキル追加効果種
-                comboBoxAスキル追加効果3.Items.Add(MyType.スキル追加効果種[i]);//スキル追加効果種
-                comboBoxAスキル追加効果4.Items.Add(MyType.スキル追加効果種[i]);//スキル追加効果種
-                comboBoxAスキル追加効果5.Items.Add(MyType.スキル追加効果種[i]);//スキル追加効果種
-            }
-
-            for (int i = 0; i < MyType.バフ効果.Count; i++)
-            {
-                comboBoxAスキルバフ1.Items.Add(MyType.バフ効果[i]);//バフ効果
-                comboBoxAスキルバフ2.Items.Add(MyType.バフ効果[i]);//バフ効果
-                comboBoxAスキルバフ3.Items.Add(MyType.バフ効果[i]);//バフ効果
-            }
-
-            for (int i = 0; i < MyType.装備種.Count; i++)
-            {
-                comboBoxジョブ武器種.Items.Add(MyType.装備種[i]);//装備種
-                comboBoxジョブ防具種.Items.Add(MyType.装備種[i]);//装備種
-                comboBox装備品装備種.Items.Add(MyType.装備種[i]);//装備種
-            }
-
-            for (int i = 0; i < MyType.クエスト種.Count; i++)
-            {
-                comboBoxクエスト種類.Items.Add(MyType.クエスト種[i]);//クエスト種
-            }
-
-            for (int i = 0; i < MyType.素材種.Count; i++)
-            {
-                comboBoxモンスター素材種.Items.Add(MyType.素材種[i]);
-                comboBox素材種類.Items.Add(MyType.素材種[i]);//素材種
-            }
         }
         private void コピー()
         {
@@ -734,28 +829,28 @@ namespace ADE_Editer
 
             UpdateComboCheck();
             ASkill.data[0].Set(this);
-            PSkill.data[0].Set(this);
-            Accessory.data[0].Set(this);
-            Quest.data[0].Set(this);
-            Job.data[0].Set(this);
-            Dungeon.data[0].Set(this);
-            Monster.data[0].Set(this);
-            Invest.data[0].Set(this);
-            Material.data[0].Set(this);
-            Item.data[0].Set(this);
+            //PSkill.data[0].Set(this);
+            //Accessory.data[0].Set(this);
+            //Quest.data[0].Set(this);
+            //Job.data[0].Set(this);
+            //Dungeon.data[0].Set(this);
+            //Monster.data[0].Set(this);
+            //Invest.data[0].Set(this);
+            //Material.data[0].Set(this);
+            //Item.data[0].Set(this);
 
             listBoxAスキル.SelectedIndex = 0;
-            listBoxPスキル.SelectedIndex = 0;
-            listBoxアクセサリー.SelectedIndex = 0;
-            listBoxクエスト.SelectedIndex = 0;
-            listBoxジョブ.SelectedIndex = 0;
-            listBoxダンジョン.SelectedIndex = 0;
-            listBoxモンスター.SelectedIndex = 0;
-            listBox投資.SelectedIndex = 0;
-            listBox素材.SelectedIndex = 0;
-            listBox装備品.SelectedIndex = 0;
+            //listBoxPスキル.SelectedIndex = 0;
+            //listBoxアクセサリー.SelectedIndex = 0;
+            //listBoxクエスト.SelectedIndex = 0;
+            //listBoxジョブ.SelectedIndex = 0;
+            //listBoxダンジョン.SelectedIndex = 0;
+            //listBoxモンスター.SelectedIndex = 0;
+            //listBox投資.SelectedIndex = 0;
+            //listBox素材.SelectedIndex = 0;
+            //listBox装備品.SelectedIndex = 0;
 
-            comboBox列挙型.SelectedIndex = 0;
+            //comboBox列挙型.SelectedIndex = 0;
 
         }
 
@@ -781,34 +876,50 @@ namespace ADE_Editer
                     ASkill.data[listBoxAスキル.SelectedIndex].Set(this);
                     break;
                 case 1:
+                    if (listBoxPスキル.SelectedIndex == -1) { listBoxPスキル.SelectedIndex = 0; }
                     PSkill.data[listBoxPスキル.SelectedIndex].Set(this);
                     break;
                 case 2:
+                    if (listBoxジョブ.SelectedIndex < 0) { listBoxジョブ.SelectedIndex = 0; }
                     Job.data[listBoxジョブ.SelectedIndex].Set(this);
                     break;
                 case 3:
+                    if (listBoxモンスター.SelectedIndex == -1) { listBoxモンスター.SelectedIndex = 0; }
                     Monster.data[listBoxモンスター.SelectedIndex].Set(this);
                     break;
                 case 4:
+                    if (listBoxダンジョン.SelectedIndex == -1) { listBoxダンジョン.SelectedIndex = 0; }
+
                     Dungeon.data[listBoxダンジョン.SelectedIndex].Set(this);
                     break;
                 case 5:
+                    if (listBoxモンスター.SelectedIndex == -1) { listBoxモンスター.SelectedIndex = 0; }
                     Item.data[listBoxモンスター.SelectedIndex].Set(this);
                     break;
                 case 6:
+                    if (listBox素材.SelectedIndex == -1) { listBox素材.SelectedIndex = 0; }
                     Material.data[listBox素材.SelectedIndex].Set(this);
                     break;
                 case 7:
+                    if (listBoxアクセサリー.SelectedIndex == -1) { listBoxアクセサリー.SelectedIndex = 0; }
                     Accessory.data[listBoxアクセサリー.SelectedIndex].Set(this);
                     break;
                 case 8:
+                    if (listBoxクエスト.SelectedIndex == -1) { listBoxクエスト.SelectedIndex = 0; }
                     Quest.data[listBoxクエスト.SelectedIndex].Set(this);
                     break;
                 case 9:
+                    if (listBox投資.SelectedIndex == -1) { listBox投資.SelectedIndex = 0; }
                     Invest.data[listBox投資.SelectedIndex].Set(this);
                     break;
                 case 10:
                     //列挙型
+                    break;
+                case 11:
+                    //強化要求                    
+                    if (listBox強化要求素材数.SelectedIndex == -1) { listBox強化要求素材数.SelectedIndex = 0; }
+
+                    RecipeNumber.data[listBox強化要求素材数.SelectedIndex].Set(this);
                     break;
                 default:
                     break;
@@ -856,6 +967,9 @@ namespace ADE_Editer
             Monster.Save(cd + "monster");
             Quest.Save(cd + "quest");
 
+            RecipeNumber.Save(cd + "request_number");
+            RecipeType.Save(cd + "request_type");
+
             //日付時間分のフォルダ作成してバックアップも保存
             DateTime dt = DateTime.Now;
             string ntStr = dt.ToString("yyyyMMddHHmm");
@@ -876,6 +990,8 @@ namespace ADE_Editer
             Monster.Save(cd + "monster");
             Quest.Save(cd + "quest");
 
+            RecipeNumber.Save(cd + "request_number");
+            RecipeType.Save(cd + "request_type");
         }
 
         private void LoadData()
@@ -894,6 +1010,10 @@ namespace ADE_Editer
             Material.Load(cd + "material");
             Monster.Load(cd + "monster");
             Quest.Load(cd + "quest");
+
+
+            RecipeNumber.Load(cd + "request_number");
+            RecipeType.Load(cd + "request_type");
 
         }
 
@@ -1246,6 +1366,21 @@ namespace ADE_Editer
             if (textBox投資名前.Focused) { return; }
             if (textBox投資説明.Focused) { return; }
             listBoxShortCut(sender, e);
+        }
+
+        private void listBox強化要求素材数_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var n = listBox強化要求素材数.SelectedIndex;
+
+            if (n == -1)
+            {
+                listBox強化要求素材数.SelectedIndex = 0;
+            }
+
+            RecipeNumber.data[now強化数].Get(this);
+            RecipeNumber.data[n].Set(this);
+
+            now強化数 = n;
         }
     }
 }

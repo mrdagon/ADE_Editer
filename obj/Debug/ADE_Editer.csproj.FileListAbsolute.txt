@@ -20,3 +20,4 @@ C:\Users\ganta\Documents\Github\ADE_Editer\obj\Debug\ADE_Editer.csproj.GenerateR
 C:\Users\ganta\Documents\Github\ADE_Editer\obj\Debug\ADE_Editer.csproj.CoreCompileInputs.cache
 C:\Users\ganta\Documents\Github\ADE_Editer\obj\Debug\ADE_Editer.exe
 C:\Users\ganta\Documents\Github\ADE_Editer\obj\Debug\ADE_Editer.pdb
+C:\Users\ganta\Documents\Github\ADE_Editer\obj\Debug\ADE_Editer.素材Combobox.resources

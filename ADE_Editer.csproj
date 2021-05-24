@@ -54,6 +54,7 @@
     <Compile Include="CustomTrackbar.Designer.cs">
       <DependentUpon>CustomTrackbar.cs</DependentUpon>
     </Compile>
+    <Compile Include="データ\Global.cs" />
     <Compile Include="データ\Invest.cs" />
     <Compile Include="データ\Dungeon.cs" />
     <Compile Include="データ\EnumClass.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="データ\Material.cs" />
+    <Compile Include="データ\Recipe.cs" />
     <Compile Include="データ\Monster.cs" />
     <Compile Include="データ\PSkill.cs" />
     <Compile Include="UserTrackbar.cs">
@@ -78,6 +80,12 @@
     </Compile>
     <Compile Include="データ\Quest.cs" />
     <Compile Include="データ\MyType.cs" />
+    <Compile Include="素材Combobox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="素材Combobox.Designer.cs">
+      <DependentUpon>素材Combobox.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +101,9 @@
     <EmbeddedResource Include="UserTrackbar.resx">
       <DependentUpon>UserTrackbar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="素材Combobox.resx">
+      <DependentUpon>素材Combobox.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -105,6 +116,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="memo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

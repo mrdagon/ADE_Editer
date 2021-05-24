@@ -197,7 +197,7 @@ namespace ADE_Editer
         public int 対象;
         public int 範囲;
         public int Hit数;
-        public int 減衰率;
+        public int 減衰率;//未使用
 
         public int 参照ステ;
         public int 隊列;
@@ -208,10 +208,12 @@ namespace ADE_Editer
 
 
         public int レベル補正種A;
-        public int[] レベル補正A = new int[9];
+        public int レベル補正A;
 
         public int レベル補正種B;
-        public int[] レベル補正B = new int[9];
+        public int レベル補正B;
+
+        public int レアリティ;
 
 
         public bool 自己バフ;
@@ -243,9 +245,7 @@ namespace ADE_Editer
 
             Eq.Set(form.numAスキルアイコンID , ref アイコンID);
             Eq.Set(form.numAスキルエフェクトID , ref エフェクトID);
-            Eq.Set(form.trackbarAスキル習得レベル , ref 習得Lv);
-            Eq.Set(form.comboBoxAスキル前提スキル , ref 前提スキルID);//Pスキルリスト
-            Eq.Set(form.trackbarAスキル前提スキル , ref 前提スキルLv);
+            Eq.Set(form.comboBoxAスキルレアリティ , ref 前提スキルID);//Pスキルリスト
             Eq.Set(form.checkedListBoxAスキルスキルタグ , ref スキルタグ , MyType.スキル系統.Count);//スキルタグ
 
             Eq.Set(form.trackbarAスキル基礎ダメージ , ref 基礎ダメージ);
@@ -276,26 +276,12 @@ namespace ADE_Editer
 
 
             Eq.Set(form.comboBoxAスキルレベル補正1 , ref レベル補正種A);
-            Eq.Set(form.numAスキルレベル補正1Lv1 , ref レベル補正A[0]);
-            Eq.Set(form.numAスキルレベル補正1Lv2 , ref レベル補正A[1]);
-            Eq.Set(form.numAスキルレベル補正1Lv3 , ref レベル補正A[2]);
-            Eq.Set(form.numAスキルレベル補正1Lv4 , ref レベル補正A[3]);
-            Eq.Set(form.numAスキルレベル補正1Lv5 , ref レベル補正A[4]);
-            Eq.Set(form.numAスキルレベル補正1Lv6 , ref レベル補正A[5]);
-            Eq.Set(form.numAスキルレベル補正1Lv7 , ref レベル補正A[6]);
-            Eq.Set(form.numAスキルレベル補正1Lv8 , ref レベル補正A[7]);
-            Eq.Set(form.numAスキルレベル補正1Lv9 , ref レベル補正A[8]);
+            Eq.Set(form.numAスキルレベル補正1Lv1 , ref レベル補正A);
 
             Eq.Set(form.comboBoxAスキルレベル補正2 , ref レベル補正種B);
-            Eq.Set(form.numAスキルレベル補正2Lv1 , ref レベル補正B[0]);
-            Eq.Set(form.numAスキルレベル補正2Lv2 , ref レベル補正B[1]);
-            Eq.Set(form.numAスキルレベル補正2Lv3 , ref レベル補正B[2]);
-            Eq.Set(form.numAスキルレベル補正2Lv4 , ref レベル補正B[3]);
-            Eq.Set(form.numAスキルレベル補正2Lv5 , ref レベル補正B[4]);
-            Eq.Set(form.numAスキルレベル補正2Lv6 , ref レベル補正B[5]);
-            Eq.Set(form.numAスキルレベル補正2Lv7 , ref レベル補正B[6]);
-            Eq.Set(form.numAスキルレベル補正2Lv8 , ref レベル補正B[7]);
-            Eq.Set(form.numAスキルレベル補正2Lv9 , ref レベル補正B[8]);
+            Eq.Set(form.numAスキルレベル補正2Lv1 , ref レベル補正B);
+
+            Eq.Set(form.comboBoxAスキルレアリティ, ref レアリティ);
 
             Eq.Set(form.checkBoxAスキル自己バフ , ref 自己バフ);
 
@@ -321,8 +307,8 @@ namespace ADE_Editer
         private void Save(StreamWriter sw_str , BinaryWriter bw_data )
         {
             //文字とそれ以外は別ファイルに保存
-            sw_str.WriteLine(名前 + "," + 説明.Replace("\r\n", "\t"));
-
+            sw_str.WriteLine(名前 + CV.区切りSave + 説明.Replace("\r\n",CV.改行Save));
+            
             RW.ReadWrite(bw_data, ref アイコンID);
             RW.ReadWrite(bw_data, ref エフェクトID);
             RW.ReadWrite(bw_data, ref 習得Lv);
@@ -330,7 +316,9 @@ namespace ADE_Editer
             RW.ReadWrite(bw_data, ref 前提スキルLv);
             
             RW.ReadWrite(bw_data, ref スキルタグ , MyType.スキル系統.Count);
-           
+
+            RW.ReadWrite(bw_data, ref レアリティ);
+
             RW.ReadWrite(bw_data, ref 基礎ダメージ);
             RW.ReadWrite(bw_data, ref 反映率);
             RW.ReadWrite(bw_data, ref 命中);
@@ -354,17 +342,10 @@ namespace ADE_Editer
 
 
             RW.ReadWrite(bw_data, ref レベル補正種A);
-            for (int i = 0; i < レベル補正A.Length; i++)
-            {
-                RW.ReadWrite(bw_data, ref レベル補正A[i]);
-            }
+            RW.ReadWrite(bw_data, ref レベル補正A);
 
             RW.ReadWrite(bw_data, ref レベル補正種B);
-
-            for(int i=0;i< レベル補正B.Length;i++)
-            {
-                RW.ReadWrite(bw_data, ref レベル補正B[i]);
-            }
+            RW.ReadWrite(bw_data, ref レベル補正B);
 
             RW.ReadWrite(bw_data, ref 自己バフ);
 
@@ -381,18 +362,21 @@ namespace ADE_Editer
         private void Load(StreamReader br_str , BinaryReader br_data)
         {
             var str = br_str.ReadLine();
-            var strS = str.Split(',');
+            var strS = str.Split(CV.区切りLoad);
 
             名前 = strS[0];
             説明 = strS[1].Replace("\t","\r\n");
 
             RW.ReadWrite(br_data, ref アイコンID);
             RW.ReadWrite(br_data, ref エフェクトID);
+
             RW.ReadWrite(br_data, ref 習得Lv);
             RW.ReadWrite(br_data, ref 前提スキルID);//Pスキルリスト
             RW.ReadWrite(br_data, ref 前提スキルLv);
 
             RW.ReadWrite(br_data, ref スキルタグ, MyType.スキル系統.Count);
+
+            RW.ReadWrite(br_data, ref レアリティ);
 
             RW.ReadWrite(br_data, ref 基礎ダメージ);
             RW.ReadWrite(br_data, ref 反映率);
@@ -418,16 +402,12 @@ namespace ADE_Editer
 
 
             RW.ReadWrite(br_data, ref レベル補正種A);
-            for (int i = 0; i < レベル補正A.Length; i++)
-            {
-                RW.ReadWrite(br_data, ref レベル補正A[i]);
-            }
+            RW.ReadWrite(br_data, ref レベル補正A);
+
 
             RW.ReadWrite(br_data, ref レベル補正種B);
-            for (int i = 0; i < レベル補正B.Length; i++)
-            {
-                RW.ReadWrite(br_data, ref レベル補正B[i]);
-            }
+            RW.ReadWrite(br_data, ref レベル補正B);
+            
 
             RW.ReadWrite(br_data, ref 自己バフ);
             for (int i = 0; i < バフ種類.Length; i++)
@@ -496,12 +476,8 @@ namespace ADE_Editer
                 clone.追加効果[i] = 追加効果[i];
             }
 
-            for (int i = 0; i < 9; i++)
-            {
-                clone.レベル補正A[i] = レベル補正A[i];
-                clone.レベル補正B[i] = レベル補正B[i];
-
-            }
+            clone.レベル補正A = レベル補正A;
+            clone.レベル補正B = レベル補正B;
 
             for (int i = 0; i < 3; i++)
             {
@@ -511,6 +487,8 @@ namespace ADE_Editer
                 clone.バフ発動率[i] = バフ発動率[i];
                 clone.バフ持続[i] = バフ持続[i];
             }
+
+            clone.レアリティ = レアリティ;
 
             return clone;
         }
@@ -543,10 +521,10 @@ namespace ADE_Editer
             }
             foreach (var it in Monster.data)
             {
-                if (it.Aスキル[0] >= index) { it.Aスキル[0]++; }
-                if (it.Aスキル[1] >= index) { it.Aスキル[1]++; }
-                if (it.Aスキル[2] >= index) { it.Aスキル[2]++; }
-                if (it.Aスキル[3] >= index) { it.Aスキル[3]++; }
+                for(int i=0;i<it.Aスキル.Length;i++)
+                {
+                    if (it.Aスキル[i] >= index) { it.Aスキル[i]++; }
+                }
             }
 
         }
