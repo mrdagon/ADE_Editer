@@ -57,7 +57,7 @@ namespace ADE_Editer
                     Dungeon.data[listBoxダンジョン.SelectedIndex].Get(this);
                     break;
                 case 5:
-                    Item.data[listBoxモンスター.SelectedIndex].Get(this);
+                    Item.data[listBox装備品.SelectedIndex].Get(this);
                     break;
                 case 6:
                     Material.data[listBox素材.SelectedIndex].Get(this);
@@ -876,40 +876,75 @@ namespace ADE_Editer
                     ASkill.data[listBoxAスキル.SelectedIndex].Set(this);
                     break;
                 case 1:
-                    if (listBoxPスキル.SelectedIndex == -1) { listBoxPスキル.SelectedIndex = 0; }
+                    if (listBoxPスキル.SelectedIndex == -1)
+                    {
+                        PSkill.data[0].Set(this);
+                        listBoxPスキル.SelectedIndex = 0;
+                    }
                     PSkill.data[listBoxPスキル.SelectedIndex].Set(this);
                     break;
                 case 2:
-                    if (listBoxジョブ.SelectedIndex < 0) { listBoxジョブ.SelectedIndex = 0; }
+                    if (listBoxジョブ.SelectedIndex == -1)
+                    {
+                        Job.data[0].Set(this);
+                        listBoxジョブ.SelectedIndex = 0;
+                    }
                     Job.data[listBoxジョブ.SelectedIndex].Set(this);
                     break;
                 case 3:
-                    if (listBoxモンスター.SelectedIndex == -1) { listBoxモンスター.SelectedIndex = 0; }
+                    if (listBoxモンスター.SelectedIndex == -1)
+                    {
+                        Monster.data[0].Set(this);
+                        listBoxモンスター.SelectedIndex = 0;
+                    }
                     Monster.data[listBoxモンスター.SelectedIndex].Set(this);
                     break;
                 case 4:
-                    if (listBoxダンジョン.SelectedIndex == -1) { listBoxダンジョン.SelectedIndex = 0; }
-
+                    if (listBoxダンジョン.SelectedIndex == -1)
+                    {
+                        Dungeon.data[0].Set(this);
+                        listBoxダンジョン.SelectedIndex = 0;
+                    }
                     Dungeon.data[listBoxダンジョン.SelectedIndex].Set(this);
                     break;
-                case 5:
-                    if (listBoxモンスター.SelectedIndex == -1) { listBoxモンスター.SelectedIndex = 0; }
-                    Item.data[listBoxモンスター.SelectedIndex].Set(this);
+                case 5://装備品
+                    if (listBox装備品.SelectedIndex == -1)
+                    {
+                        Item.data[0].Set(this);
+                        listBox装備品.SelectedIndex = 0;
+                    }
+                    Item.data[listBox装備品.SelectedIndex].Set(this);
                     break;
                 case 6:
-                    if (listBox素材.SelectedIndex == -1) { listBox素材.SelectedIndex = 0; }
+                    if (listBox素材.SelectedIndex == -1)
+                    {
+                        Material.data[0].Set(this);
+                        listBox素材.SelectedIndex = 0;
+                    }
                     Material.data[listBox素材.SelectedIndex].Set(this);
                     break;
                 case 7:
-                    if (listBoxアクセサリー.SelectedIndex == -1) { listBoxアクセサリー.SelectedIndex = 0; }
+                    if (listBoxアクセサリー.SelectedIndex == -1)
+                    {
+                        Accessory.data[0].Set(this);
+                        listBoxアクセサリー.SelectedIndex = 0;
+                    }
                     Accessory.data[listBoxアクセサリー.SelectedIndex].Set(this);
                     break;
                 case 8:
-                    if (listBoxクエスト.SelectedIndex == -1) { listBoxクエスト.SelectedIndex = 0; }
+                    if (listBoxクエスト.SelectedIndex == -1)
+                    {
+                        Quest.data[0].Set(this);
+                        listBoxクエスト.SelectedIndex = 0;
+                    }
                     Quest.data[listBoxクエスト.SelectedIndex].Set(this);
                     break;
                 case 9:
-                    if (listBox投資.SelectedIndex == -1) { listBox投資.SelectedIndex = 0; }
+                    if (listBox投資.SelectedIndex == -1)
+                    {
+                        Invest.data[0].Set(this);
+                        listBox投資.SelectedIndex = 0;
+                    }
                     Invest.data[listBox投資.SelectedIndex].Set(this);
                     break;
                 case 10:
@@ -917,8 +952,11 @@ namespace ADE_Editer
                     break;
                 case 11:
                     //強化要求                    
-                    if (listBox強化要求素材数.SelectedIndex == -1) { listBox強化要求素材数.SelectedIndex = 0; }
-
+                    if (listBox強化要求素材数.SelectedIndex == -1)
+                    {
+                        RecipeNumber.data[0].Set(this);
+                        listBox強化要求素材数.SelectedIndex = 0;
+                    }
                     RecipeNumber.data[listBox強化要求素材数.SelectedIndex].Set(this);
                     break;
                 default:

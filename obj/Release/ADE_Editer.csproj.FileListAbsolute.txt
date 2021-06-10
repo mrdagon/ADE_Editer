@@ -1,0 +1,12 @@
+C:\Users\ganta\Documents\Github\ADE_Editer\bin\Release\ADE_Editer.exe.config
+C:\Users\ganta\Documents\Github\ADE_Editer\bin\Release\ADE_Editer.exe
+C:\Users\ganta\Documents\Github\ADE_Editer\bin\Release\ADE_Editer.pdb
+C:\Users\ganta\Documents\Github\ADE_Editer\obj\Release\ADE_Editer.csprojAssemblyReference.cache
+C:\Users\ganta\Documents\Github\ADE_Editer\obj\Release\ADE_Editer.MainForm.resources
+C:\Users\ganta\Documents\Github\ADE_Editer\obj\Release\ADE_Editer.Properties.Resources.resources
+C:\Users\ganta\Documents\Github\ADE_Editer\obj\Release\ADE_Editer.UserTrackbar.resources
+C:\Users\ganta\Documents\Github\ADE_Editer\obj\Release\ADE_Editer.素材Combobox.resources
+C:\Users\ganta\Documents\Github\ADE_Editer\obj\Release\ADE_Editer.csproj.GenerateResource.cache
+C:\Users\ganta\Documents\Github\ADE_Editer\obj\Release\ADE_Editer.csproj.CoreCompileInputs.cache
+C:\Users\ganta\Documents\Github\ADE_Editer\obj\Release\ADE_Editer.exe
+C:\Users\ganta\Documents\Github\ADE_Editer\obj\Release\ADE_Editer.pdb
