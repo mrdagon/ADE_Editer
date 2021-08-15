@@ -101,7 +101,7 @@ namespace ADE_Editer
         {
             var strS = br_str.ReadLine().Split(CV.区切りLoad);
             名前 = strS[0];
-            説明 = strS[1].Replace("\t", "\r\n");
+            説明 = strS[1].Replace("$", "\r\n");
 
             RW.ReadWrite(br_data, ref 武器種);
             RW.ReadWrite(br_data, ref 防具種);

@@ -245,7 +245,7 @@ namespace ADE_Editer
 
             Eq.Set(form.numAスキルアイコンID , ref アイコンID);
             Eq.Set(form.numAスキルエフェクトID , ref エフェクトID);
-            Eq.Set(form.comboBoxAスキルレアリティ , ref 前提スキルID);//Pスキルリスト
+            Eq.Set(form.numAスキルレアリティ , ref 前提スキルID);//Pスキルリスト
             Eq.Set(form.checkedListBoxAスキルスキルタグ , ref スキルタグ , MyType.スキル系統.Count);//スキルタグ
 
             Eq.Set(form.trackbarAスキル基礎ダメージ , ref 基礎ダメージ);
@@ -281,7 +281,7 @@ namespace ADE_Editer
             Eq.Set(form.comboBoxAスキルレベル補正2 , ref レベル補正種B);
             Eq.Set(form.numAスキルレベル補正2Lv1 , ref レベル補正B);
 
-            Eq.Set(form.comboBoxAスキルレアリティ, ref レアリティ);
+            Eq.Set(form.numAスキルレアリティ, ref レアリティ);
 
             Eq.Set(form.checkBoxAスキル自己バフ , ref 自己バフ);
 
@@ -318,6 +318,7 @@ namespace ADE_Editer
             RW.ReadWrite(bw_data, ref スキルタグ , MyType.スキル系統.Count);
 
             RW.ReadWrite(bw_data, ref レアリティ);
+            if (レアリティ < 0) { レアリティ = 0; }
 
             RW.ReadWrite(bw_data, ref 基礎ダメージ);
             RW.ReadWrite(bw_data, ref 反映率);
@@ -365,7 +366,7 @@ namespace ADE_Editer
             var strS = str.Split(CV.区切りLoad);
 
             名前 = strS[0];
-            説明 = strS[1].Replace("\t","\r\n");
+            説明 = strS[1].Replace("$","\r\n");
 
             RW.ReadWrite(br_data, ref アイコンID);
             RW.ReadWrite(br_data, ref エフェクトID);
@@ -377,6 +378,7 @@ namespace ADE_Editer
             RW.ReadWrite(br_data, ref スキルタグ, MyType.スキル系統.Count);
 
             RW.ReadWrite(br_data, ref レアリティ);
+            if (レアリティ <= 0) { レアリティ = 0; }
 
             RW.ReadWrite(br_data, ref 基礎ダメージ);
             RW.ReadWrite(br_data, ref 反映率);

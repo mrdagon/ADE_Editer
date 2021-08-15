@@ -30,7 +30,7 @@
         {
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.TabAスキル = new System.Windows.Forms.TabPage();
-            this.comboBoxAスキルレアリティ = new System.Windows.Forms.ComboBox();
+            this.numAスキルレアリティ = new System.Windows.Forms.NumericUpDown();
             this.label132 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label156 = new System.Windows.Forms.Label();
@@ -44,61 +44,32 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.trackbarAスキル範囲 = new ADE_Editer.UserTrackbar();
             this.label31 = new System.Windows.Forms.Label();
             this.comboBoxAスキル隊列 = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
             this.comboBoxAスキル参照ステ = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.trackbarAスキル減衰率 = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキルHit数 = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキルクールタイム = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキル会心倍率 = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキル会心率 = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキル命中 = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキル反映率 = new ADE_Editer.UserTrackbar();
             this.comboBoxAスキル対象 = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.trackbarAスキル基礎ダメージ = new ADE_Editer.UserTrackbar();
             this.comboBoxAスキル連続スキル = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.trackbarAスキルバフ持続3 = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキルバフ持続2 = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキルバフ持続1 = new ADE_Editer.UserTrackbar();
             this.comboBoxAスキルバフ2 = new System.Windows.Forms.ComboBox();
-            this.trackbarAスキルバフ発動率3 = new ADE_Editer.UserTrackbar();
             this.comboBoxAスキルバフ3 = new System.Windows.Forms.ComboBox();
             this.checkBoxAスキル自己バフ = new System.Windows.Forms.CheckBox();
-            this.trackbarAスキルバフ発動率2 = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキルバフ発動率1 = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキルバフ反映率3 = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキルバフ反映率2 = new ADE_Editer.UserTrackbar();
             this.comboBoxAスキルバフ1 = new System.Windows.Forms.ComboBox();
-            this.trackbarAスキルバフ反映率1 = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキルバフ固定値3 = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキルバフ固定値2 = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキルバフ固定値1 = new ADE_Editer.UserTrackbar();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.trackbarAスキル追加効果5 = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキル追加効果4 = new ADE_Editer.UserTrackbar();
             this.comboBoxAスキル追加効果5 = new System.Windows.Forms.ComboBox();
             this.comboBoxAスキル追加効果4 = new System.Windows.Forms.ComboBox();
-            this.trackbarAスキル追加効果3 = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキル追加効果2 = new ADE_Editer.UserTrackbar();
-            this.trackbarAスキル追加効果1 = new ADE_Editer.UserTrackbar();
             this.comboBoxAスキル追加効果3 = new System.Windows.Forms.ComboBox();
             this.comboBoxAスキル追加効果1 = new System.Windows.Forms.ComboBox();
             this.comboBoxAスキル追加効果2 = new System.Windows.Forms.ComboBox();
@@ -138,10 +109,6 @@
             this.label33 = new System.Windows.Forms.Label();
             this.textBoxPスキル名前 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.trackbarPスキル効果値B = new ADE_Editer.UserTrackbar();
-            this.trackbarPスキル効果値A = new ADE_Editer.UserTrackbar();
-            this.trackbarPスキル発動率 = new ADE_Editer.UserTrackbar();
-            this.trackbarPスキル条件値 = new ADE_Editer.UserTrackbar();
             this.checkedListBoxPスキルスキルタグ = new System.Windows.Forms.CheckedListBox();
             this.checkBoxPスキルキースキル = new System.Windows.Forms.CheckBox();
             this.textBoxPスキル説明 = new System.Windows.Forms.TextBox();
@@ -152,22 +119,10 @@
             this.comboBoxジョブキースキル3 = new System.Windows.Forms.ComboBox();
             this.comboBoxジョブキースキル2 = new System.Windows.Forms.ComboBox();
             this.comboBoxジョブキースキル1 = new System.Windows.Forms.ComboBox();
-            this.label57 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
-            this.trackbarジョブ会心 = new ADE_Editer.UserTrackbar();
-            this.trackbarジョブ回避 = new ADE_Editer.UserTrackbar();
-            this.trackbarジョブ命中 = new ADE_Editer.UserTrackbar();
-            this.trackbarジョブ魔防 = new ADE_Editer.UserTrackbar();
-            this.trackbarジョブ物防 = new ADE_Editer.UserTrackbar();
-            this.trackbarジョブ知力 = new ADE_Editer.UserTrackbar();
-            this.trackbarジョブ技力 = new ADE_Editer.UserTrackbar();
-            this.trackbarジョブ筋力 = new ADE_Editer.UserTrackbar();
             this.checkedListBoxジョブPスキル = new System.Windows.Forms.CheckedListBox();
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
@@ -178,7 +133,6 @@
             this.label44 = new System.Windows.Forms.Label();
             this.textBoxジョブ名前 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.trackbarジョブHP = new ADE_Editer.UserTrackbar();
             this.checkedListBoxジョブAスキル = new System.Windows.Forms.CheckedListBox();
             this.textBoxジョブ説明 = new System.Windows.Forms.TextBox();
             this.comboBoxジョブ防具種 = new System.Windows.Forms.ComboBox();
@@ -224,13 +178,9 @@
             this.label73 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
             this.checkBoxモンスターボス = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
@@ -242,16 +192,6 @@
             this.label71 = new System.Windows.Forms.Label();
             this.textBoxモンスター説明 = new System.Windows.Forms.TextBox();
             this.comboBoxモンスター素材種 = new System.Windows.Forms.ComboBox();
-            this.trackbarモンスターレア素材率 = new ADE_Editer.UserTrackbar();
-            this.trackbarモンスター会心 = new ADE_Editer.UserTrackbar();
-            this.trackbarモンスター回避 = new ADE_Editer.UserTrackbar();
-            this.trackbarモンスター命中 = new ADE_Editer.UserTrackbar();
-            this.trackbarモンスター魔防 = new ADE_Editer.UserTrackbar();
-            this.trackbarモンスター物防 = new ADE_Editer.UserTrackbar();
-            this.trackbarモンスター知力 = new ADE_Editer.UserTrackbar();
-            this.trackbarモンスター技力 = new ADE_Editer.UserTrackbar();
-            this.trackbarモンスター筋力 = new ADE_Editer.UserTrackbar();
-            this.trackbarモンスターHP = new ADE_Editer.UserTrackbar();
             this.listBoxモンスター = new System.Windows.Forms.ListBox();
             this.Tabダンジョン = new System.Windows.Forms.TabPage();
             this.button雑魚Lv自動 = new System.Windows.Forms.Button();
@@ -287,37 +227,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxダンジョン説明 = new System.Windows.Forms.TextBox();
             this.comboBoxダンジョンボス1 = new System.Windows.Forms.ComboBox();
-            this.trackbarダンジョンザコLv6 = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョンザコLv5 = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョンザコLv4 = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョンザコLv3 = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョンザコLv2 = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョンボスLv6 = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョンボスLv5 = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョンボスLv4 = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョンボスLv3 = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョンボスLv2 = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョン地図発見B = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョン地図発見A = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョンボス探索率 = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョン探索地図B = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョンボス地図 = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョン探索地図A = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョンボスLv1 = new ADE_Editer.UserTrackbar();
-            this.trackbarダンジョンザコLv1 = new ADE_Editer.UserTrackbar();
             this.listBoxダンジョン = new System.Windows.Forms.ListBox();
             this.Tab装備品 = new System.Windows.Forms.TabPage();
             this.label130 = new System.Windows.Forms.Label();
             this.label101 = new System.Windows.Forms.Label();
             this.comboBox装備品Pスキル = new System.Windows.Forms.ComboBox();
             this.label100 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label87 = new System.Windows.Forms.Label();
             this.label89 = new System.Windows.Forms.Label();
-            this.label90 = new System.Windows.Forms.Label();
             this.label91 = new System.Windows.Forms.Label();
-            this.label92 = new System.Windows.Forms.Label();
-            this.label93 = new System.Windows.Forms.Label();
             this.label94 = new System.Windows.Forms.Label();
             this.label95 = new System.Windows.Forms.Label();
             this.comboBox装備品装備種 = new System.Windows.Forms.ComboBox();
@@ -326,17 +244,6 @@
             this.textBox装備品名前 = new System.Windows.Forms.TextBox();
             this.label99 = new System.Windows.Forms.Label();
             this.textBox装備品説明 = new System.Windows.Forms.TextBox();
-            this.trackbar装備品PスキルLv = new ADE_Editer.UserTrackbar();
-            this.trackbar装備品ランク = new ADE_Editer.UserTrackbar();
-            this.trackbar装備品会心 = new ADE_Editer.UserTrackbar();
-            this.trackbar装備品回避 = new ADE_Editer.UserTrackbar();
-            this.trackbar装備品命中 = new ADE_Editer.UserTrackbar();
-            this.trackbar装備品魔防 = new ADE_Editer.UserTrackbar();
-            this.trackbar装備品物防 = new ADE_Editer.UserTrackbar();
-            this.trackbar装備品知力 = new ADE_Editer.UserTrackbar();
-            this.trackbar装備品技力 = new ADE_Editer.UserTrackbar();
-            this.trackbar装備品筋力 = new ADE_Editer.UserTrackbar();
-            this.trackbar装備品HP = new ADE_Editer.UserTrackbar();
             this.listBox装備品 = new System.Windows.Forms.ListBox();
             this.Tab素材 = new System.Windows.Forms.TabPage();
             this.num素材値段 = new System.Windows.Forms.NumericUpDown();
@@ -348,7 +255,6 @@
             this.textBox素材名前 = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.textBox素材説明 = new System.Windows.Forms.TextBox();
-            this.trackbar素材ランク = new ADE_Editer.UserTrackbar();
             this.listBox素材 = new System.Windows.Forms.ListBox();
             this.Tabアクセサリー = new System.Windows.Forms.TabPage();
             this.numアクセサリー持越ポイント = new System.Windows.Forms.NumericUpDown();
@@ -360,7 +266,6 @@
             this.label80 = new System.Windows.Forms.Label();
             this.comboBoxアクセサリーレアリティ = new System.Windows.Forms.ComboBox();
             this.label86 = new System.Windows.Forms.Label();
-            this.label107 = new System.Windows.Forms.Label();
             this.numアクセサリー画像ID = new System.Windows.Forms.NumericUpDown();
             this.label118 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -368,27 +273,13 @@
             this.label109 = new System.Windows.Forms.Label();
             this.label110 = new System.Windows.Forms.Label();
             this.label111 = new System.Windows.Forms.Label();
-            this.label112 = new System.Windows.Forms.Label();
             this.label113 = new System.Windows.Forms.Label();
-            this.label114 = new System.Windows.Forms.Label();
-            this.label115 = new System.Windows.Forms.Label();
             this.label116 = new System.Windows.Forms.Label();
             this.label117 = new System.Windows.Forms.Label();
             this.label120 = new System.Windows.Forms.Label();
             this.textBoxアクセサリー名前 = new System.Windows.Forms.TextBox();
             this.label121 = new System.Windows.Forms.Label();
             this.textBoxアクセサリー説明 = new System.Windows.Forms.TextBox();
-            this.trackbarアクセサリーPスキルLv = new ADE_Editer.UserTrackbar();
-            this.trackbarアクセサリー会心 = new ADE_Editer.UserTrackbar();
-            this.trackbarアクセサリーランク = new ADE_Editer.UserTrackbar();
-            this.trackbarアクセサリー回避 = new ADE_Editer.UserTrackbar();
-            this.trackbarアクセサリー命中 = new ADE_Editer.UserTrackbar();
-            this.trackbarアクセサリー魔防 = new ADE_Editer.UserTrackbar();
-            this.trackbarアクセサリー物防 = new ADE_Editer.UserTrackbar();
-            this.trackbarアクセサリー知力 = new ADE_Editer.UserTrackbar();
-            this.trackbarアクセサリー技力 = new ADE_Editer.UserTrackbar();
-            this.trackbarアクセサリー筋力 = new ADE_Editer.UserTrackbar();
-            this.trackbarアクセサリーHP = new ADE_Editer.UserTrackbar();
             this.listBoxアクセサリー = new System.Windows.Forms.ListBox();
             this.Tabクエスト = new System.Windows.Forms.TabPage();
             this.label144 = new System.Windows.Forms.Label();
@@ -418,6 +309,13 @@
             this.comboBoxクエスト種類 = new System.Windows.Forms.ComboBox();
             this.listBoxクエスト = new System.Windows.Forms.ListBox();
             this.Tab投資 = new System.Windows.Forms.TabPage();
+            this.num投資必要数4 = new System.Windows.Forms.NumericUpDown();
+            this.num投資必要数3 = new System.Windows.Forms.NumericUpDown();
+            this.num投資必要数2 = new System.Windows.Forms.NumericUpDown();
+            this.comboBox投資費用素材種2 = new System.Windows.Forms.ComboBox();
+            this.comboBox投資費用素材種3 = new System.Windows.Forms.ComboBox();
+            this.comboBox投資費用素材種4 = new System.Windows.Forms.ComboBox();
+            this.comboBox投資費用素材種1 = new System.Windows.Forms.ComboBox();
             this.num投資必要数1 = new System.Windows.Forms.NumericUpDown();
             this.num投資部門ID = new System.Windows.Forms.NumericUpDown();
             this.label129 = new System.Windows.Forms.Label();
@@ -427,7 +325,6 @@
             this.textBox投資名前 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox投資説明 = new System.Windows.Forms.TextBox();
-            this.trackbar投資ランク = new ADE_Editer.UserTrackbar();
             this.listBox投資 = new System.Windows.Forms.ListBox();
             this.Tab列挙型 = new System.Windows.Forms.TabPage();
             this.label10 = new System.Windows.Forms.Label();
@@ -455,19 +352,104 @@
             this.button削除 = new System.Windows.Forms.Button();
             this.button挿入 = new System.Windows.Forms.Button();
             this.button貼り付け = new System.Windows.Forms.Button();
-            this.comboBox投資費用素材種1 = new System.Windows.Forms.ComboBox();
-            this.Trackbar投資素材ランク1 = new ADE_Editer.UserTrackbar();
-            this.comboBox投資費用素材種4 = new System.Windows.Forms.ComboBox();
-            this.comboBox投資費用素材種3 = new System.Windows.Forms.ComboBox();
-            this.comboBox投資費用素材種2 = new System.Windows.Forms.ComboBox();
-            this.num投資必要数2 = new System.Windows.Forms.NumericUpDown();
-            this.num投資必要数3 = new System.Windows.Forms.NumericUpDown();
-            this.num投資必要数4 = new System.Windows.Forms.NumericUpDown();
-            this.Trackbar投資素材ランク2 = new ADE_Editer.UserTrackbar();
-            this.Trackbar投資素材ランク3 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキル範囲 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキル減衰率 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキルHit数 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキルクールタイム = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキル会心倍率 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキル会心率 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキル命中 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキル反映率 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキル基礎ダメージ = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキルバフ持続3 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキルバフ持続2 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキルバフ持続1 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキルバフ発動率3 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキルバフ発動率2 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキルバフ発動率1 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキルバフ反映率3 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキルバフ反映率2 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキルバフ反映率1 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキルバフ固定値3 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキルバフ固定値2 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキルバフ固定値1 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキル追加効果5 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキル追加効果4 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキル追加効果3 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキル追加効果2 = new ADE_Editer.UserTrackbar();
+            this.trackbarAスキル追加効果1 = new ADE_Editer.UserTrackbar();
+            this.trackbarPスキル効果値B = new ADE_Editer.UserTrackbar();
+            this.trackbarPスキル効果値A = new ADE_Editer.UserTrackbar();
+            this.trackbarPスキル発動率 = new ADE_Editer.UserTrackbar();
+            this.trackbarPスキル条件値 = new ADE_Editer.UserTrackbar();
+            this.trackbarジョブ会心 = new ADE_Editer.UserTrackbar();
+            this.trackbarジョブ回避 = new ADE_Editer.UserTrackbar();
+            this.trackbarジョブ命中 = new ADE_Editer.UserTrackbar();
+            this.trackbarジョブ魔防 = new ADE_Editer.UserTrackbar();
+            this.trackbarジョブ物防 = new ADE_Editer.UserTrackbar();
+            this.trackbarジョブ知力 = new ADE_Editer.UserTrackbar();
+            this.trackbarジョブ技力 = new ADE_Editer.UserTrackbar();
+            this.trackbarジョブ筋力 = new ADE_Editer.UserTrackbar();
+            this.trackbarジョブHP = new ADE_Editer.UserTrackbar();
+            this.trackbarモンスターレア素材率 = new ADE_Editer.UserTrackbar();
+            this.trackbarモンスター会心 = new ADE_Editer.UserTrackbar();
+            this.trackbarモンスター回避 = new ADE_Editer.UserTrackbar();
+            this.trackbarモンスター命中 = new ADE_Editer.UserTrackbar();
+            this.trackbarモンスター魔防 = new ADE_Editer.UserTrackbar();
+            this.trackbarモンスター物防 = new ADE_Editer.UserTrackbar();
+            this.trackbarモンスター知力 = new ADE_Editer.UserTrackbar();
+            this.trackbarモンスター技力 = new ADE_Editer.UserTrackbar();
+            this.trackbarモンスター筋力 = new ADE_Editer.UserTrackbar();
+            this.trackbarモンスターHP = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョンザコLv6 = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョンザコLv5 = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョンザコLv4 = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョンザコLv3 = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョンザコLv2 = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョンボスLv6 = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョンボスLv5 = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョンボスLv4 = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョンボスLv3 = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョンボスLv2 = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョン地図発見B = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョン地図発見A = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョンボス探索率 = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョン探索地図B = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョンボス地図 = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョン探索地図A = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョンボスLv1 = new ADE_Editer.UserTrackbar();
+            this.trackbarダンジョンザコLv1 = new ADE_Editer.UserTrackbar();
+            this.trackbar装備品PスキルLv = new ADE_Editer.UserTrackbar();
+            this.trackbar装備品ランク = new ADE_Editer.UserTrackbar();
+            this.trackbar装備品会心 = new ADE_Editer.UserTrackbar();
+            this.trackbar装備品回避 = new ADE_Editer.UserTrackbar();
+            this.trackbar装備品命中 = new ADE_Editer.UserTrackbar();
+            this.trackbar装備品魔防 = new ADE_Editer.UserTrackbar();
+            this.trackbar装備品物防 = new ADE_Editer.UserTrackbar();
+            this.trackbar装備品知力 = new ADE_Editer.UserTrackbar();
+            this.trackbar装備品技力 = new ADE_Editer.UserTrackbar();
+            this.trackbar装備品筋力 = new ADE_Editer.UserTrackbar();
+            this.trackbar装備品HP = new ADE_Editer.UserTrackbar();
+            this.trackbar素材ランク = new ADE_Editer.UserTrackbar();
+            this.trackbarアクセサリーPスキルLv = new ADE_Editer.UserTrackbar();
+            this.trackbarアクセサリー会心 = new ADE_Editer.UserTrackbar();
+            this.trackbarアクセサリーランク = new ADE_Editer.UserTrackbar();
+            this.trackbarアクセサリー回避 = new ADE_Editer.UserTrackbar();
+            this.trackbarアクセサリー命中 = new ADE_Editer.UserTrackbar();
+            this.trackbarアクセサリー魔防 = new ADE_Editer.UserTrackbar();
+            this.trackbarアクセサリー物防 = new ADE_Editer.UserTrackbar();
+            this.trackbarアクセサリー知力 = new ADE_Editer.UserTrackbar();
+            this.trackbarアクセサリー技力 = new ADE_Editer.UserTrackbar();
+            this.trackbarアクセサリー筋力 = new ADE_Editer.UserTrackbar();
+            this.trackbarアクセサリーHP = new ADE_Editer.UserTrackbar();
             this.Trackbar投資素材ランク4 = new ADE_Editer.UserTrackbar();
+            this.Trackbar投資素材ランク3 = new ADE_Editer.UserTrackbar();
+            this.Trackbar投資素材ランク2 = new ADE_Editer.UserTrackbar();
+            this.Trackbar投資素材ランク1 = new ADE_Editer.UserTrackbar();
+            this.trackbar投資ランク = new ADE_Editer.UserTrackbar();
             this.MainTabControl.SuspendLayout();
             this.TabAスキル.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numAスキルレアリティ)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAスキルレベル補正2Lv1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAスキルレベル補正1Lv1)).BeginInit();
@@ -519,6 +501,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numクエスト開放フロア)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numクエスト条件値)).BeginInit();
             this.Tab投資.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num投資必要数4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num投資必要数3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num投資必要数2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num投資必要数1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num投資部門ID)).BeginInit();
             this.Tab列挙型.SuspendLayout();
@@ -533,9 +518,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.num強化必要3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num強化必要2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num強化必要1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num投資必要数2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num投資必要数3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num投資必要数4)).BeginInit();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -564,7 +546,7 @@
             // 
             // TabAスキル
             // 
-            this.TabAスキル.Controls.Add(this.comboBoxAスキルレアリティ);
+            this.TabAスキル.Controls.Add(this.numAスキルレアリティ);
             this.TabAスキル.Controls.Add(this.label132);
             this.TabAスキル.Controls.Add(this.groupBox4);
             this.TabAスキル.Controls.Add(this.numAスキルエフェクトID);
@@ -590,18 +572,17 @@
             this.TabAスキル.Text = "Aスキル";
             this.TabAスキル.UseVisualStyleBackColor = true;
             // 
-            // comboBoxAスキルレアリティ
+            // numAスキルレアリティ
             // 
-            this.comboBoxAスキルレアリティ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxAスキルレアリティ.FormattingEnabled = true;
-            this.comboBoxAスキルレアリティ.Items.AddRange(new object[] {
-            "初期",
-            "ノーマル",
-            "レア"});
-            this.comboBoxAスキルレアリティ.Location = new System.Drawing.Point(206, 110);
-            this.comboBoxAスキルレアリティ.Name = "comboBoxAスキルレアリティ";
-            this.comboBoxAスキルレアリティ.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxAスキルレアリティ.TabIndex = 43;
+            this.numAスキルレアリティ.Location = new System.Drawing.Point(206, 110);
+            this.numAスキルレアリティ.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numAスキルレアリティ.Name = "numAスキルレアリティ";
+            this.numAスキルレアリティ.Size = new System.Drawing.Size(120, 19);
+            this.numAスキルレアリティ.TabIndex = 48;
             // 
             // label132
             // 
@@ -626,6 +607,7 @@
             this.groupBox4.TabIndex = 45;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "スキルレベル補正";
+            this.groupBox4.Visible = false;
             // 
             // label156
             // 
@@ -760,14 +742,11 @@
             this.groupBox3.Controls.Add(this.comboBoxAスキル対象);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label23);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.trackbarAスキル基礎ダメージ);
             this.groupBox3.Controls.Add(this.comboBoxAスキル連続スキル);
             this.groupBox3.Location = new System.Drawing.Point(305, 145);
@@ -776,17 +755,6 @@
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "基礎性能";
-            // 
-            // trackbarAスキル範囲
-            // 
-            this.trackbarAスキル範囲.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキル範囲.Location = new System.Drawing.Point(86, 265);
-            this.trackbarAスキル範囲.Maximum = 6;
-            this.trackbarAスキル範囲.Minimum = 1;
-            this.trackbarAスキル範囲.Name = "trackbarAスキル範囲";
-            this.trackbarAスキル範囲.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキル範囲.TabIndex = 42;
-            this.trackbarAスキル範囲.Value = 6;
             // 
             // label31
             // 
@@ -825,11 +793,8 @@
             this.comboBoxAスキル参照ステ.FormattingEnabled = true;
             this.comboBoxAスキル参照ステ.Items.AddRange(new object[] {
             "HP",
-            "筋力",
-            "技力",
-            "知力",
-            "物防",
-            "魔防",
+            "力",
+            "防御",
             "命中",
             "回避",
             "会心"});
@@ -846,86 +811,6 @@
             this.label28.Size = new System.Drawing.Size(47, 12);
             this.label28.TabIndex = 37;
             this.label28.Text = "参照ステ";
-            // 
-            // trackbarAスキル減衰率
-            // 
-            this.trackbarAスキル減衰率.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキル減衰率.Location = new System.Drawing.Point(86, 335);
-            this.trackbarAスキル減衰率.Maximum = 100;
-            this.trackbarAスキル減衰率.Minimum = 0;
-            this.trackbarAスキル減衰率.Name = "trackbarAスキル減衰率";
-            this.trackbarAスキル減衰率.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキル減衰率.TabIndex = 33;
-            this.trackbarAスキル減衰率.Value = 10;
-            this.trackbarAスキル減衰率.Visible = false;
-            // 
-            // trackbarAスキルHit数
-            // 
-            this.trackbarAスキルHit数.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキルHit数.Location = new System.Drawing.Point(86, 299);
-            this.trackbarAスキルHit数.Maximum = 10;
-            this.trackbarAスキルHit数.Minimum = 1;
-            this.trackbarAスキルHit数.Name = "trackbarAスキルHit数";
-            this.trackbarAスキルHit数.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキルHit数.TabIndex = 36;
-            this.trackbarAスキルHit数.Value = 10;
-            // 
-            // trackbarAスキルクールタイム
-            // 
-            this.trackbarAスキルクールタイム.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキルクールタイム.Location = new System.Drawing.Point(86, 198);
-            this.trackbarAスキルクールタイム.Maximum = 200;
-            this.trackbarAスキルクールタイム.Minimum = 0;
-            this.trackbarAスキルクールタイム.Name = "trackbarAスキルクールタイム";
-            this.trackbarAスキルクールタイム.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキルクールタイム.TabIndex = 35;
-            this.trackbarAスキルクールタイム.Value = 10;
-            // 
-            // trackbarAスキル会心倍率
-            // 
-            this.trackbarAスキル会心倍率.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキル会心倍率.Location = new System.Drawing.Point(86, 162);
-            this.trackbarAスキル会心倍率.Maximum = 300;
-            this.trackbarAスキル会心倍率.Minimum = 150;
-            this.trackbarAスキル会心倍率.Name = "trackbarAスキル会心倍率";
-            this.trackbarAスキル会心倍率.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキル会心倍率.TabIndex = 34;
-            this.trackbarAスキル会心倍率.Value = 150;
-            this.trackbarAスキル会心倍率.Visible = false;
-            // 
-            // trackbarAスキル会心率
-            // 
-            this.trackbarAスキル会心率.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキル会心率.Location = new System.Drawing.Point(86, 126);
-            this.trackbarAスキル会心率.Maximum = 100;
-            this.trackbarAスキル会心率.Minimum = 0;
-            this.trackbarAスキル会心率.Name = "trackbarAスキル会心率";
-            this.trackbarAスキル会心率.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキル会心率.TabIndex = 33;
-            this.trackbarAスキル会心率.Value = 10;
-            this.trackbarAスキル会心率.Visible = false;
-            // 
-            // trackbarAスキル命中
-            // 
-            this.trackbarAスキル命中.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキル命中.Location = new System.Drawing.Point(86, 87);
-            this.trackbarAスキル命中.Maximum = 100;
-            this.trackbarAスキル命中.Minimum = 0;
-            this.trackbarAスキル命中.Name = "trackbarAスキル命中";
-            this.trackbarAスキル命中.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキル命中.TabIndex = 31;
-            this.trackbarAスキル命中.Value = 10;
-            // 
-            // trackbarAスキル反映率
-            // 
-            this.trackbarAスキル反映率.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキル反映率.Location = new System.Drawing.Point(86, 51);
-            this.trackbarAスキル反映率.Maximum = 300;
-            this.trackbarAスキル反映率.Minimum = 0;
-            this.trackbarAスキル反映率.Name = "trackbarAスキル反映率";
-            this.trackbarAスキル反映率.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキル反映率.TabIndex = 30;
-            this.trackbarAスキル反映率.Value = 10;
             // 
             // comboBoxAスキル対象
             // 
@@ -968,15 +853,6 @@
             this.label18.TabIndex = 25;
             this.label18.Text = "命中";
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(31, 343);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(41, 12);
-            this.label23.TabIndex = 28;
-            this.label23.Text = "減衰率";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -1003,15 +879,7 @@
             this.label22.Size = new System.Drawing.Size(58, 12);
             this.label22.TabIndex = 27;
             this.label22.Text = "連続スキル";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(24, 171);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(53, 12);
-            this.label19.TabIndex = 24;
-            this.label19.Text = "会心倍率";
+            this.label22.Visible = false;
             // 
             // label21
             // 
@@ -1031,26 +899,6 @@
             this.label20.TabIndex = 25;
             this.label20.Text = "Hit数";
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(30, 133);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(41, 12);
-            this.label16.TabIndex = 23;
-            this.label16.Text = "会心率";
-            // 
-            // trackbarAスキル基礎ダメージ
-            // 
-            this.trackbarAスキル基礎ダメージ.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキル基礎ダメージ.Location = new System.Drawing.Point(86, 18);
-            this.trackbarAスキル基礎ダメージ.Maximum = 100;
-            this.trackbarAスキル基礎ダメージ.Minimum = 0;
-            this.trackbarAスキル基礎ダメージ.Name = "trackbarAスキル基礎ダメージ";
-            this.trackbarAスキル基礎ダメージ.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキル基礎ダメージ.TabIndex = 8;
-            this.trackbarAスキル基礎ダメージ.Value = 10;
-            // 
             // comboBoxAスキル連続スキル
             // 
             this.comboBoxAスキル連続スキル.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1061,6 +909,7 @@
             this.comboBoxAスキル連続スキル.Name = "comboBoxAスキル連続スキル";
             this.comboBoxAスキル連続スキル.Size = new System.Drawing.Size(121, 20);
             this.comboBoxAスキル連続スキル.TabIndex = 2;
+            this.comboBoxAスキル連続スキル.Visible = false;
             // 
             // groupBox2
             // 
@@ -1091,39 +940,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "バフ-デバフ";
             // 
-            // trackbarAスキルバフ持続3
-            // 
-            this.trackbarAスキルバフ持続3.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキルバフ持続3.Location = new System.Drawing.Point(851, 139);
-            this.trackbarAスキルバフ持続3.Maximum = 1000;
-            this.trackbarAスキルバフ持続3.Minimum = 0;
-            this.trackbarAスキルバフ持続3.Name = "trackbarAスキルバフ持続3";
-            this.trackbarAスキルバフ持続3.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキルバフ持続3.TabIndex = 43;
-            this.trackbarAスキルバフ持続3.Value = 10;
-            // 
-            // trackbarAスキルバフ持続2
-            // 
-            this.trackbarAスキルバフ持続2.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキルバフ持続2.Location = new System.Drawing.Point(851, 103);
-            this.trackbarAスキルバフ持続2.Maximum = 1000;
-            this.trackbarAスキルバフ持続2.Minimum = 0;
-            this.trackbarAスキルバフ持続2.Name = "trackbarAスキルバフ持続2";
-            this.trackbarAスキルバフ持続2.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキルバフ持続2.TabIndex = 42;
-            this.trackbarAスキルバフ持続2.Value = 10;
-            // 
-            // trackbarAスキルバフ持続1
-            // 
-            this.trackbarAスキルバフ持続1.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキルバフ持続1.Location = new System.Drawing.Point(851, 67);
-            this.trackbarAスキルバフ持続1.Maximum = 1000;
-            this.trackbarAスキルバフ持続1.Minimum = 0;
-            this.trackbarAスキルバフ持続1.Name = "trackbarAスキルバフ持続1";
-            this.trackbarAスキルバフ持続1.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキルバフ持続1.TabIndex = 41;
-            this.trackbarAスキルバフ持続1.Value = 10;
-            // 
             // comboBoxAスキルバフ2
             // 
             this.comboBoxAスキルバフ2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1134,17 +950,6 @@
             this.comboBoxAスキルバフ2.Name = "comboBoxAスキルバフ2";
             this.comboBoxAスキルバフ2.Size = new System.Drawing.Size(121, 20);
             this.comboBoxAスキルバフ2.TabIndex = 16;
-            // 
-            // trackbarAスキルバフ発動率3
-            // 
-            this.trackbarAスキルバフ発動率3.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキルバフ発動率3.Location = new System.Drawing.Point(613, 139);
-            this.trackbarAスキルバフ発動率3.Maximum = 100;
-            this.trackbarAスキルバフ発動率3.Minimum = 0;
-            this.trackbarAスキルバフ発動率3.Name = "trackbarAスキルバフ発動率3";
-            this.trackbarAスキルバフ発動率3.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキルバフ発動率3.TabIndex = 40;
-            this.trackbarAスキルバフ発動率3.Value = 10;
             // 
             // comboBoxAスキルバフ3
             // 
@@ -1167,50 +972,6 @@
             this.checkBoxAスキル自己バフ.Text = "自己バフ";
             this.checkBoxAスキル自己バフ.UseVisualStyleBackColor = true;
             // 
-            // trackbarAスキルバフ発動率2
-            // 
-            this.trackbarAスキルバフ発動率2.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキルバフ発動率2.Location = new System.Drawing.Point(613, 103);
-            this.trackbarAスキルバフ発動率2.Maximum = 100;
-            this.trackbarAスキルバフ発動率2.Minimum = 0;
-            this.trackbarAスキルバフ発動率2.Name = "trackbarAスキルバフ発動率2";
-            this.trackbarAスキルバフ発動率2.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキルバフ発動率2.TabIndex = 39;
-            this.trackbarAスキルバフ発動率2.Value = 10;
-            // 
-            // trackbarAスキルバフ発動率1
-            // 
-            this.trackbarAスキルバフ発動率1.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキルバフ発動率1.Location = new System.Drawing.Point(613, 67);
-            this.trackbarAスキルバフ発動率1.Maximum = 100;
-            this.trackbarAスキルバフ発動率1.Minimum = 0;
-            this.trackbarAスキルバフ発動率1.Name = "trackbarAスキルバフ発動率1";
-            this.trackbarAスキルバフ発動率1.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキルバフ発動率1.TabIndex = 38;
-            this.trackbarAスキルバフ発動率1.Value = 10;
-            // 
-            // trackbarAスキルバフ反映率3
-            // 
-            this.trackbarAスキルバフ反映率3.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキルバフ反映率3.Location = new System.Drawing.Point(375, 139);
-            this.trackbarAスキルバフ反映率3.Maximum = 300;
-            this.trackbarAスキルバフ反映率3.Minimum = -300;
-            this.trackbarAスキルバフ反映率3.Name = "trackbarAスキルバフ反映率3";
-            this.trackbarAスキルバフ反映率3.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキルバフ反映率3.TabIndex = 37;
-            this.trackbarAスキルバフ反映率3.Value = 10;
-            // 
-            // trackbarAスキルバフ反映率2
-            // 
-            this.trackbarAスキルバフ反映率2.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキルバフ反映率2.Location = new System.Drawing.Point(375, 103);
-            this.trackbarAスキルバフ反映率2.Maximum = 300;
-            this.trackbarAスキルバフ反映率2.Minimum = -300;
-            this.trackbarAスキルバフ反映率2.Name = "trackbarAスキルバフ反映率2";
-            this.trackbarAスキルバフ反映率2.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキルバフ反映率2.TabIndex = 36;
-            this.trackbarAスキルバフ反映率2.Value = 10;
-            // 
             // comboBoxAスキルバフ1
             // 
             this.comboBoxAスキルバフ1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1221,50 +982,6 @@
             this.comboBoxAスキルバフ1.Name = "comboBoxAスキルバフ1";
             this.comboBoxAスキルバフ1.Size = new System.Drawing.Size(121, 20);
             this.comboBoxAスキルバフ1.TabIndex = 14;
-            // 
-            // trackbarAスキルバフ反映率1
-            // 
-            this.trackbarAスキルバフ反映率1.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキルバフ反映率1.Location = new System.Drawing.Point(375, 67);
-            this.trackbarAスキルバフ反映率1.Maximum = 300;
-            this.trackbarAスキルバフ反映率1.Minimum = -300;
-            this.trackbarAスキルバフ反映率1.Name = "trackbarAスキルバフ反映率1";
-            this.trackbarAスキルバフ反映率1.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキルバフ反映率1.TabIndex = 35;
-            this.trackbarAスキルバフ反映率1.Value = 10;
-            // 
-            // trackbarAスキルバフ固定値3
-            // 
-            this.trackbarAスキルバフ固定値3.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキルバフ固定値3.Location = new System.Drawing.Point(137, 139);
-            this.trackbarAスキルバフ固定値3.Maximum = 100;
-            this.trackbarAスキルバフ固定値3.Minimum = -100;
-            this.trackbarAスキルバフ固定値3.Name = "trackbarAスキルバフ固定値3";
-            this.trackbarAスキルバフ固定値3.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキルバフ固定値3.TabIndex = 34;
-            this.trackbarAスキルバフ固定値3.Value = 10;
-            // 
-            // trackbarAスキルバフ固定値2
-            // 
-            this.trackbarAスキルバフ固定値2.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキルバフ固定値2.Location = new System.Drawing.Point(137, 103);
-            this.trackbarAスキルバフ固定値2.Maximum = 100;
-            this.trackbarAスキルバフ固定値2.Minimum = -100;
-            this.trackbarAスキルバフ固定値2.Name = "trackbarAスキルバフ固定値2";
-            this.trackbarAスキルバフ固定値2.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキルバフ固定値2.TabIndex = 33;
-            this.trackbarAスキルバフ固定値2.Value = 10;
-            // 
-            // trackbarAスキルバフ固定値1
-            // 
-            this.trackbarAスキルバフ固定値1.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキルバフ固定値1.Location = new System.Drawing.Point(137, 67);
-            this.trackbarAスキルバフ固定値1.Maximum = 100;
-            this.trackbarAスキルバフ固定値1.Minimum = -100;
-            this.trackbarAスキルバフ固定値1.Name = "trackbarAスキルバフ固定値1";
-            this.trackbarAスキルバフ固定値1.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキルバフ固定値1.TabIndex = 32;
-            this.trackbarAスキルバフ固定値1.Value = 10;
             // 
             // label26
             // 
@@ -1321,28 +1038,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "追加効果";
             // 
-            // trackbarAスキル追加効果5
-            // 
-            this.trackbarAスキル追加効果5.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキル追加効果5.Location = new System.Drawing.Point(141, 161);
-            this.trackbarAスキル追加効果5.Maximum = 100;
-            this.trackbarAスキル追加効果5.Minimum = 0;
-            this.trackbarAスキル追加効果5.Name = "trackbarAスキル追加効果5";
-            this.trackbarAスキル追加効果5.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキル追加効果5.TabIndex = 35;
-            this.trackbarAスキル追加効果5.Value = 10;
-            // 
-            // trackbarAスキル追加効果4
-            // 
-            this.trackbarAスキル追加効果4.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキル追加効果4.Location = new System.Drawing.Point(141, 125);
-            this.trackbarAスキル追加効果4.Maximum = 100;
-            this.trackbarAスキル追加効果4.Minimum = 0;
-            this.trackbarAスキル追加効果4.Name = "trackbarAスキル追加効果4";
-            this.trackbarAスキル追加効果4.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキル追加効果4.TabIndex = 34;
-            this.trackbarAスキル追加効果4.Value = 10;
-            // 
             // comboBoxAスキル追加効果5
             // 
             this.comboBoxAスキル追加効果5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1364,39 +1059,6 @@
             this.comboBoxAスキル追加効果4.Name = "comboBoxAスキル追加効果4";
             this.comboBoxAスキル追加効果4.Size = new System.Drawing.Size(121, 20);
             this.comboBoxAスキル追加効果4.TabIndex = 32;
-            // 
-            // trackbarAスキル追加効果3
-            // 
-            this.trackbarAスキル追加効果3.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキル追加効果3.Location = new System.Drawing.Point(141, 94);
-            this.trackbarAスキル追加効果3.Maximum = 100;
-            this.trackbarAスキル追加効果3.Minimum = 0;
-            this.trackbarAスキル追加効果3.Name = "trackbarAスキル追加効果3";
-            this.trackbarAスキル追加効果3.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキル追加効果3.TabIndex = 31;
-            this.trackbarAスキル追加効果3.Value = 10;
-            // 
-            // trackbarAスキル追加効果2
-            // 
-            this.trackbarAスキル追加効果2.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキル追加効果2.Location = new System.Drawing.Point(141, 58);
-            this.trackbarAスキル追加効果2.Maximum = 100;
-            this.trackbarAスキル追加効果2.Minimum = 0;
-            this.trackbarAスキル追加効果2.Name = "trackbarAスキル追加効果2";
-            this.trackbarAスキル追加効果2.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキル追加効果2.TabIndex = 30;
-            this.trackbarAスキル追加効果2.Value = 10;
-            // 
-            // trackbarAスキル追加効果1
-            // 
-            this.trackbarAスキル追加効果1.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarAスキル追加効果1.Location = new System.Drawing.Point(141, 22);
-            this.trackbarAスキル追加効果1.Maximum = 100;
-            this.trackbarAスキル追加効果1.Minimum = 0;
-            this.trackbarAスキル追加効果1.Name = "trackbarAスキル追加効果1";
-            this.trackbarAスキル追加効果1.Size = new System.Drawing.Size(232, 30);
-            this.trackbarAスキル追加効果1.TabIndex = 29;
-            this.trackbarAスキル追加効果1.Value = 10;
             // 
             // comboBoxAスキル追加効果3
             // 
@@ -1562,6 +1224,7 @@
             this.label85.Size = new System.Drawing.Size(37, 12);
             this.label85.TabIndex = 87;
             this.label85.Text = "効果B";
+            this.label85.Visible = false;
             // 
             // comboBoxPスキル効果B
             // 
@@ -1571,6 +1234,7 @@
             this.comboBoxPスキル効果B.Name = "comboBoxPスキル効果B";
             this.comboBoxPスキル効果B.Size = new System.Drawing.Size(121, 20);
             this.comboBoxPスキル効果B.TabIndex = 86;
+            this.comboBoxPスキル効果B.Visible = false;
             // 
             // groupBox5
             // 
@@ -1595,6 +1259,7 @@
             this.label171.Size = new System.Drawing.Size(70, 12);
             this.label171.TabIndex = 102;
             this.label171.Text = "Lv 5 ボーナス";
+            this.label171.Visible = false;
             // 
             // comboBoxPスキルレベル補正1
             // 
@@ -1641,6 +1306,7 @@
             this.comboBoxPスキルレベル補正2.Name = "comboBoxPスキルレベル補正2";
             this.comboBoxPスキルレベル補正2.Size = new System.Drawing.Size(120, 20);
             this.comboBoxPスキルレベル補正2.TabIndex = 69;
+            this.comboBoxPスキルレベル補正2.Visible = false;
             // 
             // numPスキルレベル補正Lv5
             // 
@@ -1648,6 +1314,7 @@
             this.numPスキルレベル補正Lv5.Name = "numPスキルレベル補正Lv5";
             this.numPスキルレベル補正Lv5.Size = new System.Drawing.Size(120, 19);
             this.numPスキルレベル補正Lv5.TabIndex = 70;
+            this.numPスキルレベル補正Lv5.Visible = false;
             // 
             // label105
             // 
@@ -1662,6 +1329,11 @@
             // 
             this.comboBoxPスキルレアリティ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPスキルレアリティ.FormattingEnabled = true;
+            this.comboBoxPスキルレアリティ.Items.AddRange(new object[] {
+            "初期",
+            "コモン",
+            "アンコモン",
+            "レア"});
             this.comboBoxPスキルレアリティ.Location = new System.Drawing.Point(193, 132);
             this.comboBoxPスキルレアリティ.Name = "comboBoxPスキルレアリティ";
             this.comboBoxPスキルレアリティ.Size = new System.Drawing.Size(120, 20);
@@ -1812,50 +1484,6 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "名前";
             // 
-            // trackbarPスキル効果値B
-            // 
-            this.trackbarPスキル効果値B.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarPスキル効果値B.Location = new System.Drawing.Point(680, 528);
-            this.trackbarPスキル効果値B.Maximum = 500;
-            this.trackbarPスキル効果値B.Minimum = 0;
-            this.trackbarPスキル効果値B.Name = "trackbarPスキル効果値B";
-            this.trackbarPスキル効果値B.Size = new System.Drawing.Size(232, 30);
-            this.trackbarPスキル効果値B.TabIndex = 89;
-            this.trackbarPスキル効果値B.Value = 10;
-            // 
-            // trackbarPスキル効果値A
-            // 
-            this.trackbarPスキル効果値A.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarPスキル効果値A.Location = new System.Drawing.Point(387, 533);
-            this.trackbarPスキル効果値A.Maximum = 500;
-            this.trackbarPスキル効果値A.Minimum = 0;
-            this.trackbarPスキル効果値A.Name = "trackbarPスキル効果値A";
-            this.trackbarPスキル効果値A.Size = new System.Drawing.Size(232, 30);
-            this.trackbarPスキル効果値A.TabIndex = 46;
-            this.trackbarPスキル効果値A.Value = 10;
-            // 
-            // trackbarPスキル発動率
-            // 
-            this.trackbarPスキル発動率.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarPスキル発動率.Location = new System.Drawing.Point(385, 354);
-            this.trackbarPスキル発動率.Maximum = 100;
-            this.trackbarPスキル発動率.Minimum = 0;
-            this.trackbarPスキル発動率.Name = "trackbarPスキル発動率";
-            this.trackbarPスキル発動率.Size = new System.Drawing.Size(232, 30);
-            this.trackbarPスキル発動率.TabIndex = 26;
-            this.trackbarPスキル発動率.Value = 10;
-            // 
-            // trackbarPスキル条件値
-            // 
-            this.trackbarPスキル条件値.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarPスキル条件値.Location = new System.Drawing.Point(385, 262);
-            this.trackbarPスキル条件値.Maximum = 100;
-            this.trackbarPスキル条件値.Minimum = 0;
-            this.trackbarPスキル条件値.Name = "trackbarPスキル条件値";
-            this.trackbarPスキル条件値.Size = new System.Drawing.Size(232, 30);
-            this.trackbarPスキル条件値.TabIndex = 24;
-            this.trackbarPスキル条件値.Value = 10;
-            // 
             // checkedListBoxPスキルスキルタグ
             // 
             this.checkedListBoxPスキルスキルタグ.FormattingEnabled = true;
@@ -1919,13 +1547,9 @@
             this.Tabジョブ.Controls.Add(this.comboBoxジョブキースキル3);
             this.Tabジョブ.Controls.Add(this.comboBoxジョブキースキル2);
             this.Tabジョブ.Controls.Add(this.comboBoxジョブキースキル1);
-            this.Tabジョブ.Controls.Add(this.label57);
             this.Tabジョブ.Controls.Add(this.label53);
             this.Tabジョブ.Controls.Add(this.label54);
-            this.Tabジョブ.Controls.Add(this.label55);
             this.Tabジョブ.Controls.Add(this.label56);
-            this.Tabジョブ.Controls.Add(this.label52);
-            this.Tabジョブ.Controls.Add(this.label51);
             this.Tabジョブ.Controls.Add(this.label50);
             this.Tabジョブ.Controls.Add(this.trackbarジョブ会心);
             this.Tabジョブ.Controls.Add(this.trackbarジョブ回避);
@@ -1974,6 +1598,7 @@
             this.comboBoxジョブキースキル3.Name = "comboBoxジョブキースキル3";
             this.comboBoxジョブキースキル3.Size = new System.Drawing.Size(121, 20);
             this.comboBoxジョブキースキル3.TabIndex = 43;
+            this.comboBoxジョブキースキル3.Visible = false;
             // 
             // comboBoxジョブキースキル2
             // 
@@ -1993,15 +1618,6 @@
             this.comboBoxジョブキースキル1.Size = new System.Drawing.Size(121, 20);
             this.comboBoxジョブキースキル1.TabIndex = 10;
             // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(142, 498);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(29, 12);
-            this.label57.TabIndex = 40;
-            this.label57.Text = "会心";
-            // 
             // label53
             // 
             this.label53.AutoSize = true;
@@ -2020,15 +1636,6 @@
             this.label54.TabIndex = 35;
             this.label54.Text = "命中";
             // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(140, 390);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(29, 12);
-            this.label55.TabIndex = 34;
-            this.label55.Text = "魔防";
-            // 
             // label56
             // 
             this.label56.AutoSize = true;
@@ -2036,25 +1643,7 @@
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(29, 12);
             this.label56.TabIndex = 33;
-            this.label56.Text = "物防";
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(142, 318);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(29, 12);
-            this.label52.TabIndex = 28;
-            this.label52.Text = "知力";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(142, 281);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(29, 12);
-            this.label51.TabIndex = 27;
-            this.label51.Text = "技力";
+            this.label56.Text = "防御";
             // 
             // label50
             // 
@@ -2064,95 +1653,6 @@
             this.label50.Size = new System.Drawing.Size(66, 12);
             this.label50.TabIndex = 26;
             this.label50.Text = "習得Aスキル";
-            // 
-            // trackbarジョブ会心
-            // 
-            this.trackbarジョブ会心.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarジョブ会心.Location = new System.Drawing.Point(177, 491);
-            this.trackbarジョブ会心.Maximum = 100;
-            this.trackbarジョブ会心.Minimum = 0;
-            this.trackbarジョブ会心.Name = "trackbarジョブ会心";
-            this.trackbarジョブ会心.Size = new System.Drawing.Size(232, 30);
-            this.trackbarジョブ会心.TabIndex = 41;
-            this.trackbarジョブ会心.Value = 10;
-            this.trackbarジョブ会心.Visible = false;
-            // 
-            // trackbarジョブ回避
-            // 
-            this.trackbarジョブ回避.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarジョブ回避.Location = new System.Drawing.Point(177, 455);
-            this.trackbarジョブ回避.Maximum = 100;
-            this.trackbarジョブ回避.Minimum = 0;
-            this.trackbarジョブ回避.Name = "trackbarジョブ回避";
-            this.trackbarジョブ回避.Size = new System.Drawing.Size(232, 30);
-            this.trackbarジョブ回避.TabIndex = 39;
-            this.trackbarジョブ回避.Value = 10;
-            // 
-            // trackbarジョブ命中
-            // 
-            this.trackbarジョブ命中.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarジョブ命中.Location = new System.Drawing.Point(177, 419);
-            this.trackbarジョブ命中.Maximum = 100;
-            this.trackbarジョブ命中.Minimum = 0;
-            this.trackbarジョブ命中.Name = "trackbarジョブ命中";
-            this.trackbarジョブ命中.Size = new System.Drawing.Size(232, 30);
-            this.trackbarジョブ命中.TabIndex = 38;
-            this.trackbarジョブ命中.Value = 10;
-            // 
-            // trackbarジョブ魔防
-            // 
-            this.trackbarジョブ魔防.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarジョブ魔防.Location = new System.Drawing.Point(177, 383);
-            this.trackbarジョブ魔防.Maximum = 100;
-            this.trackbarジョブ魔防.Minimum = 0;
-            this.trackbarジョブ魔防.Name = "trackbarジョブ魔防";
-            this.trackbarジョブ魔防.Size = new System.Drawing.Size(232, 30);
-            this.trackbarジョブ魔防.TabIndex = 37;
-            this.trackbarジョブ魔防.Value = 10;
-            // 
-            // trackbarジョブ物防
-            // 
-            this.trackbarジョブ物防.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarジョブ物防.Location = new System.Drawing.Point(177, 347);
-            this.trackbarジョブ物防.Maximum = 100;
-            this.trackbarジョブ物防.Minimum = 0;
-            this.trackbarジョブ物防.Name = "trackbarジョブ物防";
-            this.trackbarジョブ物防.Size = new System.Drawing.Size(232, 30);
-            this.trackbarジョブ物防.TabIndex = 32;
-            this.trackbarジョブ物防.Value = 10;
-            // 
-            // trackbarジョブ知力
-            // 
-            this.trackbarジョブ知力.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarジョブ知力.Location = new System.Drawing.Point(177, 311);
-            this.trackbarジョブ知力.Maximum = 100;
-            this.trackbarジョブ知力.Minimum = 0;
-            this.trackbarジョブ知力.Name = "trackbarジョブ知力";
-            this.trackbarジョブ知力.Size = new System.Drawing.Size(232, 30);
-            this.trackbarジョブ知力.TabIndex = 31;
-            this.trackbarジョブ知力.Value = 10;
-            // 
-            // trackbarジョブ技力
-            // 
-            this.trackbarジョブ技力.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarジョブ技力.Location = new System.Drawing.Point(177, 275);
-            this.trackbarジョブ技力.Maximum = 100;
-            this.trackbarジョブ技力.Minimum = 0;
-            this.trackbarジョブ技力.Name = "trackbarジョブ技力";
-            this.trackbarジョブ技力.Size = new System.Drawing.Size(232, 30);
-            this.trackbarジョブ技力.TabIndex = 30;
-            this.trackbarジョブ技力.Value = 10;
-            // 
-            // trackbarジョブ筋力
-            // 
-            this.trackbarジョブ筋力.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarジョブ筋力.Location = new System.Drawing.Point(177, 239);
-            this.trackbarジョブ筋力.Maximum = 100;
-            this.trackbarジョブ筋力.Minimum = 0;
-            this.trackbarジョブ筋力.Name = "trackbarジョブ筋力";
-            this.trackbarジョブ筋力.Size = new System.Drawing.Size(232, 30);
-            this.trackbarジョブ筋力.TabIndex = 29;
-            this.trackbarジョブ筋力.Value = 10;
             // 
             // checkedListBoxジョブPスキル
             // 
@@ -2252,17 +1752,6 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "名前";
             // 
-            // trackbarジョブHP
-            // 
-            this.trackbarジョブHP.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarジョブHP.Location = new System.Drawing.Point(177, 203);
-            this.trackbarジョブHP.Maximum = 100;
-            this.trackbarジョブHP.Minimum = 0;
-            this.trackbarジョブHP.Name = "trackbarジョブHP";
-            this.trackbarジョブHP.Size = new System.Drawing.Size(232, 30);
-            this.trackbarジョブHP.TabIndex = 20;
-            this.trackbarジョブHP.Value = 10;
-            // 
             // checkedListBoxジョブAスキル
             // 
             this.checkedListBoxジョブAスキル.FormattingEnabled = true;
@@ -2352,13 +1841,9 @@
             this.Tabモンスター.Controls.Add(this.label73);
             this.Tabモンスター.Controls.Add(this.label72);
             this.Tabモンスター.Controls.Add(this.checkBoxモンスターボス);
-            this.Tabモンスター.Controls.Add(this.label4);
             this.Tabモンスター.Controls.Add(this.label58);
             this.Tabモンスター.Controls.Add(this.label59);
-            this.Tabモンスター.Controls.Add(this.label60);
             this.Tabモンスター.Controls.Add(this.label61);
-            this.Tabモンスター.Controls.Add(this.label62);
-            this.Tabモンスター.Controls.Add(this.label63);
             this.Tabモンスター.Controls.Add(this.label64);
             this.Tabモンスター.Controls.Add(this.label65);
             this.Tabモンスター.Controls.Add(this.label66);
@@ -2822,15 +2307,6 @@
             this.checkBoxモンスターボス.Text = "ボス";
             this.checkBoxモンスターボス.UseVisualStyleBackColor = true;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(169, 514);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 12);
-            this.label4.TabIndex = 70;
-            this.label4.Text = "会心";
-            // 
             // label58
             // 
             this.label58.AutoSize = true;
@@ -2849,15 +2325,6 @@
             this.label59.TabIndex = 65;
             this.label59.Text = "命中";
             // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(169, 405);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(29, 12);
-            this.label60.TabIndex = 64;
-            this.label60.Text = "魔防";
-            // 
             // label61
             // 
             this.label61.AutoSize = true;
@@ -2865,25 +2332,7 @@
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(29, 12);
             this.label61.TabIndex = 63;
-            this.label61.Text = "物防";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(170, 330);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(29, 12);
-            this.label62.TabIndex = 58;
-            this.label62.Text = "知力";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(170, 293);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(29, 12);
-            this.label63.TabIndex = 57;
-            this.label63.Text = "技力";
+            this.label61.Text = "防御";
             // 
             // label64
             // 
@@ -2980,117 +2429,6 @@
             this.comboBoxモンスター素材種.Name = "comboBoxモンスター素材種";
             this.comboBoxモンスター素材種.Size = new System.Drawing.Size(121, 20);
             this.comboBoxモンスター素材種.TabIndex = 42;
-            // 
-            // trackbarモンスターレア素材率
-            // 
-            this.trackbarモンスターレア素材率.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarモンスターレア素材率.Location = new System.Drawing.Point(436, 165);
-            this.trackbarモンスターレア素材率.Maximum = 100;
-            this.trackbarモンスターレア素材率.Minimum = 0;
-            this.trackbarモンスターレア素材率.Name = "trackbarモンスターレア素材率";
-            this.trackbarモンスターレア素材率.Size = new System.Drawing.Size(232, 30);
-            this.trackbarモンスターレア素材率.TabIndex = 73;
-            this.trackbarモンスターレア素材率.Value = 10;
-            // 
-            // trackbarモンスター会心
-            // 
-            this.trackbarモンスター会心.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarモンスター会心.Location = new System.Drawing.Point(204, 507);
-            this.trackbarモンスター会心.Maximum = 100;
-            this.trackbarモンスター会心.Minimum = 0;
-            this.trackbarモンスター会心.Name = "trackbarモンスター会心";
-            this.trackbarモンスター会心.Size = new System.Drawing.Size(232, 30);
-            this.trackbarモンスター会心.TabIndex = 71;
-            this.trackbarモンスター会心.Value = 10;
-            this.trackbarモンスター会心.Visible = false;
-            // 
-            // trackbarモンスター回避
-            // 
-            this.trackbarモンスター回避.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarモンスター回避.Location = new System.Drawing.Point(204, 471);
-            this.trackbarモンスター回避.Maximum = 100;
-            this.trackbarモンスター回避.Minimum = 0;
-            this.trackbarモンスター回避.Name = "trackbarモンスター回避";
-            this.trackbarモンスター回避.Size = new System.Drawing.Size(232, 30);
-            this.trackbarモンスター回避.TabIndex = 69;
-            this.trackbarモンスター回避.Value = 10;
-            // 
-            // trackbarモンスター命中
-            // 
-            this.trackbarモンスター命中.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarモンスター命中.Location = new System.Drawing.Point(204, 435);
-            this.trackbarモンスター命中.Maximum = 100;
-            this.trackbarモンスター命中.Minimum = 0;
-            this.trackbarモンスター命中.Name = "trackbarモンスター命中";
-            this.trackbarモンスター命中.Size = new System.Drawing.Size(232, 30);
-            this.trackbarモンスター命中.TabIndex = 68;
-            this.trackbarモンスター命中.Value = 10;
-            // 
-            // trackbarモンスター魔防
-            // 
-            this.trackbarモンスター魔防.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarモンスター魔防.Location = new System.Drawing.Point(204, 399);
-            this.trackbarモンスター魔防.Maximum = 100;
-            this.trackbarモンスター魔防.Minimum = 0;
-            this.trackbarモンスター魔防.Name = "trackbarモンスター魔防";
-            this.trackbarモンスター魔防.Size = new System.Drawing.Size(232, 30);
-            this.trackbarモンスター魔防.TabIndex = 67;
-            this.trackbarモンスター魔防.Value = 10;
-            // 
-            // trackbarモンスター物防
-            // 
-            this.trackbarモンスター物防.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarモンスター物防.Location = new System.Drawing.Point(204, 363);
-            this.trackbarモンスター物防.Maximum = 100;
-            this.trackbarモンスター物防.Minimum = 0;
-            this.trackbarモンスター物防.Name = "trackbarモンスター物防";
-            this.trackbarモンスター物防.Size = new System.Drawing.Size(232, 30);
-            this.trackbarモンスター物防.TabIndex = 62;
-            this.trackbarモンスター物防.Value = 10;
-            // 
-            // trackbarモンスター知力
-            // 
-            this.trackbarモンスター知力.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarモンスター知力.Location = new System.Drawing.Point(205, 323);
-            this.trackbarモンスター知力.Maximum = 100;
-            this.trackbarモンスター知力.Minimum = 0;
-            this.trackbarモンスター知力.Name = "trackbarモンスター知力";
-            this.trackbarモンスター知力.Size = new System.Drawing.Size(232, 30);
-            this.trackbarモンスター知力.TabIndex = 61;
-            this.trackbarモンスター知力.Value = 10;
-            // 
-            // trackbarモンスター技力
-            // 
-            this.trackbarモンスター技力.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarモンスター技力.Location = new System.Drawing.Point(205, 287);
-            this.trackbarモンスター技力.Maximum = 100;
-            this.trackbarモンスター技力.Minimum = 0;
-            this.trackbarモンスター技力.Name = "trackbarモンスター技力";
-            this.trackbarモンスター技力.Size = new System.Drawing.Size(232, 30);
-            this.trackbarモンスター技力.TabIndex = 60;
-            this.trackbarモンスター技力.Value = 10;
-            // 
-            // trackbarモンスター筋力
-            // 
-            this.trackbarモンスター筋力.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarモンスター筋力.Location = new System.Drawing.Point(205, 251);
-            this.trackbarモンスター筋力.Maximum = 100;
-            this.trackbarモンスター筋力.Minimum = 0;
-            this.trackbarモンスター筋力.Name = "trackbarモンスター筋力";
-            this.trackbarモンスター筋力.Size = new System.Drawing.Size(232, 30);
-            this.trackbarモンスター筋力.TabIndex = 59;
-            this.trackbarモンスター筋力.Value = 10;
-            // 
-            // trackbarモンスターHP
-            // 
-            this.trackbarモンスターHP.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarモンスターHP.Location = new System.Drawing.Point(205, 215);
-            this.trackbarモンスターHP.Maximum = 100;
-            this.trackbarモンスターHP.Minimum = 0;
-            this.trackbarモンスターHP.Name = "trackbarモンスターHP";
-            this.trackbarモンスターHP.Size = new System.Drawing.Size(232, 30);
-            this.trackbarモンスターHP.TabIndex = 50;
-            this.trackbarモンスターHP.Value = 10;
             // 
             // listBoxモンスター
             // 
@@ -3235,6 +2573,7 @@
             this.comboBoxダンジョン遺物6.Name = "comboBoxダンジョン遺物6";
             this.comboBoxダンジョン遺物6.Size = new System.Drawing.Size(121, 20);
             this.comboBoxダンジョン遺物6.TabIndex = 84;
+            this.comboBoxダンジョン遺物6.Visible = false;
             // 
             // label138
             // 
@@ -3284,6 +2623,7 @@
             this.comboBoxダンジョン遺物5.Name = "comboBoxダンジョン遺物5";
             this.comboBoxダンジョン遺物5.Size = new System.Drawing.Size(121, 20);
             this.comboBoxダンジョン遺物5.TabIndex = 68;
+            this.comboBoxダンジョン遺物5.Visible = false;
             // 
             // comboBoxダンジョン遺物4
             // 
@@ -3293,6 +2633,7 @@
             this.comboBoxダンジョン遺物4.Name = "comboBoxダンジョン遺物4";
             this.comboBoxダンジョン遺物4.Size = new System.Drawing.Size(121, 20);
             this.comboBoxダンジョン遺物4.TabIndex = 67;
+            this.comboBoxダンジョン遺物4.Visible = false;
             // 
             // comboBoxダンジョン遺物3
             // 
@@ -3302,6 +2643,7 @@
             this.comboBoxダンジョン遺物3.Name = "comboBoxダンジョン遺物3";
             this.comboBoxダンジョン遺物3.Size = new System.Drawing.Size(121, 20);
             this.comboBoxダンジョン遺物3.TabIndex = 66;
+            this.comboBoxダンジョン遺物3.Visible = false;
             // 
             // comboBoxダンジョン遺物2
             // 
@@ -3311,6 +2653,7 @@
             this.comboBoxダンジョン遺物2.Name = "comboBoxダンジョン遺物2";
             this.comboBoxダンジョン遺物2.Size = new System.Drawing.Size(121, 20);
             this.comboBoxダンジョン遺物2.TabIndex = 65;
+            this.comboBoxダンジョン遺物2.Visible = false;
             // 
             // comboBoxダンジョン遺物1
             // 
@@ -3320,6 +2663,7 @@
             this.comboBoxダンジョン遺物1.Name = "comboBoxダンジョン遺物1";
             this.comboBoxダンジョン遺物1.Size = new System.Drawing.Size(121, 20);
             this.comboBoxダンジョン遺物1.TabIndex = 64;
+            this.comboBoxダンジョン遺物1.Visible = false;
             // 
             // label88
             // 
@@ -3462,206 +2806,6 @@
             this.comboBoxダンジョンボス1.Size = new System.Drawing.Size(121, 20);
             this.comboBoxダンジョンボス1.TabIndex = 17;
             // 
-            // trackbarダンジョンザコLv6
-            // 
-            this.trackbarダンジョンザコLv6.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョンザコLv6.Location = new System.Drawing.Point(320, 259);
-            this.trackbarダンジョンザコLv6.Maximum = 100;
-            this.trackbarダンジョンザコLv6.Minimum = 1;
-            this.trackbarダンジョンザコLv6.Name = "trackbarダンジョンザコLv6";
-            this.trackbarダンジョンザコLv6.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョンザコLv6.TabIndex = 100;
-            this.trackbarダンジョンザコLv6.Value = 10;
-            // 
-            // trackbarダンジョンザコLv5
-            // 
-            this.trackbarダンジョンザコLv5.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョンザコLv5.Location = new System.Drawing.Point(319, 232);
-            this.trackbarダンジョンザコLv5.Maximum = 100;
-            this.trackbarダンジョンザコLv5.Minimum = 1;
-            this.trackbarダンジョンザコLv5.Name = "trackbarダンジョンザコLv5";
-            this.trackbarダンジョンザコLv5.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョンザコLv5.TabIndex = 99;
-            this.trackbarダンジョンザコLv5.Value = 10;
-            // 
-            // trackbarダンジョンザコLv4
-            // 
-            this.trackbarダンジョンザコLv4.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョンザコLv4.Location = new System.Drawing.Point(320, 203);
-            this.trackbarダンジョンザコLv4.Maximum = 100;
-            this.trackbarダンジョンザコLv4.Minimum = 1;
-            this.trackbarダンジョンザコLv4.Name = "trackbarダンジョンザコLv4";
-            this.trackbarダンジョンザコLv4.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョンザコLv4.TabIndex = 98;
-            this.trackbarダンジョンザコLv4.Value = 10;
-            // 
-            // trackbarダンジョンザコLv3
-            // 
-            this.trackbarダンジョンザコLv3.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョンザコLv3.Location = new System.Drawing.Point(320, 177);
-            this.trackbarダンジョンザコLv3.Maximum = 100;
-            this.trackbarダンジョンザコLv3.Minimum = 1;
-            this.trackbarダンジョンザコLv3.Name = "trackbarダンジョンザコLv3";
-            this.trackbarダンジョンザコLv3.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョンザコLv3.TabIndex = 97;
-            this.trackbarダンジョンザコLv3.Value = 10;
-            // 
-            // trackbarダンジョンザコLv2
-            // 
-            this.trackbarダンジョンザコLv2.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョンザコLv2.Location = new System.Drawing.Point(320, 151);
-            this.trackbarダンジョンザコLv2.Maximum = 100;
-            this.trackbarダンジョンザコLv2.Minimum = 1;
-            this.trackbarダンジョンザコLv2.Name = "trackbarダンジョンザコLv2";
-            this.trackbarダンジョンザコLv2.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョンザコLv2.TabIndex = 96;
-            this.trackbarダンジョンザコLv2.Value = 10;
-            // 
-            // trackbarダンジョンボスLv6
-            // 
-            this.trackbarダンジョンボスLv6.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョンボスLv6.Location = new System.Drawing.Point(684, 256);
-            this.trackbarダンジョンボスLv6.Maximum = 100;
-            this.trackbarダンジョンボスLv6.Minimum = 1;
-            this.trackbarダンジョンボスLv6.Name = "trackbarダンジョンボスLv6";
-            this.trackbarダンジョンボスLv6.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョンボスLv6.TabIndex = 95;
-            this.trackbarダンジョンボスLv6.Value = 10;
-            // 
-            // trackbarダンジョンボスLv5
-            // 
-            this.trackbarダンジョンボスLv5.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョンボスLv5.Location = new System.Drawing.Point(684, 229);
-            this.trackbarダンジョンボスLv5.Maximum = 100;
-            this.trackbarダンジョンボスLv5.Minimum = 1;
-            this.trackbarダンジョンボスLv5.Name = "trackbarダンジョンボスLv5";
-            this.trackbarダンジョンボスLv5.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョンボスLv5.TabIndex = 93;
-            this.trackbarダンジョンボスLv5.Value = 10;
-            // 
-            // trackbarダンジョンボスLv4
-            // 
-            this.trackbarダンジョンボスLv4.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョンボスLv4.Location = new System.Drawing.Point(684, 203);
-            this.trackbarダンジョンボスLv4.Maximum = 100;
-            this.trackbarダンジョンボスLv4.Minimum = 1;
-            this.trackbarダンジョンボスLv4.Name = "trackbarダンジョンボスLv4";
-            this.trackbarダンジョンボスLv4.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョンボスLv4.TabIndex = 91;
-            this.trackbarダンジョンボスLv4.Value = 10;
-            // 
-            // trackbarダンジョンボスLv3
-            // 
-            this.trackbarダンジョンボスLv3.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョンボスLv3.Location = new System.Drawing.Point(684, 177);
-            this.trackbarダンジョンボスLv3.Maximum = 100;
-            this.trackbarダンジョンボスLv3.Minimum = 1;
-            this.trackbarダンジョンボスLv3.Name = "trackbarダンジョンボスLv3";
-            this.trackbarダンジョンボスLv3.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョンボスLv3.TabIndex = 89;
-            this.trackbarダンジョンボスLv3.Value = 10;
-            // 
-            // trackbarダンジョンボスLv2
-            // 
-            this.trackbarダンジョンボスLv2.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョンボスLv2.Location = new System.Drawing.Point(684, 151);
-            this.trackbarダンジョンボスLv2.Maximum = 100;
-            this.trackbarダンジョンボスLv2.Minimum = 1;
-            this.trackbarダンジョンボスLv2.Name = "trackbarダンジョンボスLv2";
-            this.trackbarダンジョンボスLv2.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョンボスLv2.TabIndex = 87;
-            this.trackbarダンジョンボスLv2.Value = 10;
-            // 
-            // trackbarダンジョン地図発見B
-            // 
-            this.trackbarダンジョン地図発見B.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョン地図発見B.Location = new System.Drawing.Point(457, 424);
-            this.trackbarダンジョン地図発見B.Maximum = 100;
-            this.trackbarダンジョン地図発見B.Minimum = 0;
-            this.trackbarダンジョン地図発見B.Name = "trackbarダンジョン地図発見B";
-            this.trackbarダンジョン地図発見B.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョン地図発見B.TabIndex = 74;
-            this.trackbarダンジョン地図発見B.Value = 10;
-            this.trackbarダンジョン地図発見B.Visible = false;
-            // 
-            // trackbarダンジョン地図発見A
-            // 
-            this.trackbarダンジョン地図発見A.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョン地図発見A.Location = new System.Drawing.Point(457, 388);
-            this.trackbarダンジョン地図発見A.Maximum = 100;
-            this.trackbarダンジョン地図発見A.Minimum = 0;
-            this.trackbarダンジョン地図発見A.Name = "trackbarダンジョン地図発見A";
-            this.trackbarダンジョン地図発見A.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョン地図発見A.TabIndex = 73;
-            this.trackbarダンジョン地図発見A.Value = 10;
-            // 
-            // trackbarダンジョンボス探索率
-            // 
-            this.trackbarダンジョンボス探索率.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョンボス探索率.Location = new System.Drawing.Point(457, 352);
-            this.trackbarダンジョンボス探索率.Maximum = 100;
-            this.trackbarダンジョンボス探索率.Minimum = 0;
-            this.trackbarダンジョンボス探索率.Name = "trackbarダンジョンボス探索率";
-            this.trackbarダンジョンボス探索率.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョンボス探索率.TabIndex = 71;
-            this.trackbarダンジョンボス探索率.Value = 10;
-            // 
-            // trackbarダンジョン探索地図B
-            // 
-            this.trackbarダンジョン探索地図B.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョン探索地図B.Location = new System.Drawing.Point(207, 425);
-            this.trackbarダンジョン探索地図B.Maximum = 100;
-            this.trackbarダンジョン探索地図B.Minimum = 0;
-            this.trackbarダンジョン探索地図B.Name = "trackbarダンジョン探索地図B";
-            this.trackbarダンジョン探索地図B.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョン探索地図B.TabIndex = 69;
-            this.trackbarダンジョン探索地図B.Value = 10;
-            this.trackbarダンジョン探索地図B.Visible = false;
-            // 
-            // trackbarダンジョンボス地図
-            // 
-            this.trackbarダンジョンボス地図.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョンボス地図.Location = new System.Drawing.Point(207, 353);
-            this.trackbarダンジョンボス地図.Maximum = 100;
-            this.trackbarダンジョンボス地図.Minimum = 0;
-            this.trackbarダンジョンボス地図.Name = "trackbarダンジョンボス地図";
-            this.trackbarダンジョンボス地図.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョンボス地図.TabIndex = 47;
-            this.trackbarダンジョンボス地図.Value = 10;
-            // 
-            // trackbarダンジョン探索地図A
-            // 
-            this.trackbarダンジョン探索地図A.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョン探索地図A.Location = new System.Drawing.Point(207, 389);
-            this.trackbarダンジョン探索地図A.Maximum = 100;
-            this.trackbarダンジョン探索地図A.Minimum = 0;
-            this.trackbarダンジョン探索地図A.Name = "trackbarダンジョン探索地図A";
-            this.trackbarダンジョン探索地図A.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョン探索地図A.TabIndex = 45;
-            this.trackbarダンジョン探索地図A.Value = 10;
-            // 
-            // trackbarダンジョンボスLv1
-            // 
-            this.trackbarダンジョンボスLv1.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョンボスLv1.Location = new System.Drawing.Point(684, 125);
-            this.trackbarダンジョンボスLv1.Maximum = 100;
-            this.trackbarダンジョンボスLv1.Minimum = 1;
-            this.trackbarダンジョンボスLv1.Name = "trackbarダンジョンボスLv1";
-            this.trackbarダンジョンボスLv1.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョンボスLv1.TabIndex = 27;
-            this.trackbarダンジョンボスLv1.Value = 10;
-            // 
-            // trackbarダンジョンザコLv1
-            // 
-            this.trackbarダンジョンザコLv1.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarダンジョンザコLv1.Location = new System.Drawing.Point(320, 125);
-            this.trackbarダンジョンザコLv1.Maximum = 100;
-            this.trackbarダンジョンザコLv1.Minimum = 1;
-            this.trackbarダンジョンザコLv1.Name = "trackbarダンジョンザコLv1";
-            this.trackbarダンジョンザコLv1.Size = new System.Drawing.Size(232, 30);
-            this.trackbarダンジョンザコLv1.TabIndex = 24;
-            this.trackbarダンジョンザコLv1.Value = 10;
-            // 
             // listBoxダンジョン
             // 
             this.listBoxダンジョン.FormattingEnabled = true;
@@ -3679,13 +2823,9 @@
             this.Tab装備品.Controls.Add(this.label101);
             this.Tab装備品.Controls.Add(this.comboBox装備品Pスキル);
             this.Tab装備品.Controls.Add(this.label100);
-            this.Tab装備品.Controls.Add(this.label6);
             this.Tab装備品.Controls.Add(this.label87);
             this.Tab装備品.Controls.Add(this.label89);
-            this.Tab装備品.Controls.Add(this.label90);
             this.Tab装備品.Controls.Add(this.label91);
-            this.Tab装備品.Controls.Add(this.label92);
-            this.Tab装備品.Controls.Add(this.label93);
             this.Tab装備品.Controls.Add(this.label94);
             this.Tab装備品.Controls.Add(this.label95);
             this.Tab装備品.Controls.Add(this.comboBox装備品装備種);
@@ -3721,6 +2861,7 @@
             this.label130.Size = new System.Drawing.Size(53, 12);
             this.label130.TabIndex = 73;
             this.label130.Text = "PスキルLv";
+            this.label130.Visible = false;
             // 
             // label101
             // 
@@ -3730,6 +2871,7 @@
             this.label101.Size = new System.Drawing.Size(41, 12);
             this.label101.TabIndex = 71;
             this.label101.Text = "Pスキル";
+            this.label101.Visible = false;
             // 
             // comboBox装備品Pスキル
             // 
@@ -3739,6 +2881,7 @@
             this.comboBox装備品Pスキル.Name = "comboBox装備品Pスキル";
             this.comboBox装備品Pスキル.Size = new System.Drawing.Size(121, 20);
             this.comboBox装備品Pスキル.TabIndex = 70;
+            this.comboBox装備品Pスキル.Visible = false;
             // 
             // label100
             // 
@@ -3748,15 +2891,6 @@
             this.label100.Size = new System.Drawing.Size(30, 12);
             this.label100.TabIndex = 69;
             this.label100.Text = "ランク";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(171, 563);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 12);
-            this.label6.TabIndex = 66;
-            this.label6.Text = "会心";
             // 
             // label87
             // 
@@ -3776,15 +2910,6 @@
             this.label89.TabIndex = 61;
             this.label89.Text = "命中";
             // 
-            // label90
-            // 
-            this.label90.AutoSize = true;
-            this.label90.Location = new System.Drawing.Point(171, 454);
-            this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(29, 12);
-            this.label90.TabIndex = 60;
-            this.label90.Text = "魔防";
-            // 
             // label91
             // 
             this.label91.AutoSize = true;
@@ -3792,34 +2917,16 @@
             this.label91.Name = "label91";
             this.label91.Size = new System.Drawing.Size(29, 12);
             this.label91.TabIndex = 59;
-            this.label91.Text = "物防";
-            // 
-            // label92
-            // 
-            this.label92.AutoSize = true;
-            this.label92.Location = new System.Drawing.Point(171, 383);
-            this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(29, 12);
-            this.label92.TabIndex = 54;
-            this.label92.Text = "知力";
-            // 
-            // label93
-            // 
-            this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(171, 346);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(29, 12);
-            this.label93.TabIndex = 53;
-            this.label93.Text = "技力";
+            this.label91.Text = "防御";
             // 
             // label94
             // 
             this.label94.AutoSize = true;
             this.label94.Location = new System.Drawing.Point(171, 310);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(29, 12);
+            this.label94.Size = new System.Drawing.Size(17, 12);
             this.label94.TabIndex = 52;
-            this.label94.Text = "筋力";
+            this.label94.Text = "力";
             // 
             // label95
             // 
@@ -3880,128 +2987,6 @@
             this.textBox装備品説明.Name = "textBox装備品説明";
             this.textBox装備品説明.Size = new System.Drawing.Size(246, 55);
             this.textBox装備品説明.TabIndex = 43;
-            // 
-            // trackbar装備品PスキルLv
-            // 
-            this.trackbar装備品PスキルLv.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbar装備品PスキルLv.Location = new System.Drawing.Point(206, 160);
-            this.trackbar装備品PスキルLv.Maximum = 10;
-            this.trackbar装備品PスキルLv.Minimum = 0;
-            this.trackbar装備品PスキルLv.Name = "trackbar装備品PスキルLv";
-            this.trackbar装備品PスキルLv.Size = new System.Drawing.Size(232, 30);
-            this.trackbar装備品PスキルLv.TabIndex = 72;
-            this.trackbar装備品PスキルLv.Value = 10;
-            // 
-            // trackbar装備品ランク
-            // 
-            this.trackbar装備品ランク.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbar装備品ランク.Location = new System.Drawing.Point(206, 218);
-            this.trackbar装備品ランク.Maximum = 20;
-            this.trackbar装備品ランク.Minimum = 1;
-            this.trackbar装備品ランク.Name = "trackbar装備品ランク";
-            this.trackbar装備品ランク.Size = new System.Drawing.Size(232, 30);
-            this.trackbar装備品ランク.TabIndex = 68;
-            this.trackbar装備品ランク.Value = 10;
-            // 
-            // trackbar装備品会心
-            // 
-            this.trackbar装備品会心.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbar装備品会心.Location = new System.Drawing.Point(206, 556);
-            this.trackbar装備品会心.Maximum = 100;
-            this.trackbar装備品会心.Minimum = 0;
-            this.trackbar装備品会心.Name = "trackbar装備品会心";
-            this.trackbar装備品会心.Size = new System.Drawing.Size(232, 30);
-            this.trackbar装備品会心.TabIndex = 67;
-            this.trackbar装備品会心.Value = 10;
-            this.trackbar装備品会心.Visible = false;
-            // 
-            // trackbar装備品回避
-            // 
-            this.trackbar装備品回避.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbar装備品回避.Location = new System.Drawing.Point(206, 520);
-            this.trackbar装備品回避.Maximum = 100;
-            this.trackbar装備品回避.Minimum = 0;
-            this.trackbar装備品回避.Name = "trackbar装備品回避";
-            this.trackbar装備品回避.Size = new System.Drawing.Size(232, 30);
-            this.trackbar装備品回避.TabIndex = 65;
-            this.trackbar装備品回避.Value = 10;
-            // 
-            // trackbar装備品命中
-            // 
-            this.trackbar装備品命中.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbar装備品命中.Location = new System.Drawing.Point(206, 484);
-            this.trackbar装備品命中.Maximum = 100;
-            this.trackbar装備品命中.Minimum = 0;
-            this.trackbar装備品命中.Name = "trackbar装備品命中";
-            this.trackbar装備品命中.Size = new System.Drawing.Size(232, 30);
-            this.trackbar装備品命中.TabIndex = 64;
-            this.trackbar装備品命中.Value = 10;
-            // 
-            // trackbar装備品魔防
-            // 
-            this.trackbar装備品魔防.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbar装備品魔防.Location = new System.Drawing.Point(206, 448);
-            this.trackbar装備品魔防.Maximum = 100;
-            this.trackbar装備品魔防.Minimum = 0;
-            this.trackbar装備品魔防.Name = "trackbar装備品魔防";
-            this.trackbar装備品魔防.Size = new System.Drawing.Size(232, 30);
-            this.trackbar装備品魔防.TabIndex = 63;
-            this.trackbar装備品魔防.Value = 10;
-            // 
-            // trackbar装備品物防
-            // 
-            this.trackbar装備品物防.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbar装備品物防.Location = new System.Drawing.Point(206, 412);
-            this.trackbar装備品物防.Maximum = 100;
-            this.trackbar装備品物防.Minimum = 0;
-            this.trackbar装備品物防.Name = "trackbar装備品物防";
-            this.trackbar装備品物防.Size = new System.Drawing.Size(232, 30);
-            this.trackbar装備品物防.TabIndex = 58;
-            this.trackbar装備品物防.Value = 10;
-            // 
-            // trackbar装備品知力
-            // 
-            this.trackbar装備品知力.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbar装備品知力.Location = new System.Drawing.Point(206, 376);
-            this.trackbar装備品知力.Maximum = 100;
-            this.trackbar装備品知力.Minimum = 0;
-            this.trackbar装備品知力.Name = "trackbar装備品知力";
-            this.trackbar装備品知力.Size = new System.Drawing.Size(232, 30);
-            this.trackbar装備品知力.TabIndex = 57;
-            this.trackbar装備品知力.Value = 10;
-            // 
-            // trackbar装備品技力
-            // 
-            this.trackbar装備品技力.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbar装備品技力.Location = new System.Drawing.Point(206, 340);
-            this.trackbar装備品技力.Maximum = 100;
-            this.trackbar装備品技力.Minimum = 0;
-            this.trackbar装備品技力.Name = "trackbar装備品技力";
-            this.trackbar装備品技力.Size = new System.Drawing.Size(232, 30);
-            this.trackbar装備品技力.TabIndex = 56;
-            this.trackbar装備品技力.Value = 10;
-            // 
-            // trackbar装備品筋力
-            // 
-            this.trackbar装備品筋力.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbar装備品筋力.Location = new System.Drawing.Point(206, 304);
-            this.trackbar装備品筋力.Maximum = 100;
-            this.trackbar装備品筋力.Minimum = 0;
-            this.trackbar装備品筋力.Name = "trackbar装備品筋力";
-            this.trackbar装備品筋力.Size = new System.Drawing.Size(232, 30);
-            this.trackbar装備品筋力.TabIndex = 55;
-            this.trackbar装備品筋力.Value = 10;
-            // 
-            // trackbar装備品HP
-            // 
-            this.trackbar装備品HP.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbar装備品HP.Location = new System.Drawing.Point(206, 268);
-            this.trackbar装備品HP.Maximum = 100;
-            this.trackbar装備品HP.Minimum = 0;
-            this.trackbar装備品HP.Name = "trackbar装備品HP";
-            this.trackbar装備品HP.Size = new System.Drawing.Size(232, 30);
-            this.trackbar装備品HP.TabIndex = 48;
-            this.trackbar装備品HP.Value = 10;
             // 
             // listBox装備品
             // 
@@ -4117,17 +3102,6 @@
             this.textBox素材説明.Size = new System.Drawing.Size(246, 55);
             this.textBox素材説明.TabIndex = 27;
             // 
-            // trackbar素材ランク
-            // 
-            this.trackbar素材ランク.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbar素材ランク.Location = new System.Drawing.Point(193, 131);
-            this.trackbar素材ランク.Maximum = 20;
-            this.trackbar素材ランク.Minimum = 1;
-            this.trackbar素材ランク.Name = "trackbar素材ランク";
-            this.trackbar素材ランク.Size = new System.Drawing.Size(232, 30);
-            this.trackbar素材ランク.TabIndex = 32;
-            this.trackbar素材ランク.Value = 10;
-            // 
             // listBox素材
             // 
             this.listBox素材.FormattingEnabled = true;
@@ -4150,7 +3124,6 @@
             this.Tabアクセサリー.Controls.Add(this.label80);
             this.Tabアクセサリー.Controls.Add(this.comboBoxアクセサリーレアリティ);
             this.Tabアクセサリー.Controls.Add(this.label86);
-            this.Tabアクセサリー.Controls.Add(this.label107);
             this.Tabアクセサリー.Controls.Add(this.numアクセサリー画像ID);
             this.Tabアクセサリー.Controls.Add(this.label118);
             this.Tabアクセサリー.Controls.Add(this.label7);
@@ -4158,10 +3131,7 @@
             this.Tabアクセサリー.Controls.Add(this.label109);
             this.Tabアクセサリー.Controls.Add(this.label110);
             this.Tabアクセサリー.Controls.Add(this.label111);
-            this.Tabアクセサリー.Controls.Add(this.label112);
             this.Tabアクセサリー.Controls.Add(this.label113);
-            this.Tabアクセサリー.Controls.Add(this.label114);
-            this.Tabアクセサリー.Controls.Add(this.label115);
             this.Tabアクセサリー.Controls.Add(this.label116);
             this.Tabアクセサリー.Controls.Add(this.label117);
             this.Tabアクセサリー.Controls.Add(this.label120);
@@ -4262,15 +3232,6 @@
             this.label86.TabIndex = 106;
             this.label86.Text = "PスキルLv";
             // 
-            // label107
-            // 
-            this.label107.AutoSize = true;
-            this.label107.Location = new System.Drawing.Point(174, 588);
-            this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(29, 12);
-            this.label107.TabIndex = 103;
-            this.label107.Text = "会心";
-            // 
             // numアクセサリー画像ID
             // 
             this.numアクセサリー画像ID.Location = new System.Drawing.Point(209, 44);
@@ -4308,7 +3269,7 @@
             // label109
             // 
             this.label109.AutoSize = true;
-            this.label109.Location = new System.Drawing.Point(166, 230);
+            this.label109.Location = new System.Drawing.Point(166, 216);
             this.label109.Name = "label109";
             this.label109.Size = new System.Drawing.Size(30, 12);
             this.label109.TabIndex = 97;
@@ -4332,15 +3293,6 @@
             this.label111.TabIndex = 91;
             this.label111.Text = "命中";
             // 
-            // label112
-            // 
-            this.label112.AutoSize = true;
-            this.label112.Location = new System.Drawing.Point(174, 479);
-            this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(29, 12);
-            this.label112.TabIndex = 90;
-            this.label112.Text = "魔防";
-            // 
             // label113
             // 
             this.label113.AutoSize = true;
@@ -4348,25 +3300,7 @@
             this.label113.Name = "label113";
             this.label113.Size = new System.Drawing.Size(29, 12);
             this.label113.TabIndex = 89;
-            this.label113.Text = "物防";
-            // 
-            // label114
-            // 
-            this.label114.AutoSize = true;
-            this.label114.Location = new System.Drawing.Point(174, 408);
-            this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(29, 12);
-            this.label114.TabIndex = 84;
-            this.label114.Text = "知力";
-            // 
-            // label115
-            // 
-            this.label115.AutoSize = true;
-            this.label115.Location = new System.Drawing.Point(174, 371);
-            this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(29, 12);
-            this.label115.TabIndex = 83;
-            this.label115.Text = "技力";
+            this.label113.Text = "防御";
             // 
             // label116
             // 
@@ -4418,128 +3352,6 @@
             this.textBoxアクセサリー説明.Name = "textBoxアクセサリー説明";
             this.textBoxアクセサリー説明.Size = new System.Drawing.Size(246, 55);
             this.textBoxアクセサリー説明.TabIndex = 73;
-            // 
-            // trackbarアクセサリーPスキルLv
-            // 
-            this.trackbarアクセサリーPスキルLv.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarアクセサリーPスキルLv.Location = new System.Drawing.Point(209, 161);
-            this.trackbarアクセサリーPスキルLv.Maximum = 20;
-            this.trackbarアクセサリーPスキルLv.Minimum = 1;
-            this.trackbarアクセサリーPスキルLv.Name = "trackbarアクセサリーPスキルLv";
-            this.trackbarアクセサリーPスキルLv.Size = new System.Drawing.Size(232, 30);
-            this.trackbarアクセサリーPスキルLv.TabIndex = 105;
-            this.trackbarアクセサリーPスキルLv.Value = 10;
-            // 
-            // trackbarアクセサリー会心
-            // 
-            this.trackbarアクセサリー会心.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarアクセサリー会心.Location = new System.Drawing.Point(209, 581);
-            this.trackbarアクセサリー会心.Maximum = 100;
-            this.trackbarアクセサリー会心.Minimum = 0;
-            this.trackbarアクセサリー会心.Name = "trackbarアクセサリー会心";
-            this.trackbarアクセサリー会心.Size = new System.Drawing.Size(232, 30);
-            this.trackbarアクセサリー会心.TabIndex = 104;
-            this.trackbarアクセサリー会心.Value = 10;
-            this.trackbarアクセサリー会心.Visible = false;
-            // 
-            // trackbarアクセサリーランク
-            // 
-            this.trackbarアクセサリーランク.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarアクセサリーランク.Location = new System.Drawing.Point(209, 221);
-            this.trackbarアクセサリーランク.Maximum = 20;
-            this.trackbarアクセサリーランク.Minimum = 1;
-            this.trackbarアクセサリーランク.Name = "trackbarアクセサリーランク";
-            this.trackbarアクセサリーランク.Size = new System.Drawing.Size(232, 30);
-            this.trackbarアクセサリーランク.TabIndex = 96;
-            this.trackbarアクセサリーランク.Value = 10;
-            // 
-            // trackbarアクセサリー回避
-            // 
-            this.trackbarアクセサリー回避.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarアクセサリー回避.Location = new System.Drawing.Point(209, 545);
-            this.trackbarアクセサリー回避.Maximum = 100;
-            this.trackbarアクセサリー回避.Minimum = -100;
-            this.trackbarアクセサリー回避.Name = "trackbarアクセサリー回避";
-            this.trackbarアクセサリー回避.Size = new System.Drawing.Size(232, 30);
-            this.trackbarアクセサリー回避.TabIndex = 95;
-            this.trackbarアクセサリー回避.Value = 10;
-            // 
-            // trackbarアクセサリー命中
-            // 
-            this.trackbarアクセサリー命中.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarアクセサリー命中.Location = new System.Drawing.Point(209, 509);
-            this.trackbarアクセサリー命中.Maximum = 100;
-            this.trackbarアクセサリー命中.Minimum = -100;
-            this.trackbarアクセサリー命中.Name = "trackbarアクセサリー命中";
-            this.trackbarアクセサリー命中.Size = new System.Drawing.Size(232, 30);
-            this.trackbarアクセサリー命中.TabIndex = 94;
-            this.trackbarアクセサリー命中.Value = 10;
-            // 
-            // trackbarアクセサリー魔防
-            // 
-            this.trackbarアクセサリー魔防.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarアクセサリー魔防.Location = new System.Drawing.Point(209, 473);
-            this.trackbarアクセサリー魔防.Maximum = 100;
-            this.trackbarアクセサリー魔防.Minimum = -100;
-            this.trackbarアクセサリー魔防.Name = "trackbarアクセサリー魔防";
-            this.trackbarアクセサリー魔防.Size = new System.Drawing.Size(232, 30);
-            this.trackbarアクセサリー魔防.TabIndex = 93;
-            this.trackbarアクセサリー魔防.Value = 10;
-            // 
-            // trackbarアクセサリー物防
-            // 
-            this.trackbarアクセサリー物防.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarアクセサリー物防.Location = new System.Drawing.Point(209, 437);
-            this.trackbarアクセサリー物防.Maximum = 100;
-            this.trackbarアクセサリー物防.Minimum = -100;
-            this.trackbarアクセサリー物防.Name = "trackbarアクセサリー物防";
-            this.trackbarアクセサリー物防.Size = new System.Drawing.Size(232, 30);
-            this.trackbarアクセサリー物防.TabIndex = 88;
-            this.trackbarアクセサリー物防.Value = 10;
-            // 
-            // trackbarアクセサリー知力
-            // 
-            this.trackbarアクセサリー知力.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarアクセサリー知力.Location = new System.Drawing.Point(209, 401);
-            this.trackbarアクセサリー知力.Maximum = 100;
-            this.trackbarアクセサリー知力.Minimum = -100;
-            this.trackbarアクセサリー知力.Name = "trackbarアクセサリー知力";
-            this.trackbarアクセサリー知力.Size = new System.Drawing.Size(232, 30);
-            this.trackbarアクセサリー知力.TabIndex = 87;
-            this.trackbarアクセサリー知力.Value = 10;
-            // 
-            // trackbarアクセサリー技力
-            // 
-            this.trackbarアクセサリー技力.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarアクセサリー技力.Location = new System.Drawing.Point(209, 365);
-            this.trackbarアクセサリー技力.Maximum = 100;
-            this.trackbarアクセサリー技力.Minimum = -100;
-            this.trackbarアクセサリー技力.Name = "trackbarアクセサリー技力";
-            this.trackbarアクセサリー技力.Size = new System.Drawing.Size(232, 30);
-            this.trackbarアクセサリー技力.TabIndex = 86;
-            this.trackbarアクセサリー技力.Value = 10;
-            // 
-            // trackbarアクセサリー筋力
-            // 
-            this.trackbarアクセサリー筋力.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarアクセサリー筋力.Location = new System.Drawing.Point(209, 329);
-            this.trackbarアクセサリー筋力.Maximum = 100;
-            this.trackbarアクセサリー筋力.Minimum = -100;
-            this.trackbarアクセサリー筋力.Name = "trackbarアクセサリー筋力";
-            this.trackbarアクセサリー筋力.Size = new System.Drawing.Size(232, 30);
-            this.trackbarアクセサリー筋力.TabIndex = 85;
-            this.trackbarアクセサリー筋力.Value = 10;
-            // 
-            // trackbarアクセサリーHP
-            // 
-            this.trackbarアクセサリーHP.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbarアクセサリーHP.Location = new System.Drawing.Point(209, 293);
-            this.trackbarアクセサリーHP.Maximum = 100;
-            this.trackbarアクセサリーHP.Minimum = -100;
-            this.trackbarアクセサリーHP.Name = "trackbarアクセサリーHP";
-            this.trackbarアクセサリーHP.Size = new System.Drawing.Size(232, 30);
-            this.trackbarアクセサリーHP.TabIndex = 78;
-            this.trackbarアクセサリーHP.Value = 10;
             // 
             // listBoxアクセサリー
             // 
@@ -4833,7 +3645,6 @@
             this.Tab投資.Controls.Add(this.comboBox投資費用素材種2);
             this.Tab投資.Controls.Add(this.comboBox投資費用素材種3);
             this.Tab投資.Controls.Add(this.comboBox投資費用素材種4);
-            this.Tab投資.Controls.Add(this.Trackbar投資素材ランク1);
             this.Tab投資.Controls.Add(this.comboBox投資費用素材種1);
             this.Tab投資.Controls.Add(this.num投資必要数1);
             this.Tab投資.Controls.Add(this.num投資部門ID);
@@ -4844,6 +3655,7 @@
             this.Tab投資.Controls.Add(this.textBox投資名前);
             this.Tab投資.Controls.Add(this.label9);
             this.Tab投資.Controls.Add(this.textBox投資説明);
+            this.Tab投資.Controls.Add(this.Trackbar投資素材ランク1);
             this.Tab投資.Controls.Add(this.trackbar投資ランク);
             this.Tab投資.Controls.Add(this.listBox投資);
             this.Tab投資.Location = new System.Drawing.Point(4, 22);
@@ -4852,6 +3664,78 @@
             this.Tab投資.TabIndex = 8;
             this.Tab投資.Text = "投資";
             this.Tab投資.UseVisualStyleBackColor = true;
+            // 
+            // num投資必要数4
+            // 
+            this.num投資必要数4.Location = new System.Drawing.Point(320, 337);
+            this.num投資必要数4.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.num投資必要数4.Name = "num投資必要数4";
+            this.num投資必要数4.Size = new System.Drawing.Size(87, 19);
+            this.num投資必要数4.TabIndex = 95;
+            // 
+            // num投資必要数3
+            // 
+            this.num投資必要数3.Location = new System.Drawing.Point(320, 311);
+            this.num投資必要数3.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.num投資必要数3.Name = "num投資必要数3";
+            this.num投資必要数3.Size = new System.Drawing.Size(87, 19);
+            this.num投資必要数3.TabIndex = 94;
+            // 
+            // num投資必要数2
+            // 
+            this.num投資必要数2.Location = new System.Drawing.Point(320, 283);
+            this.num投資必要数2.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.num投資必要数2.Name = "num投資必要数2";
+            this.num投資必要数2.Size = new System.Drawing.Size(87, 19);
+            this.num投資必要数2.TabIndex = 93;
+            // 
+            // comboBox投資費用素材種2
+            // 
+            this.comboBox投資費用素材種2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox投資費用素材種2.FormattingEnabled = true;
+            this.comboBox投資費用素材種2.Location = new System.Drawing.Point(193, 284);
+            this.comboBox投資費用素材種2.Name = "comboBox投資費用素材種2";
+            this.comboBox投資費用素材種2.Size = new System.Drawing.Size(121, 20);
+            this.comboBox投資費用素材種2.TabIndex = 92;
+            // 
+            // comboBox投資費用素材種3
+            // 
+            this.comboBox投資費用素材種3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox投資費用素材種3.FormattingEnabled = true;
+            this.comboBox投資費用素材種3.Location = new System.Drawing.Point(193, 310);
+            this.comboBox投資費用素材種3.Name = "comboBox投資費用素材種3";
+            this.comboBox投資費用素材種3.Size = new System.Drawing.Size(121, 20);
+            this.comboBox投資費用素材種3.TabIndex = 91;
+            // 
+            // comboBox投資費用素材種4
+            // 
+            this.comboBox投資費用素材種4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox投資費用素材種4.FormattingEnabled = true;
+            this.comboBox投資費用素材種4.Location = new System.Drawing.Point(193, 336);
+            this.comboBox投資費用素材種4.Name = "comboBox投資費用素材種4";
+            this.comboBox投資費用素材種4.Size = new System.Drawing.Size(121, 20);
+            this.comboBox投資費用素材種4.TabIndex = 90;
+            // 
+            // comboBox投資費用素材種1
+            // 
+            this.comboBox投資費用素材種1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox投資費用素材種1.FormattingEnabled = true;
+            this.comboBox投資費用素材種1.Location = new System.Drawing.Point(193, 258);
+            this.comboBox投資費用素材種1.Name = "comboBox投資費用素材種1";
+            this.comboBox投資費用素材種1.Size = new System.Drawing.Size(121, 20);
+            this.comboBox投資費用素材種1.TabIndex = 88;
             // 
             // num投資必要数1
             // 
@@ -4931,17 +3815,6 @@
             this.textBox投資説明.Name = "textBox投資説明";
             this.textBox投資説明.Size = new System.Drawing.Size(246, 55);
             this.textBox投資説明.TabIndex = 18;
-            // 
-            // trackbar投資ランク
-            // 
-            this.trackbar投資ランク.BackColor = System.Drawing.SystemColors.Window;
-            this.trackbar投資ランク.Location = new System.Drawing.Point(193, 194);
-            this.trackbar投資ランク.Maximum = 20;
-            this.trackbar投資ランク.Minimum = 1;
-            this.trackbar投資ランク.Name = "trackbar投資ランク";
-            this.trackbar投資ランク.Size = new System.Drawing.Size(232, 30);
-            this.trackbar投資ランク.TabIndex = 24;
-            this.trackbar投資ランク.Value = 10;
             // 
             // listBox投資
             // 
@@ -5359,121 +4232,1072 @@
             this.button貼り付け.UseVisualStyleBackColor = true;
             this.button貼り付け.Click += new System.EventHandler(this.button貼り付け_Click);
             // 
-            // comboBox投資費用素材種1
+            // trackbarAスキル範囲
             // 
-            this.comboBox投資費用素材種1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox投資費用素材種1.FormattingEnabled = true;
-            this.comboBox投資費用素材種1.Location = new System.Drawing.Point(193, 258);
-            this.comboBox投資費用素材種1.Name = "comboBox投資費用素材種1";
-            this.comboBox投資費用素材種1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox投資費用素材種1.TabIndex = 88;
+            this.trackbarAスキル範囲.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキル範囲.Location = new System.Drawing.Point(86, 265);
+            this.trackbarAスキル範囲.Maximum = 6;
+            this.trackbarAスキル範囲.Minimum = 1;
+            this.trackbarAスキル範囲.Name = "trackbarAスキル範囲";
+            this.trackbarAスキル範囲.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキル範囲.TabIndex = 42;
+            this.trackbarAスキル範囲.Value = 6;
             // 
-            // Trackbar投資素材ランク1
+            // trackbarAスキル減衰率
             // 
-            this.Trackbar投資素材ランク1.BackColor = System.Drawing.SystemColors.Window;
-            this.Trackbar投資素材ランク1.Location = new System.Drawing.Point(413, 255);
-            this.Trackbar投資素材ランク1.Maximum = 10;
-            this.Trackbar投資素材ランク1.Minimum = 1;
-            this.Trackbar投資素材ランク1.Name = "Trackbar投資素材ランク1";
-            this.Trackbar投資素材ランク1.Size = new System.Drawing.Size(232, 30);
-            this.Trackbar投資素材ランク1.TabIndex = 89;
-            this.Trackbar投資素材ランク1.Value = 10;
+            this.trackbarAスキル減衰率.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキル減衰率.Location = new System.Drawing.Point(86, 335);
+            this.trackbarAスキル減衰率.Maximum = 100;
+            this.trackbarAスキル減衰率.Minimum = 0;
+            this.trackbarAスキル減衰率.Name = "trackbarAスキル減衰率";
+            this.trackbarAスキル減衰率.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキル減衰率.TabIndex = 33;
+            this.trackbarAスキル減衰率.Value = 10;
+            this.trackbarAスキル減衰率.Visible = false;
             // 
-            // comboBox投資費用素材種4
+            // trackbarAスキルHit数
             // 
-            this.comboBox投資費用素材種4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox投資費用素材種4.FormattingEnabled = true;
-            this.comboBox投資費用素材種4.Location = new System.Drawing.Point(193, 336);
-            this.comboBox投資費用素材種4.Name = "comboBox投資費用素材種4";
-            this.comboBox投資費用素材種4.Size = new System.Drawing.Size(121, 20);
-            this.comboBox投資費用素材種4.TabIndex = 90;
+            this.trackbarAスキルHit数.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキルHit数.Location = new System.Drawing.Point(86, 299);
+            this.trackbarAスキルHit数.Maximum = 10;
+            this.trackbarAスキルHit数.Minimum = 1;
+            this.trackbarAスキルHit数.Name = "trackbarAスキルHit数";
+            this.trackbarAスキルHit数.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキルHit数.TabIndex = 36;
+            this.trackbarAスキルHit数.Value = 10;
             // 
-            // comboBox投資費用素材種3
+            // trackbarAスキルクールタイム
             // 
-            this.comboBox投資費用素材種3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox投資費用素材種3.FormattingEnabled = true;
-            this.comboBox投資費用素材種3.Location = new System.Drawing.Point(193, 310);
-            this.comboBox投資費用素材種3.Name = "comboBox投資費用素材種3";
-            this.comboBox投資費用素材種3.Size = new System.Drawing.Size(121, 20);
-            this.comboBox投資費用素材種3.TabIndex = 91;
+            this.trackbarAスキルクールタイム.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキルクールタイム.Location = new System.Drawing.Point(86, 198);
+            this.trackbarAスキルクールタイム.Maximum = 200;
+            this.trackbarAスキルクールタイム.Minimum = 0;
+            this.trackbarAスキルクールタイム.Name = "trackbarAスキルクールタイム";
+            this.trackbarAスキルクールタイム.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキルクールタイム.TabIndex = 35;
+            this.trackbarAスキルクールタイム.Value = 10;
             // 
-            // comboBox投資費用素材種2
+            // trackbarAスキル会心倍率
             // 
-            this.comboBox投資費用素材種2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox投資費用素材種2.FormattingEnabled = true;
-            this.comboBox投資費用素材種2.Location = new System.Drawing.Point(193, 284);
-            this.comboBox投資費用素材種2.Name = "comboBox投資費用素材種2";
-            this.comboBox投資費用素材種2.Size = new System.Drawing.Size(121, 20);
-            this.comboBox投資費用素材種2.TabIndex = 92;
+            this.trackbarAスキル会心倍率.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキル会心倍率.Location = new System.Drawing.Point(86, 162);
+            this.trackbarAスキル会心倍率.Maximum = 300;
+            this.trackbarAスキル会心倍率.Minimum = 150;
+            this.trackbarAスキル会心倍率.Name = "trackbarAスキル会心倍率";
+            this.trackbarAスキル会心倍率.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキル会心倍率.TabIndex = 34;
+            this.trackbarAスキル会心倍率.Value = 150;
+            this.trackbarAスキル会心倍率.Visible = false;
             // 
-            // num投資必要数2
+            // trackbarAスキル会心率
             // 
-            this.num投資必要数2.Location = new System.Drawing.Point(320, 283);
-            this.num投資必要数2.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.num投資必要数2.Name = "num投資必要数2";
-            this.num投資必要数2.Size = new System.Drawing.Size(87, 19);
-            this.num投資必要数2.TabIndex = 93;
+            this.trackbarAスキル会心率.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキル会心率.Location = new System.Drawing.Point(86, 126);
+            this.trackbarAスキル会心率.Maximum = 100;
+            this.trackbarAスキル会心率.Minimum = 0;
+            this.trackbarAスキル会心率.Name = "trackbarAスキル会心率";
+            this.trackbarAスキル会心率.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキル会心率.TabIndex = 33;
+            this.trackbarAスキル会心率.Value = 10;
+            this.trackbarAスキル会心率.Visible = false;
             // 
-            // num投資必要数3
+            // trackbarAスキル命中
             // 
-            this.num投資必要数3.Location = new System.Drawing.Point(320, 311);
-            this.num投資必要数3.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.num投資必要数3.Name = "num投資必要数3";
-            this.num投資必要数3.Size = new System.Drawing.Size(87, 19);
-            this.num投資必要数3.TabIndex = 94;
+            this.trackbarAスキル命中.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキル命中.Location = new System.Drawing.Point(86, 87);
+            this.trackbarAスキル命中.Maximum = 100;
+            this.trackbarAスキル命中.Minimum = 0;
+            this.trackbarAスキル命中.Name = "trackbarAスキル命中";
+            this.trackbarAスキル命中.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキル命中.TabIndex = 31;
+            this.trackbarAスキル命中.Value = 10;
             // 
-            // num投資必要数4
+            // trackbarAスキル反映率
             // 
-            this.num投資必要数4.Location = new System.Drawing.Point(320, 337);
-            this.num投資必要数4.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.num投資必要数4.Name = "num投資必要数4";
-            this.num投資必要数4.Size = new System.Drawing.Size(87, 19);
-            this.num投資必要数4.TabIndex = 95;
+            this.trackbarAスキル反映率.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキル反映率.Location = new System.Drawing.Point(86, 51);
+            this.trackbarAスキル反映率.Maximum = 300;
+            this.trackbarAスキル反映率.Minimum = 0;
+            this.trackbarAスキル反映率.Name = "trackbarAスキル反映率";
+            this.trackbarAスキル反映率.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキル反映率.TabIndex = 30;
+            this.trackbarAスキル反映率.Value = 10;
             // 
-            // Trackbar投資素材ランク2
+            // trackbarAスキル基礎ダメージ
             // 
-            this.Trackbar投資素材ランク2.BackColor = System.Drawing.SystemColors.Window;
-            this.Trackbar投資素材ランク2.Location = new System.Drawing.Point(413, 280);
-            this.Trackbar投資素材ランク2.Maximum = 10;
-            this.Trackbar投資素材ランク2.Minimum = 1;
-            this.Trackbar投資素材ランク2.Name = "Trackbar投資素材ランク2";
-            this.Trackbar投資素材ランク2.Size = new System.Drawing.Size(232, 30);
-            this.Trackbar投資素材ランク2.TabIndex = 96;
-            this.Trackbar投資素材ランク2.Value = 10;
+            this.trackbarAスキル基礎ダメージ.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキル基礎ダメージ.Location = new System.Drawing.Point(86, 18);
+            this.trackbarAスキル基礎ダメージ.Maximum = 100;
+            this.trackbarAスキル基礎ダメージ.Minimum = 0;
+            this.trackbarAスキル基礎ダメージ.Name = "trackbarAスキル基礎ダメージ";
+            this.trackbarAスキル基礎ダメージ.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキル基礎ダメージ.TabIndex = 8;
+            this.trackbarAスキル基礎ダメージ.Value = 10;
             // 
-            // Trackbar投資素材ランク3
+            // trackbarAスキルバフ持続3
             // 
-            this.Trackbar投資素材ランク3.BackColor = System.Drawing.SystemColors.Window;
-            this.Trackbar投資素材ランク3.Location = new System.Drawing.Point(413, 307);
-            this.Trackbar投資素材ランク3.Maximum = 10;
-            this.Trackbar投資素材ランク3.Minimum = 1;
-            this.Trackbar投資素材ランク3.Name = "Trackbar投資素材ランク3";
-            this.Trackbar投資素材ランク3.Size = new System.Drawing.Size(232, 30);
-            this.Trackbar投資素材ランク3.TabIndex = 97;
-            this.Trackbar投資素材ランク3.Value = 10;
+            this.trackbarAスキルバフ持続3.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキルバフ持続3.Location = new System.Drawing.Point(851, 139);
+            this.trackbarAスキルバフ持続3.Maximum = 1000;
+            this.trackbarAスキルバフ持続3.Minimum = 0;
+            this.trackbarAスキルバフ持続3.Name = "trackbarAスキルバフ持続3";
+            this.trackbarAスキルバフ持続3.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキルバフ持続3.TabIndex = 43;
+            this.trackbarAスキルバフ持続3.Value = 10;
+            // 
+            // trackbarAスキルバフ持続2
+            // 
+            this.trackbarAスキルバフ持続2.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキルバフ持続2.Location = new System.Drawing.Point(851, 103);
+            this.trackbarAスキルバフ持続2.Maximum = 1000;
+            this.trackbarAスキルバフ持続2.Minimum = 0;
+            this.trackbarAスキルバフ持続2.Name = "trackbarAスキルバフ持続2";
+            this.trackbarAスキルバフ持続2.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキルバフ持続2.TabIndex = 42;
+            this.trackbarAスキルバフ持続2.Value = 10;
+            // 
+            // trackbarAスキルバフ持続1
+            // 
+            this.trackbarAスキルバフ持続1.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキルバフ持続1.Location = new System.Drawing.Point(851, 67);
+            this.trackbarAスキルバフ持続1.Maximum = 1000;
+            this.trackbarAスキルバフ持続1.Minimum = 0;
+            this.trackbarAスキルバフ持続1.Name = "trackbarAスキルバフ持続1";
+            this.trackbarAスキルバフ持続1.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキルバフ持続1.TabIndex = 41;
+            this.trackbarAスキルバフ持続1.Value = 10;
+            // 
+            // trackbarAスキルバフ発動率3
+            // 
+            this.trackbarAスキルバフ発動率3.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキルバフ発動率3.Location = new System.Drawing.Point(613, 139);
+            this.trackbarAスキルバフ発動率3.Maximum = 100;
+            this.trackbarAスキルバフ発動率3.Minimum = 0;
+            this.trackbarAスキルバフ発動率3.Name = "trackbarAスキルバフ発動率3";
+            this.trackbarAスキルバフ発動率3.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキルバフ発動率3.TabIndex = 40;
+            this.trackbarAスキルバフ発動率3.Value = 10;
+            // 
+            // trackbarAスキルバフ発動率2
+            // 
+            this.trackbarAスキルバフ発動率2.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキルバフ発動率2.Location = new System.Drawing.Point(613, 103);
+            this.trackbarAスキルバフ発動率2.Maximum = 100;
+            this.trackbarAスキルバフ発動率2.Minimum = 0;
+            this.trackbarAスキルバフ発動率2.Name = "trackbarAスキルバフ発動率2";
+            this.trackbarAスキルバフ発動率2.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキルバフ発動率2.TabIndex = 39;
+            this.trackbarAスキルバフ発動率2.Value = 10;
+            // 
+            // trackbarAスキルバフ発動率1
+            // 
+            this.trackbarAスキルバフ発動率1.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキルバフ発動率1.Location = new System.Drawing.Point(613, 67);
+            this.trackbarAスキルバフ発動率1.Maximum = 100;
+            this.trackbarAスキルバフ発動率1.Minimum = 0;
+            this.trackbarAスキルバフ発動率1.Name = "trackbarAスキルバフ発動率1";
+            this.trackbarAスキルバフ発動率1.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキルバフ発動率1.TabIndex = 38;
+            this.trackbarAスキルバフ発動率1.Value = 10;
+            // 
+            // trackbarAスキルバフ反映率3
+            // 
+            this.trackbarAスキルバフ反映率3.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキルバフ反映率3.Location = new System.Drawing.Point(375, 139);
+            this.trackbarAスキルバフ反映率3.Maximum = 300;
+            this.trackbarAスキルバフ反映率3.Minimum = -300;
+            this.trackbarAスキルバフ反映率3.Name = "trackbarAスキルバフ反映率3";
+            this.trackbarAスキルバフ反映率3.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキルバフ反映率3.TabIndex = 37;
+            this.trackbarAスキルバフ反映率3.Value = 10;
+            // 
+            // trackbarAスキルバフ反映率2
+            // 
+            this.trackbarAスキルバフ反映率2.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキルバフ反映率2.Location = new System.Drawing.Point(375, 103);
+            this.trackbarAスキルバフ反映率2.Maximum = 300;
+            this.trackbarAスキルバフ反映率2.Minimum = -300;
+            this.trackbarAスキルバフ反映率2.Name = "trackbarAスキルバフ反映率2";
+            this.trackbarAスキルバフ反映率2.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキルバフ反映率2.TabIndex = 36;
+            this.trackbarAスキルバフ反映率2.Value = 10;
+            // 
+            // trackbarAスキルバフ反映率1
+            // 
+            this.trackbarAスキルバフ反映率1.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキルバフ反映率1.Location = new System.Drawing.Point(375, 67);
+            this.trackbarAスキルバフ反映率1.Maximum = 300;
+            this.trackbarAスキルバフ反映率1.Minimum = -300;
+            this.trackbarAスキルバフ反映率1.Name = "trackbarAスキルバフ反映率1";
+            this.trackbarAスキルバフ反映率1.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキルバフ反映率1.TabIndex = 35;
+            this.trackbarAスキルバフ反映率1.Value = 10;
+            // 
+            // trackbarAスキルバフ固定値3
+            // 
+            this.trackbarAスキルバフ固定値3.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキルバフ固定値3.Location = new System.Drawing.Point(137, 139);
+            this.trackbarAスキルバフ固定値3.Maximum = 100;
+            this.trackbarAスキルバフ固定値3.Minimum = -100;
+            this.trackbarAスキルバフ固定値3.Name = "trackbarAスキルバフ固定値3";
+            this.trackbarAスキルバフ固定値3.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキルバフ固定値3.TabIndex = 34;
+            this.trackbarAスキルバフ固定値3.Value = 10;
+            // 
+            // trackbarAスキルバフ固定値2
+            // 
+            this.trackbarAスキルバフ固定値2.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキルバフ固定値2.Location = new System.Drawing.Point(137, 103);
+            this.trackbarAスキルバフ固定値2.Maximum = 100;
+            this.trackbarAスキルバフ固定値2.Minimum = -100;
+            this.trackbarAスキルバフ固定値2.Name = "trackbarAスキルバフ固定値2";
+            this.trackbarAスキルバフ固定値2.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキルバフ固定値2.TabIndex = 33;
+            this.trackbarAスキルバフ固定値2.Value = 10;
+            // 
+            // trackbarAスキルバフ固定値1
+            // 
+            this.trackbarAスキルバフ固定値1.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキルバフ固定値1.Location = new System.Drawing.Point(137, 67);
+            this.trackbarAスキルバフ固定値1.Maximum = 100;
+            this.trackbarAスキルバフ固定値1.Minimum = -100;
+            this.trackbarAスキルバフ固定値1.Name = "trackbarAスキルバフ固定値1";
+            this.trackbarAスキルバフ固定値1.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキルバフ固定値1.TabIndex = 32;
+            this.trackbarAスキルバフ固定値1.Value = 10;
+            // 
+            // trackbarAスキル追加効果5
+            // 
+            this.trackbarAスキル追加効果5.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキル追加効果5.Location = new System.Drawing.Point(141, 161);
+            this.trackbarAスキル追加効果5.Maximum = 100;
+            this.trackbarAスキル追加効果5.Minimum = 0;
+            this.trackbarAスキル追加効果5.Name = "trackbarAスキル追加効果5";
+            this.trackbarAスキル追加効果5.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキル追加効果5.TabIndex = 35;
+            this.trackbarAスキル追加効果5.Value = 10;
+            // 
+            // trackbarAスキル追加効果4
+            // 
+            this.trackbarAスキル追加効果4.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキル追加効果4.Location = new System.Drawing.Point(141, 125);
+            this.trackbarAスキル追加効果4.Maximum = 100;
+            this.trackbarAスキル追加効果4.Minimum = 0;
+            this.trackbarAスキル追加効果4.Name = "trackbarAスキル追加効果4";
+            this.trackbarAスキル追加効果4.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキル追加効果4.TabIndex = 34;
+            this.trackbarAスキル追加効果4.Value = 10;
+            // 
+            // trackbarAスキル追加効果3
+            // 
+            this.trackbarAスキル追加効果3.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキル追加効果3.Location = new System.Drawing.Point(141, 94);
+            this.trackbarAスキル追加効果3.Maximum = 100;
+            this.trackbarAスキル追加効果3.Minimum = 0;
+            this.trackbarAスキル追加効果3.Name = "trackbarAスキル追加効果3";
+            this.trackbarAスキル追加効果3.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキル追加効果3.TabIndex = 31;
+            this.trackbarAスキル追加効果3.Value = 10;
+            // 
+            // trackbarAスキル追加効果2
+            // 
+            this.trackbarAスキル追加効果2.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキル追加効果2.Location = new System.Drawing.Point(141, 58);
+            this.trackbarAスキル追加効果2.Maximum = 100;
+            this.trackbarAスキル追加効果2.Minimum = 0;
+            this.trackbarAスキル追加効果2.Name = "trackbarAスキル追加効果2";
+            this.trackbarAスキル追加効果2.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキル追加効果2.TabIndex = 30;
+            this.trackbarAスキル追加効果2.Value = 10;
+            // 
+            // trackbarAスキル追加効果1
+            // 
+            this.trackbarAスキル追加効果1.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarAスキル追加効果1.Location = new System.Drawing.Point(141, 22);
+            this.trackbarAスキル追加効果1.Maximum = 100;
+            this.trackbarAスキル追加効果1.Minimum = 0;
+            this.trackbarAスキル追加効果1.Name = "trackbarAスキル追加効果1";
+            this.trackbarAスキル追加効果1.Size = new System.Drawing.Size(232, 30);
+            this.trackbarAスキル追加効果1.TabIndex = 29;
+            this.trackbarAスキル追加効果1.Value = 10;
+            // 
+            // trackbarPスキル効果値B
+            // 
+            this.trackbarPスキル効果値B.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarPスキル効果値B.Location = new System.Drawing.Point(680, 528);
+            this.trackbarPスキル効果値B.Maximum = 500;
+            this.trackbarPスキル効果値B.Minimum = 0;
+            this.trackbarPスキル効果値B.Name = "trackbarPスキル効果値B";
+            this.trackbarPスキル効果値B.Size = new System.Drawing.Size(232, 30);
+            this.trackbarPスキル効果値B.TabIndex = 89;
+            this.trackbarPスキル効果値B.Value = 10;
+            // 
+            // trackbarPスキル効果値A
+            // 
+            this.trackbarPスキル効果値A.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarPスキル効果値A.Location = new System.Drawing.Point(387, 533);
+            this.trackbarPスキル効果値A.Maximum = 500;
+            this.trackbarPスキル効果値A.Minimum = 0;
+            this.trackbarPスキル効果値A.Name = "trackbarPスキル効果値A";
+            this.trackbarPスキル効果値A.Size = new System.Drawing.Size(232, 30);
+            this.trackbarPスキル効果値A.TabIndex = 46;
+            this.trackbarPスキル効果値A.Value = 10;
+            // 
+            // trackbarPスキル発動率
+            // 
+            this.trackbarPスキル発動率.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarPスキル発動率.Location = new System.Drawing.Point(385, 354);
+            this.trackbarPスキル発動率.Maximum = 100;
+            this.trackbarPスキル発動率.Minimum = 0;
+            this.trackbarPスキル発動率.Name = "trackbarPスキル発動率";
+            this.trackbarPスキル発動率.Size = new System.Drawing.Size(232, 30);
+            this.trackbarPスキル発動率.TabIndex = 26;
+            this.trackbarPスキル発動率.Value = 10;
+            // 
+            // trackbarPスキル条件値
+            // 
+            this.trackbarPスキル条件値.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarPスキル条件値.Location = new System.Drawing.Point(385, 262);
+            this.trackbarPスキル条件値.Maximum = 100;
+            this.trackbarPスキル条件値.Minimum = 0;
+            this.trackbarPスキル条件値.Name = "trackbarPスキル条件値";
+            this.trackbarPスキル条件値.Size = new System.Drawing.Size(232, 30);
+            this.trackbarPスキル条件値.TabIndex = 24;
+            this.trackbarPスキル条件値.Value = 10;
+            // 
+            // trackbarジョブ会心
+            // 
+            this.trackbarジョブ会心.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarジョブ会心.Location = new System.Drawing.Point(177, 491);
+            this.trackbarジョブ会心.Maximum = 100;
+            this.trackbarジョブ会心.Minimum = 0;
+            this.trackbarジョブ会心.Name = "trackbarジョブ会心";
+            this.trackbarジョブ会心.Size = new System.Drawing.Size(232, 30);
+            this.trackbarジョブ会心.TabIndex = 41;
+            this.trackbarジョブ会心.Value = 10;
+            this.trackbarジョブ会心.Visible = false;
+            // 
+            // trackbarジョブ回避
+            // 
+            this.trackbarジョブ回避.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarジョブ回避.Location = new System.Drawing.Point(177, 455);
+            this.trackbarジョブ回避.Maximum = 100;
+            this.trackbarジョブ回避.Minimum = 0;
+            this.trackbarジョブ回避.Name = "trackbarジョブ回避";
+            this.trackbarジョブ回避.Size = new System.Drawing.Size(232, 30);
+            this.trackbarジョブ回避.TabIndex = 39;
+            this.trackbarジョブ回避.Value = 10;
+            // 
+            // trackbarジョブ命中
+            // 
+            this.trackbarジョブ命中.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarジョブ命中.Location = new System.Drawing.Point(177, 419);
+            this.trackbarジョブ命中.Maximum = 100;
+            this.trackbarジョブ命中.Minimum = 0;
+            this.trackbarジョブ命中.Name = "trackbarジョブ命中";
+            this.trackbarジョブ命中.Size = new System.Drawing.Size(232, 30);
+            this.trackbarジョブ命中.TabIndex = 38;
+            this.trackbarジョブ命中.Value = 10;
+            // 
+            // trackbarジョブ魔防
+            // 
+            this.trackbarジョブ魔防.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarジョブ魔防.Location = new System.Drawing.Point(177, 383);
+            this.trackbarジョブ魔防.Maximum = 100;
+            this.trackbarジョブ魔防.Minimum = 0;
+            this.trackbarジョブ魔防.Name = "trackbarジョブ魔防";
+            this.trackbarジョブ魔防.Size = new System.Drawing.Size(232, 30);
+            this.trackbarジョブ魔防.TabIndex = 37;
+            this.trackbarジョブ魔防.Value = 10;
+            this.trackbarジョブ魔防.Visible = false;
+            // 
+            // trackbarジョブ物防
+            // 
+            this.trackbarジョブ物防.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarジョブ物防.Location = new System.Drawing.Point(177, 347);
+            this.trackbarジョブ物防.Maximum = 100;
+            this.trackbarジョブ物防.Minimum = 0;
+            this.trackbarジョブ物防.Name = "trackbarジョブ物防";
+            this.trackbarジョブ物防.Size = new System.Drawing.Size(232, 30);
+            this.trackbarジョブ物防.TabIndex = 32;
+            this.trackbarジョブ物防.Value = 10;
+            // 
+            // trackbarジョブ知力
+            // 
+            this.trackbarジョブ知力.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarジョブ知力.Location = new System.Drawing.Point(177, 311);
+            this.trackbarジョブ知力.Maximum = 100;
+            this.trackbarジョブ知力.Minimum = 0;
+            this.trackbarジョブ知力.Name = "trackbarジョブ知力";
+            this.trackbarジョブ知力.Size = new System.Drawing.Size(232, 30);
+            this.trackbarジョブ知力.TabIndex = 31;
+            this.trackbarジョブ知力.Value = 10;
+            this.trackbarジョブ知力.Visible = false;
+            // 
+            // trackbarジョブ技力
+            // 
+            this.trackbarジョブ技力.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarジョブ技力.Location = new System.Drawing.Point(177, 275);
+            this.trackbarジョブ技力.Maximum = 100;
+            this.trackbarジョブ技力.Minimum = 0;
+            this.trackbarジョブ技力.Name = "trackbarジョブ技力";
+            this.trackbarジョブ技力.Size = new System.Drawing.Size(232, 30);
+            this.trackbarジョブ技力.TabIndex = 30;
+            this.trackbarジョブ技力.Value = 10;
+            this.trackbarジョブ技力.Visible = false;
+            // 
+            // trackbarジョブ筋力
+            // 
+            this.trackbarジョブ筋力.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarジョブ筋力.Location = new System.Drawing.Point(177, 239);
+            this.trackbarジョブ筋力.Maximum = 100;
+            this.trackbarジョブ筋力.Minimum = 0;
+            this.trackbarジョブ筋力.Name = "trackbarジョブ筋力";
+            this.trackbarジョブ筋力.Size = new System.Drawing.Size(232, 30);
+            this.trackbarジョブ筋力.TabIndex = 29;
+            this.trackbarジョブ筋力.Value = 10;
+            // 
+            // trackbarジョブHP
+            // 
+            this.trackbarジョブHP.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarジョブHP.Location = new System.Drawing.Point(177, 203);
+            this.trackbarジョブHP.Maximum = 100;
+            this.trackbarジョブHP.Minimum = 0;
+            this.trackbarジョブHP.Name = "trackbarジョブHP";
+            this.trackbarジョブHP.Size = new System.Drawing.Size(232, 30);
+            this.trackbarジョブHP.TabIndex = 20;
+            this.trackbarジョブHP.Value = 10;
+            // 
+            // trackbarモンスターレア素材率
+            // 
+            this.trackbarモンスターレア素材率.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarモンスターレア素材率.Location = new System.Drawing.Point(436, 165);
+            this.trackbarモンスターレア素材率.Maximum = 100;
+            this.trackbarモンスターレア素材率.Minimum = 0;
+            this.trackbarモンスターレア素材率.Name = "trackbarモンスターレア素材率";
+            this.trackbarモンスターレア素材率.Size = new System.Drawing.Size(232, 30);
+            this.trackbarモンスターレア素材率.TabIndex = 73;
+            this.trackbarモンスターレア素材率.Value = 10;
+            // 
+            // trackbarモンスター会心
+            // 
+            this.trackbarモンスター会心.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarモンスター会心.Location = new System.Drawing.Point(204, 507);
+            this.trackbarモンスター会心.Maximum = 100;
+            this.trackbarモンスター会心.Minimum = 0;
+            this.trackbarモンスター会心.Name = "trackbarモンスター会心";
+            this.trackbarモンスター会心.Size = new System.Drawing.Size(232, 30);
+            this.trackbarモンスター会心.TabIndex = 71;
+            this.trackbarモンスター会心.Value = 10;
+            this.trackbarモンスター会心.Visible = false;
+            // 
+            // trackbarモンスター回避
+            // 
+            this.trackbarモンスター回避.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarモンスター回避.Location = new System.Drawing.Point(204, 471);
+            this.trackbarモンスター回避.Maximum = 100;
+            this.trackbarモンスター回避.Minimum = 0;
+            this.trackbarモンスター回避.Name = "trackbarモンスター回避";
+            this.trackbarモンスター回避.Size = new System.Drawing.Size(232, 30);
+            this.trackbarモンスター回避.TabIndex = 69;
+            this.trackbarモンスター回避.Value = 10;
+            // 
+            // trackbarモンスター命中
+            // 
+            this.trackbarモンスター命中.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarモンスター命中.Location = new System.Drawing.Point(204, 435);
+            this.trackbarモンスター命中.Maximum = 100;
+            this.trackbarモンスター命中.Minimum = 0;
+            this.trackbarモンスター命中.Name = "trackbarモンスター命中";
+            this.trackbarモンスター命中.Size = new System.Drawing.Size(232, 30);
+            this.trackbarモンスター命中.TabIndex = 68;
+            this.trackbarモンスター命中.Value = 10;
+            // 
+            // trackbarモンスター魔防
+            // 
+            this.trackbarモンスター魔防.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarモンスター魔防.Location = new System.Drawing.Point(204, 399);
+            this.trackbarモンスター魔防.Maximum = 100;
+            this.trackbarモンスター魔防.Minimum = 0;
+            this.trackbarモンスター魔防.Name = "trackbarモンスター魔防";
+            this.trackbarモンスター魔防.Size = new System.Drawing.Size(232, 30);
+            this.trackbarモンスター魔防.TabIndex = 67;
+            this.trackbarモンスター魔防.Value = 10;
+            this.trackbarモンスター魔防.Visible = false;
+            // 
+            // trackbarモンスター物防
+            // 
+            this.trackbarモンスター物防.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarモンスター物防.Location = new System.Drawing.Point(204, 363);
+            this.trackbarモンスター物防.Maximum = 100;
+            this.trackbarモンスター物防.Minimum = 0;
+            this.trackbarモンスター物防.Name = "trackbarモンスター物防";
+            this.trackbarモンスター物防.Size = new System.Drawing.Size(232, 30);
+            this.trackbarモンスター物防.TabIndex = 62;
+            this.trackbarモンスター物防.Value = 10;
+            // 
+            // trackbarモンスター知力
+            // 
+            this.trackbarモンスター知力.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarモンスター知力.Location = new System.Drawing.Point(205, 323);
+            this.trackbarモンスター知力.Maximum = 100;
+            this.trackbarモンスター知力.Minimum = 0;
+            this.trackbarモンスター知力.Name = "trackbarモンスター知力";
+            this.trackbarモンスター知力.Size = new System.Drawing.Size(232, 30);
+            this.trackbarモンスター知力.TabIndex = 61;
+            this.trackbarモンスター知力.Value = 10;
+            this.trackbarモンスター知力.Visible = false;
+            // 
+            // trackbarモンスター技力
+            // 
+            this.trackbarモンスター技力.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarモンスター技力.Location = new System.Drawing.Point(205, 287);
+            this.trackbarモンスター技力.Maximum = 100;
+            this.trackbarモンスター技力.Minimum = 0;
+            this.trackbarモンスター技力.Name = "trackbarモンスター技力";
+            this.trackbarモンスター技力.Size = new System.Drawing.Size(232, 30);
+            this.trackbarモンスター技力.TabIndex = 60;
+            this.trackbarモンスター技力.Value = 10;
+            this.trackbarモンスター技力.Visible = false;
+            // 
+            // trackbarモンスター筋力
+            // 
+            this.trackbarモンスター筋力.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarモンスター筋力.Location = new System.Drawing.Point(205, 251);
+            this.trackbarモンスター筋力.Maximum = 100;
+            this.trackbarモンスター筋力.Minimum = 0;
+            this.trackbarモンスター筋力.Name = "trackbarモンスター筋力";
+            this.trackbarモンスター筋力.Size = new System.Drawing.Size(232, 30);
+            this.trackbarモンスター筋力.TabIndex = 59;
+            this.trackbarモンスター筋力.Value = 10;
+            // 
+            // trackbarモンスターHP
+            // 
+            this.trackbarモンスターHP.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarモンスターHP.Location = new System.Drawing.Point(205, 215);
+            this.trackbarモンスターHP.Maximum = 100;
+            this.trackbarモンスターHP.Minimum = 0;
+            this.trackbarモンスターHP.Name = "trackbarモンスターHP";
+            this.trackbarモンスターHP.Size = new System.Drawing.Size(232, 30);
+            this.trackbarモンスターHP.TabIndex = 50;
+            this.trackbarモンスターHP.Value = 10;
+            // 
+            // trackbarダンジョンザコLv6
+            // 
+            this.trackbarダンジョンザコLv6.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョンザコLv6.Location = new System.Drawing.Point(320, 259);
+            this.trackbarダンジョンザコLv6.Maximum = 100;
+            this.trackbarダンジョンザコLv6.Minimum = 1;
+            this.trackbarダンジョンザコLv6.Name = "trackbarダンジョンザコLv6";
+            this.trackbarダンジョンザコLv6.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョンザコLv6.TabIndex = 100;
+            this.trackbarダンジョンザコLv6.Value = 10;
+            // 
+            // trackbarダンジョンザコLv5
+            // 
+            this.trackbarダンジョンザコLv5.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョンザコLv5.Location = new System.Drawing.Point(319, 232);
+            this.trackbarダンジョンザコLv5.Maximum = 100;
+            this.trackbarダンジョンザコLv5.Minimum = 1;
+            this.trackbarダンジョンザコLv5.Name = "trackbarダンジョンザコLv5";
+            this.trackbarダンジョンザコLv5.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョンザコLv5.TabIndex = 99;
+            this.trackbarダンジョンザコLv5.Value = 10;
+            // 
+            // trackbarダンジョンザコLv4
+            // 
+            this.trackbarダンジョンザコLv4.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョンザコLv4.Location = new System.Drawing.Point(320, 203);
+            this.trackbarダンジョンザコLv4.Maximum = 100;
+            this.trackbarダンジョンザコLv4.Minimum = 1;
+            this.trackbarダンジョンザコLv4.Name = "trackbarダンジョンザコLv4";
+            this.trackbarダンジョンザコLv4.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョンザコLv4.TabIndex = 98;
+            this.trackbarダンジョンザコLv4.Value = 10;
+            // 
+            // trackbarダンジョンザコLv3
+            // 
+            this.trackbarダンジョンザコLv3.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョンザコLv3.Location = new System.Drawing.Point(320, 177);
+            this.trackbarダンジョンザコLv3.Maximum = 100;
+            this.trackbarダンジョンザコLv3.Minimum = 1;
+            this.trackbarダンジョンザコLv3.Name = "trackbarダンジョンザコLv3";
+            this.trackbarダンジョンザコLv3.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョンザコLv3.TabIndex = 97;
+            this.trackbarダンジョンザコLv3.Value = 10;
+            // 
+            // trackbarダンジョンザコLv2
+            // 
+            this.trackbarダンジョンザコLv2.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョンザコLv2.Location = new System.Drawing.Point(320, 151);
+            this.trackbarダンジョンザコLv2.Maximum = 100;
+            this.trackbarダンジョンザコLv2.Minimum = 1;
+            this.trackbarダンジョンザコLv2.Name = "trackbarダンジョンザコLv2";
+            this.trackbarダンジョンザコLv2.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョンザコLv2.TabIndex = 96;
+            this.trackbarダンジョンザコLv2.Value = 10;
+            // 
+            // trackbarダンジョンボスLv6
+            // 
+            this.trackbarダンジョンボスLv6.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョンボスLv6.Location = new System.Drawing.Point(684, 256);
+            this.trackbarダンジョンボスLv6.Maximum = 100;
+            this.trackbarダンジョンボスLv6.Minimum = 1;
+            this.trackbarダンジョンボスLv6.Name = "trackbarダンジョンボスLv6";
+            this.trackbarダンジョンボスLv6.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョンボスLv6.TabIndex = 95;
+            this.trackbarダンジョンボスLv6.Value = 10;
+            // 
+            // trackbarダンジョンボスLv5
+            // 
+            this.trackbarダンジョンボスLv5.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョンボスLv5.Location = new System.Drawing.Point(684, 229);
+            this.trackbarダンジョンボスLv5.Maximum = 100;
+            this.trackbarダンジョンボスLv5.Minimum = 1;
+            this.trackbarダンジョンボスLv5.Name = "trackbarダンジョンボスLv5";
+            this.trackbarダンジョンボスLv5.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョンボスLv5.TabIndex = 93;
+            this.trackbarダンジョンボスLv5.Value = 10;
+            // 
+            // trackbarダンジョンボスLv4
+            // 
+            this.trackbarダンジョンボスLv4.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョンボスLv4.Location = new System.Drawing.Point(684, 203);
+            this.trackbarダンジョンボスLv4.Maximum = 100;
+            this.trackbarダンジョンボスLv4.Minimum = 1;
+            this.trackbarダンジョンボスLv4.Name = "trackbarダンジョンボスLv4";
+            this.trackbarダンジョンボスLv4.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョンボスLv4.TabIndex = 91;
+            this.trackbarダンジョンボスLv4.Value = 10;
+            // 
+            // trackbarダンジョンボスLv3
+            // 
+            this.trackbarダンジョンボスLv3.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョンボスLv3.Location = new System.Drawing.Point(684, 177);
+            this.trackbarダンジョンボスLv3.Maximum = 100;
+            this.trackbarダンジョンボスLv3.Minimum = 1;
+            this.trackbarダンジョンボスLv3.Name = "trackbarダンジョンボスLv3";
+            this.trackbarダンジョンボスLv3.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョンボスLv3.TabIndex = 89;
+            this.trackbarダンジョンボスLv3.Value = 10;
+            // 
+            // trackbarダンジョンボスLv2
+            // 
+            this.trackbarダンジョンボスLv2.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョンボスLv2.Location = new System.Drawing.Point(684, 151);
+            this.trackbarダンジョンボスLv2.Maximum = 100;
+            this.trackbarダンジョンボスLv2.Minimum = 1;
+            this.trackbarダンジョンボスLv2.Name = "trackbarダンジョンボスLv2";
+            this.trackbarダンジョンボスLv2.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョンボスLv2.TabIndex = 87;
+            this.trackbarダンジョンボスLv2.Value = 10;
+            // 
+            // trackbarダンジョン地図発見B
+            // 
+            this.trackbarダンジョン地図発見B.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョン地図発見B.Location = new System.Drawing.Point(457, 424);
+            this.trackbarダンジョン地図発見B.Maximum = 100;
+            this.trackbarダンジョン地図発見B.Minimum = 0;
+            this.trackbarダンジョン地図発見B.Name = "trackbarダンジョン地図発見B";
+            this.trackbarダンジョン地図発見B.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョン地図発見B.TabIndex = 74;
+            this.trackbarダンジョン地図発見B.Value = 10;
+            this.trackbarダンジョン地図発見B.Visible = false;
+            // 
+            // trackbarダンジョン地図発見A
+            // 
+            this.trackbarダンジョン地図発見A.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョン地図発見A.Location = new System.Drawing.Point(457, 388);
+            this.trackbarダンジョン地図発見A.Maximum = 100;
+            this.trackbarダンジョン地図発見A.Minimum = 0;
+            this.trackbarダンジョン地図発見A.Name = "trackbarダンジョン地図発見A";
+            this.trackbarダンジョン地図発見A.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョン地図発見A.TabIndex = 73;
+            this.trackbarダンジョン地図発見A.Value = 10;
+            // 
+            // trackbarダンジョンボス探索率
+            // 
+            this.trackbarダンジョンボス探索率.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョンボス探索率.Location = new System.Drawing.Point(457, 352);
+            this.trackbarダンジョンボス探索率.Maximum = 100;
+            this.trackbarダンジョンボス探索率.Minimum = 0;
+            this.trackbarダンジョンボス探索率.Name = "trackbarダンジョンボス探索率";
+            this.trackbarダンジョンボス探索率.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョンボス探索率.TabIndex = 71;
+            this.trackbarダンジョンボス探索率.Value = 10;
+            // 
+            // trackbarダンジョン探索地図B
+            // 
+            this.trackbarダンジョン探索地図B.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョン探索地図B.Location = new System.Drawing.Point(207, 425);
+            this.trackbarダンジョン探索地図B.Maximum = 100;
+            this.trackbarダンジョン探索地図B.Minimum = 0;
+            this.trackbarダンジョン探索地図B.Name = "trackbarダンジョン探索地図B";
+            this.trackbarダンジョン探索地図B.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョン探索地図B.TabIndex = 69;
+            this.trackbarダンジョン探索地図B.Value = 10;
+            this.trackbarダンジョン探索地図B.Visible = false;
+            // 
+            // trackbarダンジョンボス地図
+            // 
+            this.trackbarダンジョンボス地図.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョンボス地図.Location = new System.Drawing.Point(207, 353);
+            this.trackbarダンジョンボス地図.Maximum = 100;
+            this.trackbarダンジョンボス地図.Minimum = 0;
+            this.trackbarダンジョンボス地図.Name = "trackbarダンジョンボス地図";
+            this.trackbarダンジョンボス地図.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョンボス地図.TabIndex = 47;
+            this.trackbarダンジョンボス地図.Value = 10;
+            // 
+            // trackbarダンジョン探索地図A
+            // 
+            this.trackbarダンジョン探索地図A.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョン探索地図A.Location = new System.Drawing.Point(207, 389);
+            this.trackbarダンジョン探索地図A.Maximum = 100;
+            this.trackbarダンジョン探索地図A.Minimum = 0;
+            this.trackbarダンジョン探索地図A.Name = "trackbarダンジョン探索地図A";
+            this.trackbarダンジョン探索地図A.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョン探索地図A.TabIndex = 45;
+            this.trackbarダンジョン探索地図A.Value = 10;
+            // 
+            // trackbarダンジョンボスLv1
+            // 
+            this.trackbarダンジョンボスLv1.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョンボスLv1.Location = new System.Drawing.Point(684, 125);
+            this.trackbarダンジョンボスLv1.Maximum = 100;
+            this.trackbarダンジョンボスLv1.Minimum = 1;
+            this.trackbarダンジョンボスLv1.Name = "trackbarダンジョンボスLv1";
+            this.trackbarダンジョンボスLv1.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョンボスLv1.TabIndex = 27;
+            this.trackbarダンジョンボスLv1.Value = 10;
+            // 
+            // trackbarダンジョンザコLv1
+            // 
+            this.trackbarダンジョンザコLv1.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarダンジョンザコLv1.Location = new System.Drawing.Point(320, 125);
+            this.trackbarダンジョンザコLv1.Maximum = 100;
+            this.trackbarダンジョンザコLv1.Minimum = 1;
+            this.trackbarダンジョンザコLv1.Name = "trackbarダンジョンザコLv1";
+            this.trackbarダンジョンザコLv1.Size = new System.Drawing.Size(232, 30);
+            this.trackbarダンジョンザコLv1.TabIndex = 24;
+            this.trackbarダンジョンザコLv1.Value = 10;
+            // 
+            // trackbar装備品PスキルLv
+            // 
+            this.trackbar装備品PスキルLv.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbar装備品PスキルLv.Location = new System.Drawing.Point(206, 160);
+            this.trackbar装備品PスキルLv.Maximum = 10;
+            this.trackbar装備品PスキルLv.Minimum = 0;
+            this.trackbar装備品PスキルLv.Name = "trackbar装備品PスキルLv";
+            this.trackbar装備品PスキルLv.Size = new System.Drawing.Size(232, 30);
+            this.trackbar装備品PスキルLv.TabIndex = 72;
+            this.trackbar装備品PスキルLv.Value = 10;
+            this.trackbar装備品PスキルLv.Visible = false;
+            // 
+            // trackbar装備品ランク
+            // 
+            this.trackbar装備品ランク.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbar装備品ランク.Location = new System.Drawing.Point(206, 218);
+            this.trackbar装備品ランク.Maximum = 20;
+            this.trackbar装備品ランク.Minimum = 1;
+            this.trackbar装備品ランク.Name = "trackbar装備品ランク";
+            this.trackbar装備品ランク.Size = new System.Drawing.Size(232, 30);
+            this.trackbar装備品ランク.TabIndex = 68;
+            this.trackbar装備品ランク.Value = 10;
+            // 
+            // trackbar装備品会心
+            // 
+            this.trackbar装備品会心.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbar装備品会心.Location = new System.Drawing.Point(206, 556);
+            this.trackbar装備品会心.Maximum = 100;
+            this.trackbar装備品会心.Minimum = 0;
+            this.trackbar装備品会心.Name = "trackbar装備品会心";
+            this.trackbar装備品会心.Size = new System.Drawing.Size(232, 30);
+            this.trackbar装備品会心.TabIndex = 67;
+            this.trackbar装備品会心.Value = 10;
+            this.trackbar装備品会心.Visible = false;
+            // 
+            // trackbar装備品回避
+            // 
+            this.trackbar装備品回避.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbar装備品回避.Location = new System.Drawing.Point(206, 520);
+            this.trackbar装備品回避.Maximum = 100;
+            this.trackbar装備品回避.Minimum = 0;
+            this.trackbar装備品回避.Name = "trackbar装備品回避";
+            this.trackbar装備品回避.Size = new System.Drawing.Size(232, 30);
+            this.trackbar装備品回避.TabIndex = 65;
+            this.trackbar装備品回避.Value = 10;
+            // 
+            // trackbar装備品命中
+            // 
+            this.trackbar装備品命中.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbar装備品命中.Location = new System.Drawing.Point(206, 484);
+            this.trackbar装備品命中.Maximum = 100;
+            this.trackbar装備品命中.Minimum = 0;
+            this.trackbar装備品命中.Name = "trackbar装備品命中";
+            this.trackbar装備品命中.Size = new System.Drawing.Size(232, 30);
+            this.trackbar装備品命中.TabIndex = 64;
+            this.trackbar装備品命中.Value = 10;
+            // 
+            // trackbar装備品魔防
+            // 
+            this.trackbar装備品魔防.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbar装備品魔防.Location = new System.Drawing.Point(206, 448);
+            this.trackbar装備品魔防.Maximum = 100;
+            this.trackbar装備品魔防.Minimum = 0;
+            this.trackbar装備品魔防.Name = "trackbar装備品魔防";
+            this.trackbar装備品魔防.Size = new System.Drawing.Size(232, 30);
+            this.trackbar装備品魔防.TabIndex = 63;
+            this.trackbar装備品魔防.Value = 10;
+            this.trackbar装備品魔防.Visible = false;
+            // 
+            // trackbar装備品物防
+            // 
+            this.trackbar装備品物防.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbar装備品物防.Location = new System.Drawing.Point(206, 412);
+            this.trackbar装備品物防.Maximum = 100;
+            this.trackbar装備品物防.Minimum = 0;
+            this.trackbar装備品物防.Name = "trackbar装備品物防";
+            this.trackbar装備品物防.Size = new System.Drawing.Size(232, 30);
+            this.trackbar装備品物防.TabIndex = 58;
+            this.trackbar装備品物防.Value = 10;
+            // 
+            // trackbar装備品知力
+            // 
+            this.trackbar装備品知力.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbar装備品知力.Location = new System.Drawing.Point(206, 376);
+            this.trackbar装備品知力.Maximum = 100;
+            this.trackbar装備品知力.Minimum = 0;
+            this.trackbar装備品知力.Name = "trackbar装備品知力";
+            this.trackbar装備品知力.Size = new System.Drawing.Size(232, 30);
+            this.trackbar装備品知力.TabIndex = 57;
+            this.trackbar装備品知力.Value = 10;
+            this.trackbar装備品知力.Visible = false;
+            // 
+            // trackbar装備品技力
+            // 
+            this.trackbar装備品技力.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbar装備品技力.Location = new System.Drawing.Point(206, 340);
+            this.trackbar装備品技力.Maximum = 100;
+            this.trackbar装備品技力.Minimum = 0;
+            this.trackbar装備品技力.Name = "trackbar装備品技力";
+            this.trackbar装備品技力.Size = new System.Drawing.Size(232, 30);
+            this.trackbar装備品技力.TabIndex = 56;
+            this.trackbar装備品技力.Value = 10;
+            this.trackbar装備品技力.Visible = false;
+            // 
+            // trackbar装備品筋力
+            // 
+            this.trackbar装備品筋力.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbar装備品筋力.Location = new System.Drawing.Point(206, 304);
+            this.trackbar装備品筋力.Maximum = 100;
+            this.trackbar装備品筋力.Minimum = 0;
+            this.trackbar装備品筋力.Name = "trackbar装備品筋力";
+            this.trackbar装備品筋力.Size = new System.Drawing.Size(232, 30);
+            this.trackbar装備品筋力.TabIndex = 55;
+            this.trackbar装備品筋力.Value = 10;
+            // 
+            // trackbar装備品HP
+            // 
+            this.trackbar装備品HP.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbar装備品HP.Location = new System.Drawing.Point(206, 268);
+            this.trackbar装備品HP.Maximum = 100;
+            this.trackbar装備品HP.Minimum = 0;
+            this.trackbar装備品HP.Name = "trackbar装備品HP";
+            this.trackbar装備品HP.Size = new System.Drawing.Size(232, 30);
+            this.trackbar装備品HP.TabIndex = 48;
+            this.trackbar装備品HP.Value = 10;
+            // 
+            // trackbar素材ランク
+            // 
+            this.trackbar素材ランク.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbar素材ランク.Location = new System.Drawing.Point(193, 131);
+            this.trackbar素材ランク.Maximum = 3;
+            this.trackbar素材ランク.Minimum = 1;
+            this.trackbar素材ランク.Name = "trackbar素材ランク";
+            this.trackbar素材ランク.Size = new System.Drawing.Size(232, 30);
+            this.trackbar素材ランク.TabIndex = 32;
+            this.trackbar素材ランク.Value = 3;
+            // 
+            // trackbarアクセサリーPスキルLv
+            // 
+            this.trackbarアクセサリーPスキルLv.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarアクセサリーPスキルLv.Location = new System.Drawing.Point(209, 161);
+            this.trackbarアクセサリーPスキルLv.Maximum = 20;
+            this.trackbarアクセサリーPスキルLv.Minimum = 1;
+            this.trackbarアクセサリーPスキルLv.Name = "trackbarアクセサリーPスキルLv";
+            this.trackbarアクセサリーPスキルLv.Size = new System.Drawing.Size(232, 30);
+            this.trackbarアクセサリーPスキルLv.TabIndex = 105;
+            this.trackbarアクセサリーPスキルLv.Value = 10;
+            // 
+            // trackbarアクセサリー会心
+            // 
+            this.trackbarアクセサリー会心.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarアクセサリー会心.Location = new System.Drawing.Point(209, 581);
+            this.trackbarアクセサリー会心.Maximum = 100;
+            this.trackbarアクセサリー会心.Minimum = 0;
+            this.trackbarアクセサリー会心.Name = "trackbarアクセサリー会心";
+            this.trackbarアクセサリー会心.Size = new System.Drawing.Size(232, 30);
+            this.trackbarアクセサリー会心.TabIndex = 104;
+            this.trackbarアクセサリー会心.Value = 10;
+            this.trackbarアクセサリー会心.Visible = false;
+            // 
+            // trackbarアクセサリーランク
+            // 
+            this.trackbarアクセサリーランク.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarアクセサリーランク.Location = new System.Drawing.Point(209, 207);
+            this.trackbarアクセサリーランク.Maximum = 20;
+            this.trackbarアクセサリーランク.Minimum = 1;
+            this.trackbarアクセサリーランク.Name = "trackbarアクセサリーランク";
+            this.trackbarアクセサリーランク.Size = new System.Drawing.Size(232, 30);
+            this.trackbarアクセサリーランク.TabIndex = 96;
+            this.trackbarアクセサリーランク.Value = 10;
+            // 
+            // trackbarアクセサリー回避
+            // 
+            this.trackbarアクセサリー回避.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarアクセサリー回避.Location = new System.Drawing.Point(209, 545);
+            this.trackbarアクセサリー回避.Maximum = 100;
+            this.trackbarアクセサリー回避.Minimum = -100;
+            this.trackbarアクセサリー回避.Name = "trackbarアクセサリー回避";
+            this.trackbarアクセサリー回避.Size = new System.Drawing.Size(232, 30);
+            this.trackbarアクセサリー回避.TabIndex = 95;
+            this.trackbarアクセサリー回避.Value = 10;
+            // 
+            // trackbarアクセサリー命中
+            // 
+            this.trackbarアクセサリー命中.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarアクセサリー命中.Location = new System.Drawing.Point(209, 509);
+            this.trackbarアクセサリー命中.Maximum = 100;
+            this.trackbarアクセサリー命中.Minimum = -100;
+            this.trackbarアクセサリー命中.Name = "trackbarアクセサリー命中";
+            this.trackbarアクセサリー命中.Size = new System.Drawing.Size(232, 30);
+            this.trackbarアクセサリー命中.TabIndex = 94;
+            this.trackbarアクセサリー命中.Value = 10;
+            // 
+            // trackbarアクセサリー魔防
+            // 
+            this.trackbarアクセサリー魔防.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarアクセサリー魔防.Location = new System.Drawing.Point(209, 473);
+            this.trackbarアクセサリー魔防.Maximum = 100;
+            this.trackbarアクセサリー魔防.Minimum = -100;
+            this.trackbarアクセサリー魔防.Name = "trackbarアクセサリー魔防";
+            this.trackbarアクセサリー魔防.Size = new System.Drawing.Size(232, 30);
+            this.trackbarアクセサリー魔防.TabIndex = 93;
+            this.trackbarアクセサリー魔防.Value = 10;
+            this.trackbarアクセサリー魔防.Visible = false;
+            // 
+            // trackbarアクセサリー物防
+            // 
+            this.trackbarアクセサリー物防.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarアクセサリー物防.Location = new System.Drawing.Point(209, 437);
+            this.trackbarアクセサリー物防.Maximum = 100;
+            this.trackbarアクセサリー物防.Minimum = -100;
+            this.trackbarアクセサリー物防.Name = "trackbarアクセサリー物防";
+            this.trackbarアクセサリー物防.Size = new System.Drawing.Size(232, 30);
+            this.trackbarアクセサリー物防.TabIndex = 88;
+            this.trackbarアクセサリー物防.Value = 10;
+            // 
+            // trackbarアクセサリー知力
+            // 
+            this.trackbarアクセサリー知力.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarアクセサリー知力.Location = new System.Drawing.Point(209, 401);
+            this.trackbarアクセサリー知力.Maximum = 100;
+            this.trackbarアクセサリー知力.Minimum = -100;
+            this.trackbarアクセサリー知力.Name = "trackbarアクセサリー知力";
+            this.trackbarアクセサリー知力.Size = new System.Drawing.Size(232, 30);
+            this.trackbarアクセサリー知力.TabIndex = 87;
+            this.trackbarアクセサリー知力.Value = 10;
+            this.trackbarアクセサリー知力.Visible = false;
+            // 
+            // trackbarアクセサリー技力
+            // 
+            this.trackbarアクセサリー技力.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarアクセサリー技力.Location = new System.Drawing.Point(209, 365);
+            this.trackbarアクセサリー技力.Maximum = 100;
+            this.trackbarアクセサリー技力.Minimum = -100;
+            this.trackbarアクセサリー技力.Name = "trackbarアクセサリー技力";
+            this.trackbarアクセサリー技力.Size = new System.Drawing.Size(232, 30);
+            this.trackbarアクセサリー技力.TabIndex = 86;
+            this.trackbarアクセサリー技力.Value = 10;
+            this.trackbarアクセサリー技力.Visible = false;
+            // 
+            // trackbarアクセサリー筋力
+            // 
+            this.trackbarアクセサリー筋力.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarアクセサリー筋力.Location = new System.Drawing.Point(209, 329);
+            this.trackbarアクセサリー筋力.Maximum = 100;
+            this.trackbarアクセサリー筋力.Minimum = -100;
+            this.trackbarアクセサリー筋力.Name = "trackbarアクセサリー筋力";
+            this.trackbarアクセサリー筋力.Size = new System.Drawing.Size(232, 30);
+            this.trackbarアクセサリー筋力.TabIndex = 85;
+            this.trackbarアクセサリー筋力.Value = 10;
+            // 
+            // trackbarアクセサリーHP
+            // 
+            this.trackbarアクセサリーHP.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbarアクセサリーHP.Location = new System.Drawing.Point(209, 293);
+            this.trackbarアクセサリーHP.Maximum = 100;
+            this.trackbarアクセサリーHP.Minimum = -100;
+            this.trackbarアクセサリーHP.Name = "trackbarアクセサリーHP";
+            this.trackbarアクセサリーHP.Size = new System.Drawing.Size(232, 30);
+            this.trackbarアクセサリーHP.TabIndex = 78;
+            this.trackbarアクセサリーHP.Value = 10;
             // 
             // Trackbar投資素材ランク4
             // 
             this.Trackbar投資素材ランク4.BackColor = System.Drawing.SystemColors.Window;
             this.Trackbar投資素材ランク4.Location = new System.Drawing.Point(413, 334);
-            this.Trackbar投資素材ランク4.Maximum = 10;
+            this.Trackbar投資素材ランク4.Maximum = 3;
             this.Trackbar投資素材ランク4.Minimum = 1;
             this.Trackbar投資素材ランク4.Name = "Trackbar投資素材ランク4";
             this.Trackbar投資素材ランク4.Size = new System.Drawing.Size(232, 30);
             this.Trackbar投資素材ランク4.TabIndex = 98;
-            this.Trackbar投資素材ランク4.Value = 10;
+            this.Trackbar投資素材ランク4.Value = 3;
+            // 
+            // Trackbar投資素材ランク3
+            // 
+            this.Trackbar投資素材ランク3.BackColor = System.Drawing.SystemColors.Window;
+            this.Trackbar投資素材ランク3.Location = new System.Drawing.Point(413, 307);
+            this.Trackbar投資素材ランク3.Maximum = 3;
+            this.Trackbar投資素材ランク3.Minimum = 1;
+            this.Trackbar投資素材ランク3.Name = "Trackbar投資素材ランク3";
+            this.Trackbar投資素材ランク3.Size = new System.Drawing.Size(232, 30);
+            this.Trackbar投資素材ランク3.TabIndex = 97;
+            this.Trackbar投資素材ランク3.Value = 3;
+            // 
+            // Trackbar投資素材ランク2
+            // 
+            this.Trackbar投資素材ランク2.BackColor = System.Drawing.SystemColors.Window;
+            this.Trackbar投資素材ランク2.Location = new System.Drawing.Point(413, 280);
+            this.Trackbar投資素材ランク2.Maximum = 3;
+            this.Trackbar投資素材ランク2.Minimum = 1;
+            this.Trackbar投資素材ランク2.Name = "Trackbar投資素材ランク2";
+            this.Trackbar投資素材ランク2.Size = new System.Drawing.Size(232, 30);
+            this.Trackbar投資素材ランク2.TabIndex = 96;
+            this.Trackbar投資素材ランク2.Value = 3;
+            // 
+            // Trackbar投資素材ランク1
+            // 
+            this.Trackbar投資素材ランク1.BackColor = System.Drawing.SystemColors.Window;
+            this.Trackbar投資素材ランク1.Location = new System.Drawing.Point(413, 255);
+            this.Trackbar投資素材ランク1.Maximum = 3;
+            this.Trackbar投資素材ランク1.Minimum = 1;
+            this.Trackbar投資素材ランク1.Name = "Trackbar投資素材ランク1";
+            this.Trackbar投資素材ランク1.Size = new System.Drawing.Size(232, 30);
+            this.Trackbar投資素材ランク1.TabIndex = 89;
+            this.Trackbar投資素材ランク1.Value = 3;
+            // 
+            // trackbar投資ランク
+            // 
+            this.trackbar投資ランク.BackColor = System.Drawing.SystemColors.Window;
+            this.trackbar投資ランク.Location = new System.Drawing.Point(193, 194);
+            this.trackbar投資ランク.Maximum = 20;
+            this.trackbar投資ランク.Minimum = 1;
+            this.trackbar投資ランク.Name = "trackbar投資ランク";
+            this.trackbar投資ランク.Size = new System.Drawing.Size(232, 30);
+            this.trackbar投資ランク.TabIndex = 24;
+            this.trackbar投資ランク.Value = 10;
             // 
             // MainForm
             // 
@@ -5494,6 +5318,7 @@
             this.MainTabControl.ResumeLayout(false);
             this.TabAスキル.ResumeLayout(false);
             this.TabAスキル.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numAスキルレアリティ)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAスキルレベル補正2Lv1)).EndInit();
@@ -5558,6 +5383,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numクエスト条件値)).EndInit();
             this.Tab投資.ResumeLayout(false);
             this.Tab投資.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num投資必要数4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num投資必要数3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num投資必要数2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num投資必要数1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num投資部門ID)).EndInit();
             this.Tab列挙型.ResumeLayout(false);
@@ -5574,9 +5402,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.num強化必要3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num強化必要2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num強化必要1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num投資必要数2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num投資必要数3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num投資必要数4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -5589,7 +5414,6 @@
         public System.Windows.Forms.TabPage Tabモンスター;
         public System.Windows.Forms.TabPage Tabダンジョン;
         public System.Windows.Forms.TabPage Tab装備品;
-        public System.Windows.Forms.TabPage Tabアクセサリー;
         public System.Windows.Forms.TabPage Tabクエスト;
         public System.Windows.Forms.TabPage Tab投資;
         public System.Windows.Forms.TabPage Tab列挙型;
@@ -5618,7 +5442,6 @@
         public System.Windows.Forms.ComboBox comboBoxダンジョンボス1;
         public System.Windows.Forms.ListBox listBoxダンジョン;
         public System.Windows.Forms.ListBox listBox装備品;
-        public System.Windows.Forms.ListBox listBoxアクセサリー;
         public System.Windows.Forms.TextBox textBoxクエスト名前;
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.TextBox textBoxクエスト説明;
@@ -5657,20 +5480,16 @@
         public System.Windows.Forms.Label label45;
         public System.Windows.Forms.Label label44;
         public UserTrackbar trackbarジョブ会心;
-        public System.Windows.Forms.Label label57;
         public UserTrackbar trackbarジョブ回避;
         public UserTrackbar trackbarジョブ命中;
         public UserTrackbar trackbarジョブ魔防;
         public System.Windows.Forms.Label label53;
         public System.Windows.Forms.Label label54;
-        public System.Windows.Forms.Label label55;
         public System.Windows.Forms.Label label56;
         public UserTrackbar trackbarジョブ物防;
         public UserTrackbar trackbarジョブ知力;
         public UserTrackbar trackbarジョブ技力;
         public UserTrackbar trackbarジョブ筋力;
-        public System.Windows.Forms.Label label52;
-        public System.Windows.Forms.Label label51;
         public System.Windows.Forms.Label label50;
         public System.Windows.Forms.CheckedListBox checkedListBoxジョブPスキル;
         public System.Windows.Forms.Label label49;
@@ -5680,20 +5499,16 @@
         public UserTrackbar trackbarモンスターレア素材率;
         public System.Windows.Forms.CheckBox checkBoxモンスターボス;
         public UserTrackbar trackbarモンスター会心;
-        public System.Windows.Forms.Label label4;
         public UserTrackbar trackbarモンスター回避;
         public UserTrackbar trackbarモンスター命中;
         public UserTrackbar trackbarモンスター魔防;
         public System.Windows.Forms.Label label58;
         public System.Windows.Forms.Label label59;
-        public System.Windows.Forms.Label label60;
         public System.Windows.Forms.Label label61;
         public UserTrackbar trackbarモンスター物防;
         public UserTrackbar trackbarモンスター知力;
         public UserTrackbar trackbarモンスター技力;
         public UserTrackbar trackbarモンスター筋力;
-        public System.Windows.Forms.Label label62;
-        public System.Windows.Forms.Label label63;
         public System.Windows.Forms.Label label64;
         public System.Windows.Forms.Label label65;
         public System.Windows.Forms.Label label66;
@@ -5727,20 +5542,16 @@
         public System.Windows.Forms.Label label100;
         public UserTrackbar trackbar装備品ランク;
         public UserTrackbar trackbar装備品会心;
-        public System.Windows.Forms.Label label6;
         public UserTrackbar trackbar装備品回避;
         public UserTrackbar trackbar装備品命中;
         public UserTrackbar trackbar装備品魔防;
         public System.Windows.Forms.Label label87;
         public System.Windows.Forms.Label label89;
-        public System.Windows.Forms.Label label90;
         public System.Windows.Forms.Label label91;
         public UserTrackbar trackbar装備品物防;
         public UserTrackbar trackbar装備品知力;
         public UserTrackbar trackbar装備品技力;
         public UserTrackbar trackbar装備品筋力;
-        public System.Windows.Forms.Label label92;
-        public System.Windows.Forms.Label label93;
         public System.Windows.Forms.Label label94;
         public System.Windows.Forms.Label label95;
         public System.Windows.Forms.ComboBox comboBox装備品装備種;
@@ -5754,31 +5565,6 @@
         public System.Windows.Forms.Label label102;
         public System.Windows.Forms.Label label103;
         public System.Windows.Forms.ComboBox comboBox素材種類;
-        public System.Windows.Forms.Label label118;
-        public System.Windows.Forms.Label label7;
-        public System.Windows.Forms.ComboBox comboBoxアクセサリーPスキル;
-        public System.Windows.Forms.Label label109;
-        public UserTrackbar trackbarアクセサリーランク;
-        public UserTrackbar trackbarアクセサリー回避;
-        public UserTrackbar trackbarアクセサリー命中;
-        public UserTrackbar trackbarアクセサリー魔防;
-        public System.Windows.Forms.Label label110;
-        public System.Windows.Forms.Label label111;
-        public System.Windows.Forms.Label label112;
-        public System.Windows.Forms.Label label113;
-        public UserTrackbar trackbarアクセサリー物防;
-        public UserTrackbar trackbarアクセサリー知力;
-        public UserTrackbar trackbarアクセサリー技力;
-        public UserTrackbar trackbarアクセサリー筋力;
-        public System.Windows.Forms.Label label114;
-        public System.Windows.Forms.Label label115;
-        public System.Windows.Forms.Label label116;
-        public System.Windows.Forms.Label label117;
-        public UserTrackbar trackbarアクセサリーHP;
-        public System.Windows.Forms.Label label120;
-        public System.Windows.Forms.TextBox textBoxアクセサリー名前;
-        public System.Windows.Forms.Label label121;
-        public System.Windows.Forms.TextBox textBoxアクセサリー説明;
         public System.Windows.Forms.Label label124;
         public System.Windows.Forms.Label label123;
         public System.Windows.Forms.Label label122;
@@ -5797,7 +5583,6 @@
         public System.Windows.Forms.ComboBox comboBoxモンスターボスドロップA;
         public System.Windows.Forms.NumericUpDown numモンスター画像ID;
         public System.Windows.Forms.NumericUpDown num素材値段;
-        public System.Windows.Forms.NumericUpDown numアクセサリー画像ID;
         public System.Windows.Forms.Label label137;
         public System.Windows.Forms.NumericUpDown numクエスト開放フロア;
         public System.Windows.Forms.NumericUpDown numクエスト条件値;
@@ -5816,8 +5601,6 @@
         public System.Windows.Forms.Label label105;
         public System.Windows.Forms.ComboBox comboBoxPスキルレアリティ;
         public System.Windows.Forms.GroupBox groupBox5;
-        public System.Windows.Forms.Label label107;
-        public UserTrackbar trackbarアクセサリー会心;
         public System.Windows.Forms.ComboBox comboBox開放クエスト;
         public System.Windows.Forms.ComboBox comboBoxモンスター隊列;
         public System.Windows.Forms.Label label36;
@@ -5830,8 +5613,6 @@
         public System.Windows.Forms.ComboBox comboBoxモンスターAスキル1;
         public System.Windows.Forms.Label label130;
         public UserTrackbar trackbar装備品PスキルLv;
-        public System.Windows.Forms.Label label86;
-        public UserTrackbar trackbarアクセサリーPスキルLv;
         public System.Windows.Forms.ComboBox comboBoxモンスターPスキル8;
         public System.Windows.Forms.ComboBox comboBoxモンスターPスキル7;
         public System.Windows.Forms.ComboBox comboBoxモンスターPスキル6;
@@ -5867,7 +5648,6 @@
         private System.Windows.Forms.Label label171;
         private System.Windows.Forms.Label label165;
         public System.Windows.Forms.TabPage TabAスキル;
-        public System.Windows.Forms.ComboBox comboBoxAスキルレアリティ;
         public System.Windows.Forms.Label label132;
         public System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label156;
@@ -5897,14 +5677,11 @@
         public System.Windows.Forms.ComboBox comboBoxAスキル対象;
         public System.Windows.Forms.Label label17;
         public System.Windows.Forms.Label label18;
-        public System.Windows.Forms.Label label23;
         public System.Windows.Forms.Label label14;
         public System.Windows.Forms.Label label12;
         public System.Windows.Forms.Label label22;
-        public System.Windows.Forms.Label label19;
         public System.Windows.Forms.Label label21;
         public System.Windows.Forms.Label label20;
-        public System.Windows.Forms.Label label16;
         public UserTrackbar trackbarAスキル基礎ダメージ;
         public System.Windows.Forms.ComboBox comboBoxAスキル連続スキル;
         public System.Windows.Forms.GroupBox groupBox2;
@@ -5977,11 +5754,6 @@
         public UserTrackbar trackbarダンジョンボスLv2;
         public System.Windows.Forms.ComboBox comboBoxダンジョンザコ6;
         public System.Windows.Forms.ComboBox comboBoxダンジョン遺物6;
-        public System.Windows.Forms.Label label108;
-        public System.Windows.Forms.Label label106;
-        public System.Windows.Forms.Label label82;
-        public System.Windows.Forms.Label label80;
-        public System.Windows.Forms.ComboBox comboBoxアクセサリーレアリティ;
         public System.Windows.Forms.NumericUpDown numクエスト獲得ポイント;
         public System.Windows.Forms.NumericUpDown numクエスト目標日数;
         public System.Windows.Forms.NumericUpDown numクエスト対象フロア;
@@ -5990,9 +5762,6 @@
         public System.Windows.Forms.Label label131;
         private System.Windows.Forms.TabPage Tab素材要求;
         public System.Windows.Forms.CheckBox checkBoxクエスト重要;
-        public System.Windows.Forms.NumericUpDown numアクセサリー持越ポイント;
-        public System.Windows.Forms.NumericUpDown numアクセサリー目標日数;
-        public System.Windows.Forms.NumericUpDown numアクセサリー購入ポイント;
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.Label label78;
         public System.Windows.Forms.ListBox listBox強化要求素材数;
@@ -6021,6 +5790,43 @@
         public System.Windows.Forms.ComboBox comboBox投資費用素材種4;
         public UserTrackbar Trackbar投資素材ランク1;
         public System.Windows.Forms.ComboBox comboBox投資費用素材種1;
+        public System.Windows.Forms.TabPage Tabアクセサリー;
+        public System.Windows.Forms.NumericUpDown numアクセサリー持越ポイント;
+        public System.Windows.Forms.Label label108;
+        public System.Windows.Forms.NumericUpDown numアクセサリー目標日数;
+        public System.Windows.Forms.Label label106;
+        public System.Windows.Forms.Label label82;
+        public System.Windows.Forms.NumericUpDown numアクセサリー購入ポイント;
+        public System.Windows.Forms.Label label80;
+        public System.Windows.Forms.ComboBox comboBoxアクセサリーレアリティ;
+        public System.Windows.Forms.Label label86;
+        public System.Windows.Forms.NumericUpDown numアクセサリー画像ID;
+        public System.Windows.Forms.Label label118;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.ComboBox comboBoxアクセサリーPスキル;
+        public System.Windows.Forms.Label label109;
+        public System.Windows.Forms.Label label110;
+        public System.Windows.Forms.Label label111;
+        public System.Windows.Forms.Label label113;
+        public System.Windows.Forms.Label label116;
+        public System.Windows.Forms.Label label117;
+        public System.Windows.Forms.Label label120;
+        public System.Windows.Forms.TextBox textBoxアクセサリー名前;
+        public System.Windows.Forms.Label label121;
+        public System.Windows.Forms.TextBox textBoxアクセサリー説明;
+        public UserTrackbar trackbarアクセサリーPスキルLv;
+        public UserTrackbar trackbarアクセサリー会心;
+        public UserTrackbar trackbarアクセサリーランク;
+        public UserTrackbar trackbarアクセサリー回避;
+        public UserTrackbar trackbarアクセサリー命中;
+        public UserTrackbar trackbarアクセサリー魔防;
+        public UserTrackbar trackbarアクセサリー物防;
+        public UserTrackbar trackbarアクセサリー知力;
+        public UserTrackbar trackbarアクセサリー技力;
+        public UserTrackbar trackbarアクセサリー筋力;
+        public UserTrackbar trackbarアクセサリーHP;
+        public System.Windows.Forms.ListBox listBoxアクセサリー;
+        public System.Windows.Forms.NumericUpDown numAスキルレアリティ;
     }
 }
 

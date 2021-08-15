@@ -146,6 +146,7 @@ namespace ADE_Editer
             RW.ReadWrite(br_data, ref 対象);//
             RW.ReadWrite(br_data, ref 効果A);//
             RW.ReadWrite(br_data, ref 効果値A);
+
             RW.ReadWrite(br_data, ref 効果B);//
             RW.ReadWrite(br_data, ref 効果値B);
 
@@ -156,6 +157,8 @@ namespace ADE_Editer
             RW.ReadWrite(br_data, ref レベル補正B);
 
             RW.ReadWrite(br_data, ref レアリティ);
+
+            if (レアリティ < 0) { レアリティ = 0; }
         }
 
         static public void Save(string fileName)

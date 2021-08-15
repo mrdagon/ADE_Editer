@@ -92,7 +92,6 @@ namespace ADE_Editer
                     comboBoxAスキルバフ2.Items.Clear();//バフ効果
                     comboBoxAスキルバフ3.Items.Clear();//バフ効果
                     comboBoxAスキル連続スキル.Items.Clear();//ASkill
-                    comboBoxAスキルレアリティ.Items.Clear();//ASkill
                     comboBoxAスキル追加効果1.Items.Clear();//スキル追加効果種
                     comboBoxAスキル追加効果2.Items.Clear();//スキル追加効果種
                     comboBoxAスキル追加効果3.Items.Clear();//スキル追加効果種
@@ -828,29 +827,10 @@ namespace ADE_Editer
             for(int i = 0; i < Item.data.Count; i++) { listBox装備品.Items.Add(Item.data[i].名前); }
 
             UpdateComboCheck();
+
             ASkill.data[0].Set(this);
-            //PSkill.data[0].Set(this);
-            //Accessory.data[0].Set(this);
-            //Quest.data[0].Set(this);
-            //Job.data[0].Set(this);
-            //Dungeon.data[0].Set(this);
-            //Monster.data[0].Set(this);
-            //Invest.data[0].Set(this);
-            //Material.data[0].Set(this);
-            //Item.data[0].Set(this);
 
             listBoxAスキル.SelectedIndex = 0;
-            //listBoxPスキル.SelectedIndex = 0;
-            //listBoxアクセサリー.SelectedIndex = 0;
-            //listBoxクエスト.SelectedIndex = 0;
-            //listBoxジョブ.SelectedIndex = 0;
-            //listBoxダンジョン.SelectedIndex = 0;
-            //listBoxモンスター.SelectedIndex = 0;
-            //listBox投資.SelectedIndex = 0;
-            //listBox素材.SelectedIndex = 0;
-            //listBox装備品.SelectedIndex = 0;
-
-            //comboBox列挙型.SelectedIndex = 0;
 
         }
 

@@ -119,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="memo.txt" />
+    <Content Include="memo2.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
