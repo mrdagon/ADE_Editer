@@ -10,3 +10,4 @@ C:\Users\ganta\Documents\Github\ADE_Editer\obj\Release\ADE_Editer.csproj.Generat
 C:\Users\ganta\Documents\Github\ADE_Editer\obj\Release\ADE_Editer.csproj.CoreCompileInputs.cache
 C:\Users\ganta\Documents\Github\ADE_Editer\obj\Release\ADE_Editer.exe
 C:\Users\ganta\Documents\Github\ADE_Editer\obj\Release\ADE_Editer.pdb
+C:\Users\ganta\Documents\Github\ADE_Editer\obj\Release\ADE_Editer.CustomTrackbar.resources

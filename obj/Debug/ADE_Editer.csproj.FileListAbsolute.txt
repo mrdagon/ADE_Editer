@@ -21,3 +21,4 @@ C:\Users\ganta\Documents\Github\ADE_Editer\obj\Debug\ADE_Editer.csproj.CoreCompi
 C:\Users\ganta\Documents\Github\ADE_Editer\obj\Debug\ADE_Editer.exe
 C:\Users\ganta\Documents\Github\ADE_Editer\obj\Debug\ADE_Editer.pdb
 C:\Users\ganta\Documents\Github\ADE_Editer\obj\Debug\ADE_Editer.素材Combobox.resources
+C:\Users\ganta\Documents\Github\ADE_Editer\obj\Debug\ADE_Editer.CustomTrackbar.resources

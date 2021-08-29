@@ -25,5 +25,14 @@ namespace ADE_Editer
 
             pe.Graphics.DrawString(this.Value.ToString() , fnt , Brushes.Black,-20,0);
         }
+
+        private void CustomTrackbar_ValueChanged(object sender, EventArgs e)
+        {
+            int num = MainForm.mainForm.trackbarAスキル反映率.Value * 
+                MainForm.mainForm.trackbarAスキル命中.Value * 
+                MainForm.mainForm.trackbarAスキルHit数.Value;
+
+            MainForm.mainForm.labelDPS.Text = num.ToString();
+        }
     }
 }

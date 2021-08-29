@@ -1400,5 +1400,50 @@ namespace ADE_Editer
 
             now強化数 = n;
         }
+
+        private void trackbarAスキル基礎ダメージ_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackbarAスキル反映率_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDPS_Click(object sender, EventArgs e)
+        {
+            int num = MainForm.mainForm.trackbarAスキル反映率.Value *
+                MainForm.mainForm.trackbarAスキル命中.Value *
+                MainForm.mainForm.trackbarAスキルHit数.Value /
+                Math.Max(1, MainForm.mainForm.trackbarAスキルクールタイム.Value);
+
+            MainForm.mainForm.labelDPS.Text = num.ToString();
+        }
+
+        private void labelDPS_MouseMove(object sender, MouseEventArgs e)
+        {
+            int num = MainForm.mainForm.trackbarAスキル反映率.Value *
+                MainForm.mainForm.trackbarAスキル命中.Value *
+                MainForm.mainForm.trackbarAスキルHit数.Value /
+                Math.Max(1,MainForm.mainForm.trackbarAスキルクールタイム.Value);
+
+            MainForm.mainForm.labelDPS.Text = num.ToString();
+        }
+
+        private void TabAスキル_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void groupBox3_MouseHover(object sender, EventArgs e)
+        {
+            int num = MainForm.mainForm.trackbarAスキル反映率.Value *
+                MainForm.mainForm.trackbarAスキル命中.Value *
+                MainForm.mainForm.trackbarAスキルHit数.Value /
+                Math.Max(1, MainForm.mainForm.trackbarAスキルクールタイム.Value);
+
+            MainForm.mainForm.labelDPS.Text = num.ToString();
+        }
     }
 }
